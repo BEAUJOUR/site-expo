@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/site-expo/static/css/main.05b2a4a2.css",
+    "main.js": "/site-expo/static/js/main.0747d026.js",
+    "index.html": "/site-expo/index.html",
+    "main.05b2a4a2.css.map": "/site-expo/static/css/main.05b2a4a2.css.map",
+    "main.0747d026.js.map": "/site-expo/static/js/main.0747d026.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05b2a4a2.css",
+    "static/js/main.0747d026.js"
+  ]
+}
