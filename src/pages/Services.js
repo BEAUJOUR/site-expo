@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import "../style/services.css"
 const Services = () => {
   const sectionsRef = useRef([]);
 

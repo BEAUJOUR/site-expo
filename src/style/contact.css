@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Valeur standard : 100 (fin) à 900 (gras) */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.contact-page {
+  .contact-hero {
+    background-image: url("https://img.freepik.com/vecteurs-libre/stand-exposition-maquette-3d-design_1284-15925.jpg?semt=ais_hybrid&w=740");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .contact-form-section {
+    h2 {
+      font-size: 2rem;
+      color: #f9e30c;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea {
+          padding: 0.8rem;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+        }
+      }
+
+      .submit-button {
+        padding: 0.8rem 1.5rem;
+        background-color: #f9e30c;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        align-self: flex-start;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f9e30c;
+        }
+      }
+    }
+  }
+}

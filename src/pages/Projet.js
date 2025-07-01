@@ -4,9 +4,9 @@
 
 
 
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 
-
+import "../style/projet.css"
 const categories = [
   {
     id: "portes",

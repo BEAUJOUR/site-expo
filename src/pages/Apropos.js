@@ -1,6 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-
+import '../style/apropos.css';
 const Apropos = () => {
   useScrollAnimation('.animate-on-scroll', 'visible');
 

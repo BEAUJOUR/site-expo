@@ -24,6 +24,7 @@ function App() {
   return (
     
     <I18nextProvider i18n={i18n}>
+    
       <Router>
         <Navbar />
         <Routes>
@@ -32,6 +33,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/projet" element={<Projet />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
         <Footer/>
       </Router>

@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { FaGlobe, FaMoon, FaSun, FaBars } from "react-icons/fa";
+import "../components/styles-component/navbar.css"
 
 const LANGS = ["fr", "en", "es", "pt"];
 
@@ -17,17 +19,14 @@ const Navbar = () => {
     document.body.classList.toggle("dark", !darkMode);
   };
 
-  // Pour éviter l'erreur quand i18n.language est undefined
   const currentLang = i18n.language || "fr";
 
-  // Fonction pour passer à la langue suivante dans LANGS
   const handleLangToggle = () => {
     const currentIndex = LANGS.indexOf(currentLang);
     const nextIndex = (currentIndex + 1) % LANGS.length;
     i18n.changeLanguage(LANGS[nextIndex]);
   };
 
-  // Force scroll en haut et potentiellement autre effet au changement langue ou page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [i18n.language, location.pathname]);
@@ -37,7 +36,11 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo">
           <Link to="/">
-            <img className="imlogo" src="/logo.png" alt="EUROPE RAPIDE EXPO" />
+            <img
+              className="logo"
+              src={`${process.env.PUBLIC_URL}/logo.png`}
+              alt="EUROPE RAPIDE EXPO"
+            />
           </Link>
         </div>
 
@@ -47,8 +50,12 @@ const Navbar = () => {
             onClick={handleLangToggle}
             className="nav-btn"
             aria-label="Changer la langue"
+            title={`Changer la langue (actuelle: ${currentLang.toUpperCase()})`}
           >
-            {currentLang.toUpperCase()}
+            <FaGlobe size={20} />
+            <span style={{ marginLeft: "6px", fontWeight: "bold" }}>
+              {currentLang.toUpperCase()}
+            </span>
           </button>
 
           {/* Bouton Dark Mode */}
@@ -56,8 +63,9 @@ const Navbar = () => {
             onClick={toggleDarkMode}
             className="nav-btn"
             aria-label="Toggle mode sombre"
+            title={darkMode ? "Mode clair" : "Mode sombre"}
           >
-            {darkMode ? "☀️" : "🌙"}
+            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
 
           {/* Bouton menu burger */}
@@ -65,8 +73,9 @@ const Navbar = () => {
             className="menu-toggle"
             onClick={toggleMenu}
             aria-label="Toggle menu"
+            title="Menu"
           >
-            <span className={`hamburger ${menuOpen ? "open" : ""}`}></span>
+            <FaBars size={24} className={`${menuOpen ? "open" : ""}`} />
           </button>
         </div>
 
@@ -78,22 +87,22 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/apropos" onClick={() => setMenuOpen(false)}>
-              {t("apropos")}
+              {t("Apropos")}
             </Link>
           </li>
           <li>
             <Link to="/services" onClick={() => setMenuOpen(false)}>
-              {t("services")}
+              {t("Services")}
             </Link>
           </li>
           <li>
             <Link to="/projet" onClick={() => setMenuOpen(false)}>
-              {t("projet")}
+              {t("Projet")}
             </Link>
           </li>
           <li>
             <Link to="/contact" onClick={() => setMenuOpen(false)}>
-              {t("contact")}
+              {t("Contact")}
             </Link>
           </li>
         </ul>

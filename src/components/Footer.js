@@ -1,7 +1,8 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import "../components/styles-component/footer.css"
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -20,10 +21,10 @@ const Footer = () => {
           <h3>{t("Footer.links") || "Liens utiles"}</h3>
           <ul>
             <li><Link to="/">{t("accueil")}</Link></li>
-            <li><Link to="/apropos">{t("apropos")}</Link></li>
-            <li><Link to="/services">{t("services")}</Link></li>
-            <li><Link to="/projet">{t("projet")}</Link></li>
-            <li><Link to="/contact">{t("contact")}</Link></li>
+            <li><Link to="/apropos">{t("Apropos")}</Link></li>
+            <li><Link to="/services">{t("Services")}</Link></li>
+            <li><Link to="/projet">{t("Projet")}</Link></li>
+            <li><Link to="/contact">{t("Contact")}</Link></li>
           </ul>
         </div>
 
@@ -39,14 +40,15 @@ const Footer = () => {
         {/* Bloc 4 : Réseaux sociaux */}
         <div className="footer-section">
           <h3>{t("Social") || "Suivez-nous"}</h3>
-          <ul className="social-links">
+          <ul className="footer-socials">
             <li>
               <a
                 href="https://www.facebook.com/EuropeRapideExpo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
-                🌐 Facebook
+                <FaFacebookF />
               </a>
             </li>
             <li>
@@ -54,8 +56,9 @@ const Footer = () => {
                 href="https://twitter.com/EuropeRapideExpo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
               >
-                🐦 Twitter
+                <FaTwitter />
               </a>
             </li>
             <li>
@@ -63,8 +66,9 @@ const Footer = () => {
                 href="https://www.instagram.com/EuropeRapideExpo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
-                📸 Instagram
+                <FaInstagram />
               </a>
             </li>
             <li>
@@ -72,8 +76,9 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/europe-rapide-expo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                💼 LinkedIn
+                <FaLinkedinIn />
               </a>
             </li>
           </ul>
@@ -88,3 +93,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

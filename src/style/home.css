@@ -1,0 +1,197 @@
+.home {
+  line-height: 1.8;
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    background-image: url("https://slow-furniture.com/wp-content/uploads/2020/05/cuisine-moderne-haut-de-gamme-sur-mesure.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+
+    .overlay {
+      background: rgba(37, 37, 37, 0.322);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 5%;
+
+      .hero-content {
+        max-width: 550px;
+        background-color: rgba(255, 253, 253, 0.404);
+        color: #fff;
+        padding: 1.5rem;
+        border-radius: 15px;
+        animation: fadeInLeft 1s ease-in-out;
+
+        h1 {
+          font-family: "Libertinus Math", system-ui;
+          font-weight: 600;
+          font-size: 2.7rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        .cta-button {
+          margin-top: 1rem;
+
+          .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #f9e30c;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        text-align: center;
+
+        .hero-content {
+          h1 {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .services,
+  .about,
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+    .card {
+      background: #f4f1ee;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      text-align: center;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      h3 {
+        margin: 1rem 0 0.5rem;
+        font-size: 1.25rem;
+      }
+
+      p {
+        padding: 0 1rem 1rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .suggestions {
+    background-color: #dbdbdbc4;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  button,
+  strong {
+    background-color: #f9e30c;
+    color: #1b1919;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #e2d100;
+      color: #444;
+    }
+  }
+
+  .footer {
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
