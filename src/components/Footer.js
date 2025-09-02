@@ -18,9 +18,9 @@ const Footer = () => {
 
         {/* Bloc 2 : Liens utiles */}
         <div className="footer-section">
-          <h3>{t("Footer.links") || "Liens utiles"}</h3>
+          <h3>{t("Accès rapides") || "Liens utiles"}</h3>
           <ul>
-            <li><Link to="/">{t("accueil")}</Link></li>
+            <li><Link to="/">{t("Accueil")}</Link></li>
             <li><Link to="/apropos">{t("Apropos")}</Link></li>
             <li><Link to="/services">{t("Services")}</Link></li>
             <li><Link to="/projet">{t("Projet")}</Link></li>
@@ -37,52 +37,57 @@ const Footer = () => {
           <p>✉️ contact@ere91.com</p>
         </div>
 
-        {/* Bloc 4 : Réseaux sociaux */}
-        <div className="footer-section">
-          <h3>{t("Social") || "Suivez-nous"}</h3>
-          <ul className="footer-socials">
-            <li>
-              <a
-                href="https://www.facebook.com/EuropeRapideExpo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/EuropeRapideExpo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/EuropeRapideExpo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/europe-rapide-expo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-          </ul>
-        </div>
+       {/* Bloc 4 : Réseaux sociaux */}
+<div className="footer-section">
+  <h3>{t("Social") || "Suivez-nous"}</h3>
+  <ul className="footer-socials">
+    <li>
+      <a
+        href="https://www.facebook.com/profile.php?id=100070063475044&locale=fr_FR"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        className="facebook social-icon"
+      >
+        <FaFacebookF />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com/EuropeRapideExpo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        className="twitter social-icon"
+      >
+        <FaTwitter />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.instagram.com/EuropeRapideExpo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="instagram social-icon"
+      >
+        <FaInstagram />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/company/europe-rapide-expo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="linkedin social-icon"
+      >
+        <FaLinkedinIn />
+      </a>
+    </li>
+  </ul>
+</div>
+
       </div>
 
       <div className="footer-bottom">

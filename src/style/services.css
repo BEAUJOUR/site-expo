@@ -7,6 +7,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.dark .services-list p{
+  color: #020202;
+}
 .services-page {
   
 
@@ -33,6 +36,9 @@ body {
         font-size: 3rem;
         padding: 1rem;
         text-align: center;
+        text-shadow : 2px 2px #020202;
+        font-family: "Libertinus Math", serif;
+        font-weight: 600;
       }
     }
   }
@@ -52,7 +58,7 @@ body {
       background-color: #f9f9f9;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.774);
       transition: transform 0.3s ease;
 
       &:hover {

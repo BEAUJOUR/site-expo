@@ -3,6 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -11,6 +12,7 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
 }
 
 body.dark {
@@ -18,36 +20,23 @@ body.dark {
   color: #f0eaeae7;
 }
 
-/* topbar.css */
+/* Sticky footer layout (flex) - placez en haut du fichier CSS global */
 
-/* .topbar {
-  background-color:#f9e30c;
-  color: #fff;
-  font-size: 0.85rem;
-  padding: 0.4rem 1rem;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1100;
+html, body, #root {
+  height: 100%;
 }
 
-.topbar-content {
+/* site-wrapper : layout vertical complet */
+
+.site-wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
 }
 
-.topbar-content span a {
-  color: #f9e30c;
-  text-decoration: underline;
+/* site-main prend l'espace restant et pousse le footer en bas */
+.site-main {
+  flex: 1 1 auto;
+  /* facultatif : si tu veux un padding latéral ou vertical */
+  /* padding: 1rem 0; */
 }
-
-@media (min-width: 768px) {
-  .topbar-content {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-} */
-

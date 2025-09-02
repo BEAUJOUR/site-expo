@@ -1,7 +1,15 @@
 import React from "react";
-import '../style/home.css';
-
+import "../style/home.css";
 import { useNavigate } from "react-router-dom";
+import expo from"../assets/chantier/expo.png"
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const imageUrls = importAll(
+  require.context("../assets/galerie", false, /\.(png|jpe?g|webp)$/)
+);
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -11,27 +19,39 @@ const Home = () => {
   // }
   return (
     <div className="home">
-      <header class="hero"  data-aos="fade-left"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500">
+      <header
+        className="hero"
+        data-aos="fade-left"
+      >
+        {/* <video className="background-video" autoPlay loop muted playsInline>
+          <source
+            src="https://www.shutterstock.com/shutterstock/videos/1093664035/preview/stock-footage-handsome-young-artisan-craftsman-in-checkered-shirt-using-hand-plane-to-shape-a-wood-bar-carpenter.webm"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video> */}
+        <img
+          className="background-video background-image"
+          src={expo}
+          alt="image_exposition"
+        />
+
         <div class="overlay">
-          <div class="hero-content"data-aos="fade-right"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine">
-            <h1 class="hero-title">EUROPE RAPIDE EXPO</h1>
-            <p class="hero-subtitle">
+          <div
+            class="hero-content mozart"
+           
+          >
+            <h1 class="hero-title cafe-inner">EUROPE RAPIDE EXPO</h1>
+            <p class="hero-subtitle mozart">
               Des créations sur mesure qui donnent vie à vos espaces
             </p>
-            <p class="hero-description">
+            <p class="hero-description mozart">
               Explorez nos expositions uniques et laissez-vous inspirer par
               l’innovation.
             </p>
-            <div class="cta-button">
+            <div class="cta-button mozart">
               <button onClick={() => navigate("/contact")}>
-              
                 Contactez-nous
-             
               </button>
             </div>
           </div>
@@ -41,32 +61,25 @@ const Home = () => {
       <section className="intro">
         <div className="container">
           <h2
-            data-aos="fade-left"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500"
+           
           >
             Votre espace, notre passion
           </h2>
-          <p
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-          >
+          <p>
             Depuis plus de 20 ans, notre entreprise accompagne particuliers et
             professionnels dans la réalisation de leurs projets d’agencement
             intérieur et de menuiserie sur mesure. Alliant savoir-faire
             artisanal et innovation, nous créons des espaces fonctionnels,
             esthétiques et durables.
           </p>
-          <p data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <p >
             Que vous rêviez d’une cuisine chaleureuse, d’un bureau optimisé ou
             d’un mobilier unique, notre équipe met tout en œuvre pour
             concrétiser vos envies avec rigueur et créativité.
           </p>
           <p className="gallery-note">
             Veuillez nous{" "}
-            <strong onClick={() => navigate("/contact")}>Contacter</strong>.
+            <strong onClick={() => navigate("/contact")}>Contacter</strong>
           </p>
         </div>
       </section>
@@ -74,13 +87,11 @@ const Home = () => {
       <section className="services-preview">
         <div className="container">
           <h2>Nos domaines d’expertise</h2>
-          <p data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <p >
             Nous proposons une large gamme de prestations adaptées à vos besoins
             :
           </p>
-          <ul data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+          <ul>
             <li>
               Agencement d’intérieur personnalisé : optimisation et design de
               vos espaces de vie et de travail
@@ -96,47 +107,43 @@ const Home = () => {
           </ul>
           <p>
             Découvrez en détail toutes nos prestations sur la page{" "}
-            <strong onClick={() => navigate("/services")}>Nos Services</strong>.
+            <strong onClick={() => navigate("/services")}>Services</strong>
           </p>
         </div>
       </section>
 
       <section className="suggestions">
-        <div className="container">
-          <h2>Galerie inspiration</h2>
-          <p>
-            Parcourez une sélection de nos réalisations et laissez-vous inspirer
-            par la diversité de nos créations.
-          </p>
-          <div className="gallery">
+      <div className="container">
+        <h2>Galerie inspiration</h2>
+        <p>
+          Parcourez une sélection de nos réalisations et laissez-vous inspirer
+          par la diversité de nos créations.
+        </p>
+
+        <div className="gallery">
+          {imageUrls.map((src, index) => (
             <img
-              src="https://slow-furniture.com/wp-content/uploads/2020/05/cuisine-moderne-haut-de-gamme-sur-mesure.jpg"
-              alt="Cuisine moderne en bois"
+              key={index}
+              src={src}
+              alt={`Réalisation ${index + 1}`}
+              loading="lazy"
+              style={{ width: "100%", maxWidth: "400px", borderRadius: "8px" }}
             />
-            <img
-              src="https://boisetblanc.fr/wp-content/uploads/36.-Bobillot-8.webp"
-              alt="Salon sur mesure"
-            />
-            <img
-              src="https://cocre-art.com/wp-content/uploads/2022/09/martine-et-alain-amenagement-salon-sur-mesure_salon_meuble_tv_sur_mesure_angencement_interieur_paris_montreuil_vincennes_cocre-art-min.jpg"
-              alt="Rangements intégrés"
-            />
-            <img
-              src="https://www.gerriet.com/escaliers/Escaliers-Bois-Metal/files/lg-1664.jpg"
-              alt="Escalier design bois et métal"
-            />
-          </div>
-          <p className="gallery-note">
-            Retrouvez l’ensemble de nos projets sur la page{" "}
-            <strong onClick={() => navigate("/projet")}>Réalisations</strong>.
-          </p>
+          ))}
         </div>
-      </section>
+
+        <p className="gallery-note">
+          Retrouvez l’ensemble de nos projets sur la page{" "}
+          <strong onClick={() => navigate("/projet")}>Réalisations</strong>
+        </p>
+      </div>
+    </section>
 
       <section className="values">
         <div className="container">
           <h2>Pourquoi choisir notre entreprise ?</h2>
-          <div className="values-list" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <div
+            className="values-list">
             <article>
               <h3>Qualité artisanale</h3>
               <p>

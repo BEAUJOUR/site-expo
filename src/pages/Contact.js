@@ -1,83 +1,173 @@
 import React, { useState } from "react";
-import '../style/contact.css';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import "../style/contact.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    nom: "",
-    email: "",
-    message: "",
-  });
-
+  const [formData, setFormData] = useState({ nom: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // 👉 Intégration possible avec EmailJS, Formspree, etc.
-    console.log("Formulaire soumis :", formData);
-    setSent(true);
+    setError(null);
+    setSent(false);
+
+    // Validation des champs
+    if (!formData.nom || !formData.email || !formData.message) {
+      setError("Merci de remplir tous les champs.");
+      return;
+    }
+
+    // Validation simple de l'email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError("Merci de saisir une adresse email valide.");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://formspree.io/f/mldnqoeb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nom: formData.nom,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setFormData({ nom: "", email: "", message: "" });
+      } else {
+        const data = await response.json();
+        setError(data.error || "Une erreur est survenue, veuillez réessayer.");
+      }
+    } catch {
+      setError("Erreur réseau, veuillez réessayer.");
+    }
   };
 
   return (
-    <div className="contact-page">
-      <header className="contact-hero">
-        <div className="overlay">
-          <h1>Contactez Europe Rapide Expo</h1>
+    <div className="contact-container">
+      <section className="contact-left"data-aos="fade-down-right">
+        <h2>Contactez-nous</h2>
+        {sent && <p className="success-msg">Merci pour votre message !</p>}
+        {error && <p className="error-msg">{error}</p>}
+
+        <form onSubmit={handleSubmit} className="contact-form" noValidate>
+          <label htmlFor="nom">Nom</label>
+          <input
+            id="nom"
+            name="nom"
+            type="text"
+            value={formData.nom}
+            onChange={handleChange}
+            required
+            placeholder="Votre nom"
+          />
+
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="exemple@mail.com"
+          />
+
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            placeholder="Votre message..."
+          />
+
+          <button type="submit" className="btn-submit">
+            Envoyer
+          </button>
+        </form>
+      </section>
+
+      <section className="contact-right"data-aos="fade-down-left">
+        <h2>Nos Informations</h2>
+        <div className="location-info">
+          <p>
+            <strong>Adresse :</strong> ZAC de Montvrain II 4-10 Rue de Vilmorin
+            97540-MENECY
+          </p>
+          <p>
+            <strong>Téléphone :</strong> 01 60 87 20 02
+          </p>
+          <p>
+            <strong>Email :</strong> contact@ere91.com
+          </p>
         </div>
-      </header>
 
-      <section className="contact-form-section container">
-        <h2>Un projet en tête ? Parlons-en.</h2>
-        <p>Remplissez ce formulaire et nous vous répondrons rapidement.</p>
-
-        {sent ? (
-          <p className="success-message">✅ Merci pour votre message ! Nous reviendrons vers vous rapidement.</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="nom">Nom</label>
-              <input
-                type="text"
-                id="nom"
-                name="nom"
-                value={formData.nom}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Adresse e-mail</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" className="submit-button">
-              Envoyer
-            </button>
-          </form>
-        )}
+        <h3>Suivez-nous</h3>
+        <ul className="social-icons">
+          <li>
+            <a
+              href="https://facebook.com"
+              className="facebook"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com"
+              className="twitter"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              className="instagram"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              className="linkedin"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+          </li>
+        </ul>
       </section>
     </div>
   );

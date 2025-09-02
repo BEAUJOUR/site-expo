@@ -1,197 +1,238 @@
 .home {
   line-height: 1.8;
+  /* font-family: "Segoe UI", sans-serif; */
+}
 
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+/* Container global */
+.home .container {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* HERO SECTION */
+.home .hero {
+  /* background-image: url("https://slow-furniture.com/wp-content/uploads/2020/05/cuisine-moderne-haut-de-gamme-sur-mesure.jpg"); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.6); /* Optionnel : assombrit la vidéo pour le texte */
+}
+
+
+.home .hero .overlay {
+  background: rgba(37, 37, 37, 0.4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.home .hero .hero-content {
+  max-width: 60%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.home .hero h1 {
+  font-family: "Libertinus Math", serif;
+  font-weight: 600;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  text-shadow : 2px 2px #020202;
+}
+
+.home .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow : 2px 2px #020202;
+}
+
+.home .cta-button {
+  margin-top: 1rem;
+}
+
+/* .home.gallery{
+    display:flex;
+   
+} */
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-
-  .hero {
-    background-image: url("https://slow-furniture.com/wp-content/uploads/2020/05/cuisine-moderne-haut-de-gamme-sur-mesure.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-
-    .overlay {
-      background: rgba(37, 37, 37, 0.322);
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 5%;
-
-      .hero-content {
-        max-width: 550px;
-        background-color: rgba(255, 253, 253, 0.404);
-        color: #fff;
-        padding: 1.5rem;
-        border-radius: 15px;
-        animation: fadeInLeft 1s ease-in-out;
-
-        h1 {
-          font-family: "Libertinus Math", system-ui;
-          font-weight: 600;
-          font-size: 2.7rem;
-        }
-
-        p {
-          font-size: 1.2rem;
-          margin-bottom: 1rem;
-        }
-
-        .cta-button {
-          margin-top: 1rem;
-
-          .btn-outline {
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-
-            &:hover {
-              background-color: #f9e30c;
-              color: #000;
-            }
-          }
-        }
-      }
-
-      @media (max-width: 768px) {
-        justify-content: center;
-        text-align: center;
-
-        .hero-content {
-          h1 {
-            font-size: 1.8rem;
-          }
-          p {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .services,
-  .about,
-  h2 {
+/* RESPONSIVE HERO */
+@media (max-width: 768px) {
+  .home .hero {
+    justify-content: center;
     text-align: center;
-    margin-bottom: 2rem;
+  }
+
+  .home .hero .hero-content {
+    padding: 1rem;
+  }
+
+  .home .hero h1 {
     font-size: 2rem;
   }
 
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-
-    .card {
-      background: #f4f1ee;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      text-align: center;
-      max-width: 300px;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
-
-      img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      h3 {
-        margin: 1rem 0 0.5rem;
-        font-size: 1.25rem;
-      }
-
-      p {
-        padding: 0 1rem 1rem;
-        font-size: 0.95rem;
-      }
-    }
-  }
-
-  .suggestions {
-    background-color: #dbdbdbc4;
-    width: 95%;
-    margin: auto;
-    border-radius: 10px;
-    padding: 2rem 1rem;
-
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-
-      img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.03);
-        }
-      }
-    }
-  }
-
-  button,
-  strong {
-    background-color: #f9e30c;
-    color: #1b1919;
-    border: none;
-    padding: 0.75rem 1rem;
+  .home .hero p {
     font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  }
+}
 
-    &:hover {
-      background-color: #e2d100;
-      color: #444;
-    }
+/* SECTIONS : services / about */
+.home,
+.home {
+  /* text-align: center; */
+  margin-bottom: 2rem;
+}
+
+.home h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  
+  font-weight: 600;
+  color: #FFFFFF;
+text-shadow : 2px 2px #020202;
+font-family: "Libertinus Math", serif;
+}
+
+/* CARDS */
+.home .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.home .card {
+  background: #f4f1ee;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(5, 5, 5, 0.05);
+  overflow: hidden;
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.home .card:hover {
+  transform: translateY(-5px);
+}
+
+.home .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.home .card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.home .card p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* SUGGESTIONS / GALERIE */
+.home .suggestions {
+  background-color: #dbdbdb10;
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  border: 2px solid green;
+}
+
+.home .suggestions h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.home .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.home .gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.home .gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* BOUTONS & STRONG */
+.home button,
+.home strong {
+  background-color: green;
+  color: #f9e30c;
+ 
+  border: none;
+  padding: 0.50rem 0.50rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+}
+.home button,
+.home strong:hover
+{
+  background-color: #f9e30c;
+  color: green;
+
+}
+
+.home button:hover {
+  background-color: green;
+  color: white;
+}
+
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .home .cards {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .footer {
-    background-color: #2e2e2e;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 1rem;
+  .home .card {
+    width: 90%;
   }
 
-  @media (max-width: 768px) {
-    .cards {
-      flex-direction: column;
-      align-items: center;
-    }
+  .home .suggestions {
+    padding: 1rem;
   }
 }

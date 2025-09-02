@@ -1,100 +1,149 @@
+import React, { useState, useRef, useEffect } from "react";
+import "../style/projet.css";
 
+// --- Importation dynamique des images (Webpack uniquement) ---
+function importImages(context) {
+  return context.keys().map(context);
+}
 
+const salle_de_bain= importImages(
+  require.context("../assets/projets/salle_de_bain", false, /\.(jpg|jpeg|png|webp)$/)
+);
+const cuisinesImages = importImages(
+  require.context("../assets/projets/cuisines", false, /\.(jpg|jpeg|png|webp)$/)
+);
+const salonsImages = importImages(
+  require.context("../assets/projets/salons", false, /\.(jpg|jpeg|png|webp)$/)
+);
+const dressingsImages = importImages(
+  require.context("../assets/projets/dressings", false, /\.(jpg|jpeg|png|webp)$/)
+);
+const meublesImages = importImages(
+  require.context("../assets/projets/meubles", false, /\.(jpg|jpeg|png|webp)$/)
+);
 
-
-
-
-import { useState, useRef } from "react";
-
-import "../style/projet.css"
+// --- Définition des catégories ---
 const categories = [
-  {
-    id: "portes",
-    title: "Portes",
-    images: [
-      "https://img.freepik.com/vecteurs-premium/porte-ouverte-bois-vecteur-cadre-isole_212889-726.jpg",
-      "https://png.pngtree.com/png-clipart/20240508/original/pngtree-closed-and-open-door-set-png-image_15045876.png",
-      "https://st3.depositphotos.com/3405399/37465/i/450/depositphotos_374653756-stock-photo-yellow-door-isolated-white-background.jpg",
-    
-    ],
-    },
-  {
-    id: "cuisines",
-    title: "Cuisine",
-    images: [
-      "https://img.freepik.com/photos-gratuite/comptoir-cuisine-moderne-rendu-3d-design-blanc-beige_105762-2228.jpg",
-      "https://img.freepik.com/photos-premium/design-interieur-cuisine-minimaliste-rendu-3d_674881-1059.jpg",
-      "https://mir-s3-cdn-cf.behance.net/projects/404/129430215329435.Y3JvcCwxMDA3LDc4OCwxNDQsMA.jpg",
-    ],
-  },
-   {
-    id: "salons",
-    title: "Salons",
-    images: [
-      "https://st3.depositphotos.com/15869754/18120/i/450/depositphotos_181206652-stock-photo-modern-bright-interiors-rendering-illustration.jpg",
-      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://st3.depositphotos.com/5028327/13547/i/450/depositphotos_135473662-stock-photo-modern-living-room-in-a.jpg",
-    ],
-  },
-   {
-    id: "dressings",
-    title: "Dressins",
-    images: [
-      "https://media.istockphoto.com/id/482502897/fr/photo/int%C3%A9rieur-de-la-maison-moderne.jpg?s=612x612&w=0&k=20&c=RZTcrcZoLAt_1Fy0r0dp4qeopQU98WVWVtpB1KyP-So=",
-      "https://images.pexels.com/photos/6782465/pexels-photo-6782465.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://cdn.pixabay.com/photo/2023/07/06/20/23/ai-generated-8111336_640.jpg",
-    ],
-  },
-  {
-    id: "meubles",
-    title: "Meubles",
-    images: [
-      "https://media.istockphoto.com/id/1308740147/fr/photo/maquette-int%C3%A9rieure-de-mur-darmoire-de-tv-en-bois-dans-la-salle-vide-moderne-conception.jpg?s=612x612&w=0&k=20&c=Eok20kG4MmiG4fyu0ZqLnV45kEVlTYH30TbIMEmfmII=",
-      "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://img.freepik.com/photos-premium/olive-moderne-simple-cuisine-verte-plancher-bois-rendu-3d_476612-3000.jpg?semt=ais_hybrid&w=740",
-    ],
-  },
+  { id: "salle_de_bain", title: "Salle de bain", images: salle_de_bain},
+  { id: "cuisines", title: "Cuisines", images: cuisinesImages },
+  { id: "salons", title: "Salons Expo", images: salonsImages },
+  { id: "dressings", title: "Dressings", images: dressingsImages },
+  { id: "meubles", title: "Meubles", images: meublesImages },
 ];
 
 export default function Projet() {
+  // --- States & Refs ---
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const cardRefs = useRef([]);
+  const rafRefs = useRef({});
+  const rectsRef = useRef({});
+  const modalRef = useRef(null);
+  const closeBtnRef = useRef(null);
+  const lastFocusedElement = useRef(null);
 
   const activeCategory = categories[activeCategoryIndex];
 
-  const handleMouseMove = (e, idx) => {
+  // --- Effet de tilt sur les cartes ---
+  const isTiltAllowed = () =>
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: fine)").matches &&
+    window.innerWidth >= 768;
+
+  function handleMouseMove(e, idx) {
+    if (!isTiltAllowed()) return;
     const card = cardRefs.current[idx];
     if (!card) return;
-
-    const rect = card.getBoundingClientRect();
+    if (!rectsRef.current[idx]) rectsRef.current[idx] = card.getBoundingClientRect();
+    const rect = rectsRef.current[idx];
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const rotateX = ((y - cy) / cy) * -8;
+    const rotateY = ((x - cx) / cx) * 8;
+    if (rafRefs.current[idx]) cancelAnimationFrame(rafRefs.current[idx]);
+    rafRefs.current[idx] = requestAnimationFrame(() => {
+      card.style.willChange = "transform";
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+  }
 
-    const centerX = rect.width / 3;
-    const centerY = rect.height / 3;
-
-    const rotateX = ((y - centerY) / centerY) * -15;
-    const rotateY = ((x - centerX) / centerX) * 15;
-
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.10)`;
-  };
-
-  const resetCardTransform = (idx) => {
+  function resetCardTransform(idx) {
     const card = cardRefs.current[idx];
+    if (rafRefs.current[idx]) cancelAnimationFrame(rafRefs.current[idx]);
     if (card) {
       card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+      card.style.willChange = "auto";
     }
-  };
+    rectsRef.current[idx] = null;
+  }
 
+  // --- Gestion modale et accessibilité ---
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === "Escape") setSelectedImage(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    if (selectedImage) {
+      lastFocusedElement.current = document.activeElement;
+      document.body.classList.add("modal-open");
+      setTimeout(() => closeBtnRef.current?.focus(), 0);
+    } else {
+      document.body.classList.remove("modal-open");
+      try {
+        lastFocusedElement.current?.focus?.();
+      } catch {}
+    }
+  }, [selectedImage]);
+
+  useEffect(() => {
+    if (!selectedImage) return;
+    function handleTab(e) {
+      if (e.key !== "Tab") return;
+      const modal = modalRef.current;
+      if (!modal) return;
+      const focusable = modal.querySelectorAll(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+    window.addEventListener("keydown", handleTab);
+    return () => window.removeEventListener("keydown", handleTab);
+  }, [selectedImage]);
+
+  // --- Fonctions modale ---
+  const openImage = (src, title) => setSelectedImage({ src, title });
+  const closeImage = () => setSelectedImage(null);
+
+  // --- Rendu ---
   return (
-    <div className="projet-container">
-      <h2>Galerie Menuiserie</h2>
+   
+    <div className="projet-container dark" >
+      <h2>Découvrez Nos œuvres en Menuiserie</h2>
 
-      <div className="category-slider">
+      {/* Slider de catégories */}
+      <div className="category-slider" role="tablist" aria-label="Catégories">
         {categories.map((cat, idx) => (
           <button
             key={cat.id}
+            role="tab"
+            aria-selected={idx === activeCategoryIndex}
+            aria-controls={`gallery-${cat.id}`}
+            id={`tab-${cat.id}`}
             className={`category-btn ${idx === activeCategoryIndex ? "active" : ""}`}
             onClick={() => setActiveCategoryIndex(idx)}
           >
@@ -103,7 +152,14 @@ export default function Projet() {
         ))}
       </div>
 
-      <div className="gallery">
+      {/* Galerie d'images */}
+      <div
+        className="gallery"
+        id={`gallery-${activeCategory.id}`}
+        role="region"
+        aria-labelledby={`tab-${activeCategory.id}`}
+        data-aos="zoom-in"
+      >
         {activeCategory.images.map((img, idx) => (
           <div
             key={idx}
@@ -111,31 +167,57 @@ export default function Projet() {
             ref={(el) => (cardRefs.current[idx] = el)}
             onMouseMove={(e) => handleMouseMove(e, idx)}
             onMouseLeave={() => resetCardTransform(idx)}
-            onClick={() => setSelectedImage({ src: img, title: activeCategory.title })}
+            onTouchStart={() => resetCardTransform(idx)}
+            onClick={() => openImage(img, activeCategory.title)}
             tabIndex={0}
             onKeyDown={(e) => {
-              if (e.key === "Enter") setSelectedImage({ src: img, title: activeCategory.title });
+              if (e.key === "Enter" || e.key === " ") openImage(img, activeCategory.title);
             }}
+            aria-label={`${activeCategory.title} image ${idx + 1}`}
           >
-            <img src={img} alt={`${activeCategory.title} ${idx + 1}`} />
+            <img
+              src={img}
+              alt={`${activeCategory.title} ${idx + 1}`}
+              loading="lazy"
+              decoding="async"
+            />
             <div className="card-info">{activeCategory.title}</div>
           </div>
         ))}
       </div>
 
+      {/* Modale d'aperçu */}
       {selectedImage && (
-        <div className="modal" onClick={() => setSelectedImage(null)}>
-          <span className="close-btn" onClick={() => setSelectedImage(null)}>&times;</span>
-          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+        <div className="modal" onClick={closeImage} role="presentation" aria-hidden="false">
+          <div
+            className="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${selectedImage.title} — aperçu`}
+            onClick={(e) => e.stopPropagation()}
+            ref={modalRef}
+          >
+            <button
+              className="close-btn"
+              aria-label="Fermer"
+              onClick={closeImage}
+              ref={closeBtnRef}
+            >
+              &times;
+            </button>
             <img
               className="modal-content"
               src={selectedImage.src}
-              alt="Affichage agrandi"
+              alt={selectedImage.title}
+              loading="eager"
+              decoding="async"
             />
             <div className="modal-title">{selectedImage.title}</div>
           </div>
+          
         </div>
       )}
     </div>
+   
   );
 }

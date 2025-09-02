@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import "../style/services.css"
+import atelier8 from "../assets/Atelier/ATELIER8.jpg";
+import expo from"../assets/chantier/expo.png"
 const Services = () => {
   const sectionsRef = useRef([]);
 
@@ -39,31 +41,26 @@ const Services = () => {
         "https://menuiserie-desnoyer.com/wp-content/uploads/2017/10/1501_06.jpg",
     },
     {
-      title: "Revêtements & finitions",
-      description:
-        "Pose de parquet, lambris, panneaux décoratifs, habillages muraux, moulures et finitions haut de gamme.",
-      image:
-        "https://mouluresdunord.fr/wp-content/uploads/2019/12/point_hongrie_salin_ok.jpg",
-    },
-    {
-      title: "Escaliers & garde-corps",
-      description:
-        "Fabrication d’escaliers en bois et métal, garde-corps design et sécurisés adaptés à votre espace.",
-      image:
-        "https://escalier-oeba.ch/img/cms/Image1.gif",
-    },
+  title: "Mise en scène & Exposition",
+  description:
+    "Conception et réalisation d'espaces d'exposition sur-mesure : stands, vitrines, présentoirs, scénographies d’intérieur et aménagements événementiels.",
+  image:
+    expo, // Remplace par ton URL ou import local
+}
+
+   
   ];
 
   return (
     <div className="services-page">
-      <header className="services-hero">
+      <header className="services-hero" data-aos="zoom-out">
         <div className="overlay">
           <h1>Nos Services</h1>
         </div>
       </header>
 
       {/* Présentation */}
-      <section className="presentation container hidden" ref={el => sectionsRef.current[0] = el}>
+      <section className="presentation container hidden" ref={el => sectionsRef.current[0] = el} data-aos="zoom-in-up">
         <h2>Présentation</h2>
         <p>
           Implantés depuis 1997 dans le Sud Essonne, nous avons récemment déménagé à Mennecy, à 40 km de Paris, pour mieux vous accueillir.
@@ -79,7 +76,7 @@ const Services = () => {
       </section>
 
       {/* Liste des services */}
-      <section className="services-list container hidden" ref={el => sectionsRef.current[1] = el}>
+      <section className="services-list container hidden"ref={el => sectionsRef.current[1] = el} >
         {services.map((service, index) => (
           <div className="service-card" key={index}>
             <img src={service.image} alt={service.title} />
@@ -92,7 +89,7 @@ const Services = () => {
       </section>
 
       {/* Stand */}
-      <section className="stand container hidden" ref={el => sectionsRef.current[2] = el}>
+      <section className="stand container hidden"ref={el=> sectionsRef.current[2] = el}>
         <h2>Stands & Expositions</h2>
         <p>
           Experts en fabrication et montage de stands depuis plus de 20 ans, nous vous accompagnons dans tous vos projets d’agencement éphémère : showroom, expositions, salons...
@@ -103,7 +100,7 @@ const Services = () => {
       </section>
 
       {/* Agencement */}
-      <section className="agencement container hidden" ref={el => sectionsRef.current[3] = el}>
+      <section className="agencement container hidden"ref={el => sectionsRef.current[3] = el}>
         <h2>Agencement</h2>
         <p>
           Nous intervenons aussi bien chez les particuliers que dans les espaces professionnels : hôtels particuliers, boutiques, expositions, etc.

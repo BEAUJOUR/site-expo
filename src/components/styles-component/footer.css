@@ -141,6 +141,50 @@
   font-style: italic;
   font-weight: 400;
 }
+/* Styles de base pour les icônes sociales */
+.footer-socials a.social-icon {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  transition: all 0.35s ease;
+  transform: scale(1);
+}
+
+/* Animation rebond au clic */
+.footer-socials a.social-icon:active {
+  transform: scale(0.9);
+}
+
+/* Couleurs de survol selon les marques */
+.footer-socials a.facebook:hover {
+  color: #1877F2;
+  background-color: rgba(24, 119, 242, 0.1);
+  filter: drop-shadow(0 0 8px #1877F2);
+}
+
+.footer-socials a.twitter:hover {
+  color: #1DA1F2;
+  background-color: rgba(29, 161, 242, 0.1);
+  filter: drop-shadow(0 0 8px #1DA1F2);
+}
+
+.footer-socials a.instagram:hover {
+  color: #E1306C;
+  background-color: rgba(225, 48, 108, 0.1);
+  filter: drop-shadow(0 0 8px #E1306C);
+}
+
+.footer-socials a.linkedin:hover {
+  color: #0A66C2;
+  background-color: rgba(10, 102, 194, 0.1);
+  filter: drop-shadow(0 0 8px #0A66C2);
+}
+
 
 @media (max-width: 900px) {
   .footer-container {
