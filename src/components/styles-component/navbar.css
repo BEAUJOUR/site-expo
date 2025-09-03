@@ -1,7 +1,4 @@
-/* navbar.css - remplacement complet
-   - centré et aligné avec le container principal (90% / max-width)
-   - responsive, dark mode kept
-*/
+
 
 /* variables (partager la même max-width que le site principal) */
 :root {
@@ -69,13 +66,14 @@
 .nav-select,
 .nav-btn {
   background: transparent;
-  border: 1px solid var(--navbar-color);
-  color: var(--navbar-color);
+  border: 1px solid var(--accent);
+  color: var(--accent);
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
+  
 }
 .nav-select:hover,
 .nav-btn:hover { background-color: rgba(255,255,255,0.12); }
