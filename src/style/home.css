@@ -1,9 +1,9 @@
 .home {
   line-height: 1.8;
-  /* font-family: "Segoe UI", sans-serif; */
+  margin-bottom: 2rem;
 }
 
-/* Container global */
+/* Container */
 .home .container {
   display: block;
   max-width: 100%;
@@ -13,33 +13,36 @@
 
 /* HERO SECTION */
 .home .hero {
-  /* background-image: url("https://slow-furniture.com/wp-content/uploads/2020/05/cuisine-moderne-haut-de-gamme-sur-mesure.jpg"); */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
   position: relative;
-  color: white;
-}
-.background-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 100vh;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  filter: brightness(0.6); /* Optionnel : assombrit la vidéo pour le texte */
+  color: white;
+  overflow: hidden;
 }
 
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;       /* ✅ couvre tout */
+  background-position: center;  /* ✅ centré */
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+  z-index: -1;
+}
 
 .home .hero .overlay {
-  background: rgba(37, 37, 37, 0.4);
-  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 5%;
+  height: 100%;
+  width: 100%;
 }
 
 .home .hero .hero-content {
@@ -49,28 +52,24 @@
   animation: fadeInLeft 1s ease-in-out;
 }
 
+/* TITRES */
 .home .hero h1 {
   font-family: "Libertinus Math", serif;
   font-weight: 600;
   font-size: 2.7rem;
   margin-bottom: 1rem;
-  text-shadow : 2px 2px #020202;
+  text-shadow: 2px 2px #020202;
 }
 
 .home .hero p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  text-shadow : 2px 2px #020202;
+  text-shadow: 2px 2px #020202;
 }
 
 .home .cta-button {
   margin-top: 1rem;
 }
-
-/* .home.gallery{
-    display:flex;
-   
-} */
 
 /* Animation */
 @keyframes fadeInLeft {
@@ -84,41 +83,14 @@
   }
 }
 
-/* RESPONSIVE HERO */
-@media (max-width: 768px) {
-  .home .hero {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .home .hero .hero-content {
-    padding: 1rem;
-  }
-
-  .home .hero h1 {
-    font-size: 2rem;
-  }
-
-  .home .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* SECTIONS : services / about */
-.home,
-.home {
-  /* text-align: center; */
-  margin-bottom: 2rem;
-}
-
+/* TITRES DE SECTION */
 .home h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  
   font-weight: 600;
-  color: #FFFFFF;
-text-shadow : 2px 2px #020202;
-font-family: "Libertinus Math", serif;
+  color: #ffffff;
+  text-shadow: 2px 2px #020202;
+  font-family: "Libertinus Math", serif;
 }
 
 /* CARDS */
@@ -159,7 +131,7 @@ font-family: "Libertinus Math", serif;
   font-size: 0.95rem;
 }
 
-/* SUGGESTIONS / GALERIE */
+/* GALERIE */
 .home .suggestions {
   background-color: #dbdbdb10;
   width: 95%;
@@ -198,31 +170,45 @@ font-family: "Libertinus Math", serif;
 .home strong {
   background-color: green;
   color: #f9e30c;
- 
   border: none;
-  padding: 0.50rem 0.50rem;
+  padding: 0.5rem;
   font-size: 1rem;
   border-radius: 7px;
   cursor: pointer;
   transition: background 0.3s ease;
-
 }
-.home button,
-.home strong:hover
-{
+
+.home button:hover,
+.home strong:hover {
   background-color: #f9e30c;
   color: green;
-
 }
 
-.home button:hover {
-  background-color: green;
-  color: white;
-}
-
-
-/* MOBILE ADJUSTMENTS */
+/* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 768px) {
+  .home .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home .hero .overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .home .hero .hero-content {
+    max-width: 90%;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .background-image {
+    object-position: center top;
+  }
+
   .home .cards {
     flex-direction: column;
     align-items: center;
@@ -234,5 +220,23 @@ font-family: "Libertinus Math", serif;
 
   .home .suggestions {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .home .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- GRAND ÉCRAN > 2000px -------------------- */
+@media (min-width: 2000px) {
+  .background-image {
+    object-position: center;
+    object-fit: cover; /* ou contain si tu préfères */
   }
 }

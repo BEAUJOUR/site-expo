@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/home.css";
 import { useNavigate } from "react-router-dom";
 import expo from"../assets/chantier/expo.png"
@@ -14,50 +13,30 @@ const imageUrls = importAll(
 const Home = () => {
   const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   navigate("/contact");
-  // }
+  
   return (
-    <div className="home">
-      <header
-        className="hero"
-        data-aos="fade-left"
-      >
-        {/* <video className="background-video" autoPlay loop muted playsInline>
-          <source
-            src="https://www.shutterstock.com/shutterstock/videos/1093664035/preview/stock-footage-handsome-young-artisan-craftsman-in-checkered-shirt-using-hand-plane-to-shape-a-wood-bar-carpenter.webm"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video> */}
-        <img
-          className="background-video background-image"
-          src={expo}
-          alt="image_exposition"
-        />
+  <div className="home">
+    <header className="hero">
+      
+  <div
+    className="background-layer"
+    style={{
+      backgroundImage: `url(${expo})`,
+    }}
+  ></div>
+  <div className="overlay">
+    <div className="hero-content">
+      <h1>EUROPE RAPIDE EXPO</h1>
+      <p>Des créations sur mesure qui donnent vie à vos espaces</p>
+      <p>Explorez nos expositions uniques et laissez-vous inspirer par l’innovation.</p>
+      <div className="cta-button">
+        <button onClick={() => navigate("/contact")}>Contactez-nous</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-        <div class="overlay">
-          <div
-            class="hero-content mozart"
-           
-          >
-            <h1 class="hero-title cafe-inner">EUROPE RAPIDE EXPO</h1>
-            <p class="hero-subtitle mozart">
-              Des créations sur mesure qui donnent vie à vos espaces
-            </p>
-            <p class="hero-description mozart">
-              Explorez nos expositions uniques et laissez-vous inspirer par
-              l’innovation.
-            </p>
-            <div class="cta-button mozart">
-              <button onClick={() => navigate("/contact")}>
-                Contactez-nous
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+    
       <section className="intro">
         <div className="container">
           <h2

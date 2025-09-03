@@ -19,9 +19,20 @@
   min-height: 100vh;
   height: auto; /* plus fiable que 100vh sur mobile */
   box-sizing: border-box;
+ 
   ;
 }
 
+body.dark .projet-container {
+  --color-bg:#124660 ;
+}
+body.dark .projet-container h2 {
+color:yellow;
+}
+body.dark .projet-container button {
+color:white;
+border-color:yellow;
+}
 .projet-container h2 {
   margin-top: 45px;
   text-align: center;
@@ -29,6 +40,7 @@
   margin-bottom: 2rem;
   font-weight: 700;
   color: var(--color-accent);
+  
 }
 
 .category-slider {

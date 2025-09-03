@@ -24,6 +24,7 @@
   font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color:var(--text-dark);
   background:transparent;
+  width: 100%;
 }
 
 /* --- Left: Form --- */
@@ -96,11 +97,11 @@
   font-size:1.05rem;
   padding:.85rem 1.1rem;
   border:none;
-  border-radius:50px;
+  border-radius:15px;
   cursor:pointer;
   transition:background-color .2s ease, transform .12s ease;
   align-self:flex-start;
-  min-width:140px;
+  width:100%;
 }
 .btn-submit:hover{background-color:var(--primary-green);transform:scale(1.03)}
 
@@ -115,7 +116,9 @@
   margin-bottom:1rem;
 }
 .error-msg{
-  background:#9b2c2c;color:#fff;padding:.9rem;border-radius:8px;margin-bottom:1rem;font-weight:600;
+  background:#9b2c2c;color:#fff;
+  padding:.9rem;border-radius:8px;
+  margin-bottom:1rem;font-weight:600;
 }
 
 /* --- Right: Info & social --- */
@@ -130,13 +133,26 @@
   justify-content:center;
 }
 
-.contact-right h2{font-size:2rem;margin:0 0 1rem;font-weight:700;color:green}
-.contact-right h3{margin-top:2.25rem;font-weight:600;color:green}
+.contact-right h2{
+  font-size:2rem;margin:0 0 1rem;
+  font-weight:700;color:green;
+}
+.contact-right h3{
+  margin-top:2.25rem;
+  font-weight:600;color:green;
+}
 
-.location-info p{margin:.35rem 0;font-size:1.05rem;word-break:break-word}
+.location-info p{margin:.35rem 0;
+  font-size:1.05rem;
+  word-break:break-word;
+}
 
 /* Social icons */
-.social-icons{margin-top:1rem;padding:0;list-style:none;display:flex;gap:1.25rem}
+.social-icons{
+  margin-top:1rem;padding:0;
+  list-style:none;display:flex;
+  gap:1.25rem;
+}
 .social-icons li a{
   display:inline-flex;align-items:center;justify-content:center;
   width:48px;height:48px;border-radius:50%;
@@ -208,11 +224,17 @@ body.dark .contact-form textarea:focus{
   box-shadow:0 0 0 3px rgba(255,255,255,0.06);
   background:rgba(255,255,255,0.03);
 }
-
+h2.dark, h3.dark {
+  color: var(--text-light);
+}
 /* Buttons & messages in dark */
-body.dark .btn-submit{background:#0fa3c1;color:#012028}
-body.dark .btn-submit:hover{background:#0ba0bb;transform:scale(1.03)}
-body.dark .success-msg{background:#0fa372;color:#e9fff5}
+body.dark .btn-submit{background:green;color:#edeff0}
+body.dark .btn-submit:hover
+{background:var(--bg-yellow);
+  transform:scale(1.03);
+  color:var(--primary-green);
+}
+body.dark .success-msg{background:#0fa372;color:#e9fff5a9}
 body.dark .error-msg{background:#9b2c2c;color:#fff4f4}
 
 /* Social icons in dark */
@@ -263,6 +285,18 @@ html, body {
   overflow-wrap: break-word;
   word-break: break-word;
 }
+@media (max-width:768px){
+  
+  .contact-left{
+    padding-top: 1.5rem;   /* ✅ réduit l’espace en haut */
+    padding-bottom: 2rem;  /* garde du confort en bas */
+  }
+  .contact-left h2{
+    text-align: center;    /* optionnel : centrer le titre */
+    margin-top: 2.5rem;
+  }
+}
+
 
 /* 5) Réduire les paddings horizontaux sur très petits écrans */
 @media (max-width: 420px) {

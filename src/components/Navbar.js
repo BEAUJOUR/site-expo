@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaGlobe, FaMoon, FaSun, FaBars } from "react-icons/fa";
+import { FaMoon, FaSun, FaBars } from "react-icons/fa";
 import "../components/styles-component/navbar.css";
 
 // const LANGS = ["fr", "en", "es", "pt"];

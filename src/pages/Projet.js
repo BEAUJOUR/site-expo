@@ -132,7 +132,7 @@ export default function Projet() {
   // --- Rendu ---
   return (
    
-    <div className="projet-container dark" >
+    <div className="projet-container" >
       <h2>Découvrez Nos œuvres en Menuiserie</h2>
 
       {/* Slider de catégories */}

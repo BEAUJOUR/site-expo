@@ -87,3 +87,15 @@ body {
     }
   }
 }
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+  .services-page .services-list {
+    display: flex;              /* passe en flex au lieu de grid */
+    flex-direction: column;     /* une carte par ligne */
+    align-items: center;        /* centre les cartes */
+  }
+
+  .services-page .services-list .service-card {
+    max-width: 90%;             /* limite la largeur */
+  }
+}
