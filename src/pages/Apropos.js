@@ -18,23 +18,7 @@ const images = importAll(
 
 const Apropos = () => {
   useScrollAnimation('.animate-on-scroll', 'visible');
-
-  const equipe = [
-    { nom: 'Jean Dupont', poste: 'Menuisier expert', img: 'https://randomuser.me/api/portraits/men/11.jpg' },
-    { nom: 'Marie Dubois', poste: 'Architecte d’intérieur', img: 'https://randomuser.me/api/portraits/women/12.jpg' },
-    { nom: 'Ahmed Karim', poste: 'Chef de projet', img: 'https://randomuser.me/api/portraits/men/13.jpg' },
-    { nom: 'Sophie Leroy', poste: 'Designer bois', img: 'https://randomuser.me/api/portraits/women/14.jpg' },
-    { nom: 'Luc Moreau', poste: 'Charpentier', img: 'https://randomuser.me/api/portraits/men/15.jpg' },
-    { nom: 'Emma Martin', poste: 'Responsable client', img: 'https://randomuser.me/api/portraits/women/16.jpg' },
-    { nom: 'Thomas Bernard', poste: 'Technicien pose', img: 'https://randomuser.me/api/portraits/men/17.jpg' },
-    { nom: 'Camille Lefevre', poste: 'Ingénieure bois', img: 'https://randomuser.me/api/portraits/women/18.jpg' },
-    { nom: 'Julien Petit', poste: 'Menuisier junior', img: 'https://randomuser.me/api/portraits/men/19.jpg' },
-    { nom: 'Nina Rousseau', poste: 'Assistante projet', img: 'https://randomuser.me/api/portraits/women/20.jpg' },
-    { nom: 'Ali Benali', poste: 'Poseur', img: 'https://randomuser.me/api/portraits/men/21.jpg' },
-    { nom: 'Claire Girard', poste: 'Technicienne SAV', img: 'https://randomuser.me/api/portraits/women/22.jpg' }
-  ];
-
-  return (
+   return (
     <main className="apropos">
       {/* HERO */}
       <header className="apropos-hero animate-on-scroll" data-aos="fade-up">
@@ -90,19 +74,7 @@ const Apropos = () => {
         </ul>
       </section>
 
-      {/* ÉQUIPE */}
-      <section className="apropos-team container section animate-on-scroll">
-        <h2 >Notre équipe</h2>
-        <div className="team-grid">
-          {equipe.map((membre) => (
-            <div key={membre.nom} className="team-card">
-              <img src={membre.img} alt={membre.nom} />
-              <h4>{membre.nom}</h4>
-              <p>{membre.poste}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    
 
       {/* GALERIE */}
      <section className="apropos-gallery container section animate-on-scroll">

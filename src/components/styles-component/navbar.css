@@ -43,7 +43,11 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+
+  background-color:rgba(187, 179, 179, 0.144);
+  padding: 10px;
+  border-radius: 7px;
+  
 }
 
 /* image logo - hauteur fixe, largeur auto pour ne pas déformer */
