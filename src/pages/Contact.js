@@ -107,7 +107,7 @@ export default function Contact() {
       </section>
 
       <section className="contact-right"data-aos="fade-down-left">
-        <h2 className="dark">Nos Informations</h2>
+        <h2 >Nos Informations</h2>
         <div className="location-info">
           <p>
             <strong>Adresse :</strong> ZAC de Montvrain II 4-10 Rue de Vilmorin
@@ -121,7 +121,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <h3 className="dark">Suivez-nous</h3>
+        <h3 >Suivez-nous</h3>
         <ul className="social-icons">
           <li>
             <a

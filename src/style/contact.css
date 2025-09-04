@@ -126,21 +126,25 @@
   flex:1 1 50%;
   min-width:0;
   background:#f9f9f9;
-  color:var(--text-dark);
   padding:3rem 2rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
 }
 
-.contact-right h2{
-  font-size:2rem;margin:0 0 1rem;
-  font-weight:700;color:green;
+.contact-right h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
 }
-.contact-right h3{
-  margin-top:2.25rem;
-  font-weight:600;color:green;
+
+.contact-right h3 {
+  margin-top: 2.25rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  /* color: var(--text-dark); */
 }
+
 
 .location-info p{margin:.35rem 0;
   font-size:1.05rem;

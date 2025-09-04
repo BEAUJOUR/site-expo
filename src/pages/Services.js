@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import "../style/services.css"
-import atelier8 from "../assets/Atelier/ATELIER8.jpg";
+// import atelier8 from "../assets/Atelier/ATELIER8.jpg";
 import expo from"../assets/chantier/expo.png"
 const Services = () => {
   const sectionsRef = useRef([]);
