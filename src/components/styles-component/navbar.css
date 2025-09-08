@@ -4,7 +4,7 @@
 :root {
   --max-width: 1200px;
   --container-padding: 1rem; /* si besoin garder un padding interne */
-  --navbar-height: 64px; /* valeur de fallback, peut être mise à jour via JS */
+  --navbar-height: 58px; /* valeur de fallback, peut être mise à jour via JS */
   --navbar-bg: #f9e30c;
   --navbar-color: #ffffff;
   --accent: #006600;
@@ -15,6 +15,7 @@
 
 /* navbar fixed en haut */
 .navbar {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +26,12 @@
   padding: 0.4em 0;        /* on retire padding horizontal pour le placer dans .navbar-container */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: background-color 0.3s ease;
+  height: var(--navbar-height);
+}
+.navbar-container,
+.nav-links {
+  display: flex;
+  align-items: center;   /* centre verticalement */
 }
 
 /* Container centré et aligné avec le reste du site */
@@ -43,19 +50,17 @@
 .logo {
   display: flex;
   align-items: center;
-
-  background-color:rgba(187, 179, 179, 0.144);
-  padding: 10px;
-  border-radius: 7px;
+ 
   
 }
 
+
 /* image logo - hauteur fixe, largeur auto pour ne pas déformer */
 .logo img {
-  height: 55px;
+  height: 52px;
   width: auto;
-  display: block;
-  padding: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* controls (dark mode, burger etc.) */
@@ -80,7 +85,9 @@
   
 }
 .nav-select:hover,
-.nav-btn:hover { background-color: rgba(255,255,255,0.12); }
+.nav-btn:hover { 
+background-color: rgba(255,255,255,0.12); 
+}
 
 /* burger button */
 .menu-toggle {

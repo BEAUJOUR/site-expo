@@ -8,7 +8,12 @@ import {
 import "../style/contact.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ nom: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    nom: "",
+    email: "",
+    message: "",
+    entreprise: "",
+  });
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(null);
 
@@ -20,16 +25,23 @@ export default function Contact() {
     setError(null);
     setSent(false);
 
-    // Validation des champs
+    // Vérification des champs obligatoires
     if (!formData.nom || !formData.email || !formData.message) {
       setError("Merci de remplir tous les champs.");
       return;
     }
 
-    // Validation simple de l'email
+    // Vérification email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setError("Merci de saisir une adresse email valide.");
+      return;
+    }
+
+    // Vérification checkbox RGPD
+    const checkbox = document.querySelector('input[name="consent"]');
+    if (!checkbox || !checkbox.checked) {
+      setError("Merci de cocher la case de consentement RGPD.");
       return;
     }
 
@@ -44,12 +56,14 @@ export default function Contact() {
           nom: formData.nom,
           email: formData.email,
           message: formData.message,
+          entreprise: formData.entreprise,
         }),
       });
 
       if (response.ok) {
         setSent(true);
-        setFormData({ nom: "", email: "", message: "" });
+        setFormData({ nom: "", email: "", message: "", entreprise: "" });
+        checkbox.checked = false; // reset la checkbox
       } else {
         const data = await response.json();
         setError(data.error || "Une erreur est survenue, veuillez réessayer.");
@@ -61,7 +75,7 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
-      <section className="contact-left"data-aos="fade-down-right">
+      <section className="contact-left" data-aos="fade-down-right">
         <h2>Contactez-nous</h2>
         {sent && <p className="success-msg">Merci pour votre message !</p>}
         {error && <p className="error-msg">{error}</p>}
@@ -76,6 +90,16 @@ export default function Contact() {
             onChange={handleChange}
             required
             placeholder="Votre nom"
+          />
+
+          <label htmlFor="entreprise">Société</label>
+          <input
+            id="entreprise"
+            name="entreprise"
+            type="text"
+            value={formData.entreprise}
+            onChange={handleChange}
+            placeholder="Votre société (facultatif)"
           />
 
           <label htmlFor="email">Email</label>
@@ -100,18 +124,34 @@ export default function Contact() {
             placeholder="Votre message..."
           />
 
+          <div className="consent-wrapper">
+            <label htmlFor="consent">
+              
+              <input type="checkbox" id="consent" name="consent" required />
+              <p>
+                En soumettant ce formulaire, j'accepte que les informations
+                saisies soient exploitées dans le cadre strict de ma demande *
+              </p>
+            </label>
+          </div>
+
           <button type="submit" className="btn-submit">
             Envoyer
           </button>
         </form>
+
+        <p className="rgpd-note">
+          Europe Rapide Expo respecte la loi RGPD. Vos données sont utilisées
+          uniquement pour traiter votre demande.
+        </p>
       </section>
 
-      <section className="contact-right"data-aos="fade-down-left">
-        <h2 >Nos Informations</h2>
+      <section className="contact-right" data-aos="fade-down-left">
+        <h2>Nos Informations</h2>
         <div className="location-info">
           <p>
-            <strong>Adresse :</strong> ZAC de Montvrain II 4-10 Rue de Vilmorin
-            97540-MENECY
+            <strong>Adresse :</strong> ZAC de Montvrain II, 4-10 Rue de
+            Vilmorin, 97540 Mennecy
           </p>
           <p>
             <strong>Téléphone :</strong> 01 60 87 20 02
@@ -121,15 +161,15 @@ export default function Contact() {
           </p>
         </div>
 
-        <h3 >Suivez-nous</h3>
+        <h3>Suivez-nous</h3>
         <ul className="social-icons">
           <li>
             <a
               href="https://facebook.com"
               className="facebook"
-              aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
             >
               <FaFacebookF />
             </a>
@@ -138,9 +178,9 @@ export default function Contact() {
             <a
               href="https://twitter.com"
               className="twitter"
-              aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter"
             >
               <FaTwitter />
             </a>
@@ -149,9 +189,9 @@ export default function Contact() {
             <a
               href="https://instagram.com"
               className="instagram"
-              aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
@@ -160,9 +200,9 @@ export default function Contact() {
             <a
               href="https://linkedin.com"
               className="linkedin"
-              aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
               <FaLinkedinIn />
             </a>
