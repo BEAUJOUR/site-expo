@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import "../style/services.css"
-// import atelier8 from "../assets/Atelier/ATELIER8.jpg";
+import endoftext from"../assets/Atelier/endoftext.png"
 import expo from"../assets/chantier/expo.png"
+import conception from"../assets/Atelier/conception.png"
+import menuiserie from"../assets/Atelier/menuiserie.png"
 const Services = () => {
   const sectionsRef = useRef([]);
 
@@ -31,14 +33,14 @@ const Services = () => {
       description:
         "Conception et réalisation d’espaces sur mesure : bureaux, cuisines, dressings, bibliothèques, cloisons et rangements intégrés.",
       image:
-        "https://www.signature-dinterieur.fr/scripts/files/669a1e7887fe19.07004753/agencement-interieur-finistere.jpg",
+      conception,
     },
     {
       title: "Menuiserie sur mesure",
       description:
         "Création artisanale de meubles et éléments en bois massif ou stratifié adaptés à votre intérieur.",
       image:
-        "https://menuiserie-desnoyer.com/wp-content/uploads/2017/10/1501_06.jpg",
+        endoftext, // Remplace par ton URL ou import local
     },
     {
   title: "Mise en scène & Exposition",
@@ -53,7 +55,7 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <header className="services-hero" data-aos="zoom-out">
+      <header className="services-hero" data-aos="zoom-out" background-image={menuiserie}>
         <div className="overlay">
           <h1>Nos Services</h1>
         </div>
