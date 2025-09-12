@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
@@ -46,7 +45,7 @@ export default function Contact() {
     }
 
     try {
-      const response = await fetch("https://formspree.io/f/mldnqoeb", {
+      const response = await fetch("https://formspree.io/f/mdkljgzl", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -165,7 +164,7 @@ export default function Contact() {
         <ul className="social-icons">
           <li>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100070063475044"
               className="facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -174,20 +173,10 @@ export default function Contact() {
               <FaFacebookF />
             </a>
           </li>
+          
           <li>
             <a
-              href="https://twitter.com"
-              className="twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/accounts/onetap/?next=%2Feuroperapideexpo%2F"
               className="instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -198,7 +187,7 @@ export default function Contact() {
           </li>
           <li>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/74368705/admin/dashboard/"
               className="linkedin"
               target="_blank"
               rel="noopener noreferrer"
