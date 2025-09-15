@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-expo/static/css/main.e883a9e9.css",
-    "main.js": "/site-expo/static/js/main.34964daa.js",
+    "main.js": "/site-expo/static/js/main.ab251836.js",
     "static/media/atelier-fabrique.png.jpg": "/site-expo/static/media/atelier-fabrique.png.75e93f601390150d62eb.jpg",
     "static/media/20231219_091234.jpg": "/site-expo/static/media/20231219_091234.64e38c753036dfb41b3d.jpg",
     "static/media/20220219_111659.jpg": "/site-expo/static/media/20220219_111659.b104a216fd23bcb5fa7a.jpg",
@@ -66,10 +66,10 @@
     "static/media/20240826_124715.jpg": "/site-expo/static/media/20240826_124715.fb1f5baa25bb30f454ee.jpg",
     "index.html": "/site-expo/index.html",
     "main.e883a9e9.css.map": "/site-expo/static/css/main.e883a9e9.css.map",
-    "main.34964daa.js.map": "/site-expo/static/js/main.34964daa.js.map"
+    "main.ab251836.js.map": "/site-expo/static/js/main.ab251836.js.map"
   },
   "entrypoints": [
     "static/css/main.e883a9e9.css",
-    "static/js/main.34964daa.js"
+    "static/js/main.ab251836.js"
   ]
 }
