@@ -87,7 +87,7 @@ const Navbar = () => {
           </li>
           <li role="none">
             <Link role="menuitem" to="/apropos" onClick={() => setMenuOpen(false)}>
-              {("Apropos")}
+              {("A propos")}
             </Link>
           </li>
           <li role="none">

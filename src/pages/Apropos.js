@@ -122,7 +122,7 @@ const Apropos = () => {
   <h2 >Pourquoi nous choisir ?</h2>
   <ul>
     <li><strong>Expertise reconnue :</strong> Plus de 20 ans dans le secteur du stand et de l’agencement.</li>
-    <li><strong>Projets personnalisés :</strong> De l’idée au plan 3D, vous êtes accompagné à chaque étape.</li>
+    <li><strong>Projets personnalisés :</strong> De la première idée au rendu 3D, un accompagnement sur mesure à chaque étape.</li>
     <li><strong>Logistique intégrée :</strong> Fabrication, livraison, montage et démontage inclus.</li>
     <li><strong>Éco-conception :</strong> Utilisation de matériaux responsables et circuits courts.</li>
   </ul>

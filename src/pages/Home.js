@@ -126,8 +126,7 @@ const Home = () => {
             <article>
               <h3>Qualité artisanale</h3>
               <p>
-                Chaque projet est une création unique, réalisée avec soin et
-                précision par nos artisans qualifiés.
+               Des créations uniques, réalisées avec une précision millimétrée et le savoir-faire de nos artisans qualifiés.
               </p>
             </article>
             <article>
