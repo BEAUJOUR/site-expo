@@ -88,16 +88,35 @@ const Apropos = () => {
 
       {/* TÉMOIGNAGES */}
       <section className="apropos-testimonials container section animate-on-scroll">
-        <h2 >Ils nous font confiance</h2>
-        <div className="testimonial">
-          <p>"Travail exceptionnel, respect des délais, résultat magnifique. Merci à toute l’équipe !"</p>
-          <span>— Mme Legrand</span>
-        </div>
-        <div className="testimonial">
-          <p>"Un partenaire fiable et passionné, je recommande sans hésiter."</p>
-          <span>— BTP Concept SARL</span>
-        </div>
-      </section>
+  <h2>Ils nous font confiance</h2>
+  
+  <div className="testimonial">
+    <p>"Travail exceptionnel, respect des délais, résultat magnifique. Merci à toute l’équipe !"</p>
+    <span>— M. BEAUJOUR</span>
+  </div>
+
+  <div className="testimonial">
+    <p>"Un partenaire fiable et passionné, je recommande sans hésiter."</p>
+    <span>— BJD.HOME.PRO</span>
+  </div>
+
+  <div className="testimonial">
+    <p>"Une écoute attentive de nos besoins, des propositions créatives et un rendu final au-delà de nos attentes."</p>
+    <span>— M. NOSTER, Architecte d’intérieur</span>
+  </div>
+
+  
+
+  <div className="testimonial">
+    <p>"Un vrai savoir-faire artisanal allié à des solutions modernes. Nous sommes ravis de cette collaboration."</p>
+    <span>— Famille MARTIN</span>
+  </div>
+
+  
+
+ 
+</section>
+
       {/* POURQUOI NOUS CHOISIR */}
 <section className="container section animate-on-scroll">
   <h2 >Pourquoi nous choisir ?</h2>
@@ -113,19 +132,19 @@ const Apropos = () => {
   <h2 >Besoin d’aide ? Consultez notre FAQ</h2>
   <div className="faq">
     <div className="faq-item">
-      <h4> Proposez-vous la livraison et le montage ?</h4>
+      <h3> Proposez-vous la livraison et le montage ?</h3>
       <p>Oui, nous nous occupons de la livraison, du montage et du démontage de vos projets sur toute la France.</p>
     </div>
     <div className="faq-item">
-      <h4> Puis-je voir des plans avant la fabrication ?</h4>
+      <h3> Puis-je voir des plans avant la fabrication ?</h3>
       <p>Bien sûr. Nous réalisons des plans 2D et 3D pour valider votre projet avant la fabrication.</p>
     </div>
     <div className="faq-item">
-      <h4> Quels sont vos délais moyens ?</h4>
+      <h3> Quels sont vos délais moyens ?</h3>
       <p>Les délais varient selon la complexité, mais nous nous engageons à vous fournir un calendrier précis dès validation.</p>
     </div>
     <div className="faq-item">
-      <h4> Intervenez-vous à l’international ?</h4>
+      <h3> Intervenez-vous à l’international ?</h3>
       <p>Principalement en France, mais nous pouvons étudier toute demande spécifique à l’étranger.</p>
     </div>
   </div>

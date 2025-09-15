@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { Link, } from "react-router-dom";
+
 import { FaMoon, FaSun, FaBars } from "react-icons/fa";
 import "../components/styles-component/navbar.css";
 
-// const LANGS = ["fr", "en", "es", "pt"];
-
 const Navbar = () => {
-  const location = useLocation();
-  const { t, i18n } = useTranslation();
+  
+  
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
@@ -36,18 +34,10 @@ const Navbar = () => {
     setMenuOpen(false);
     // scroll to top when language or route changes
     window.scrollTo(0, 0);
-  }, [i18n.language, location.pathname]);
+  }, []);
 
   const toggleMenu = () => setMenuOpen((v) => !v);
   const toggleDarkMode = () => setDarkMode((v) => !v);
-
-  // const currentLang = i18n.language || "fr";
-  // const handleLangToggle = () => {
-  //   const currentIndex = LANGS.indexOf(currentLang);
-  //   const nextIndex = (currentIndex + 1) % LANGS.length;
-  //   i18n.changeLanguage(LANGS[nextIndex]);
-  // };
-
   return (
     
     <nav className="navbar" role="navigation" aria-label="Main navigation">
@@ -63,20 +53,6 @@ const Navbar = () => {
         </div>
 
         <div className="nav-controls">
-          {/* Lang toggle (décommenter si besoin)
-          <button
-            onClick={handleLangToggle}
-            className="nav-btn"
-            aria-label="Changer la langue"
-            title={`Changer la langue (actuelle: ${currentLang.toUpperCase()})`}
-          >
-            <FaGlobe size={20} />
-            <span style={{ marginLeft: 6, fontWeight: "bold" }}>
-              {currentLang.toUpperCase()}
-            </span>
-          </button>
-          */}
-
           {/* Dark Mode */}
           <button
             onClick={toggleDarkMode}
@@ -106,27 +82,27 @@ const Navbar = () => {
         >
           <li className="dark" role="none">
             <Link role="menuitem" to="/" onClick={() => setMenuOpen(false)}>
-              {t("Accueil")}
+              {("Accueil")}
             </Link>
           </li>
           <li role="none">
             <Link role="menuitem" to="/apropos" onClick={() => setMenuOpen(false)}>
-              {t("Apropos")}
+              {("Apropos")}
             </Link>
           </li>
           <li role="none">
             <Link role="menuitem" to="/services" onClick={() => setMenuOpen(false)}>
-              {t("Services")}
+              {("Services")}
             </Link>
           </li>
           <li role="none">
             <Link role="menuitem" to="/projet" onClick={() => setMenuOpen(false)}>
-              {t("Projet")}
+              {("Projet")}
             </Link>
           </li>
           <li role="none">
             <Link role="menuitem" to="/contact" onClick={() => setMenuOpen(false)}>
-              {t("Contact")}
+              {("Contact")}
             </Link>
           </li>
         </ul>

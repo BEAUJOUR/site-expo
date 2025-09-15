@@ -4,22 +4,25 @@ const useScrollAnimation = (selector, animationClass) => {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
 
-    const onScroll = () => {
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add(animationClass);
-        } else {
-          el.classList.remove(animationClass);
-        }
-      });
-    };
+    if (!elements.length) return;
 
-    window.addEventListener('scroll', onScroll);
-    onScroll();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(animationClass);
+          } else {
+            entry.target.classList.remove(animationClass);
+          }
+        });
+      },
+      { threshold: 0.1 } // déclenche quand 10% de l’élément est visible
+    );
+
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, [selector, animationClass]);
 };
