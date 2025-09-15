@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF,FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "../components/styles-component/footer.css"
 
 const Footer = () => {
@@ -32,7 +32,6 @@ const Footer = () => {
         <div className="footer-section">
           <h3>{t("Contact") || "Contact"}</h3>
           <p>📍 91540 MENNECY </p>
-          <p> 📞Directe: 01.60.87.03.22</p>
           <p>📞Standard: 01.60.87.20.02</p>
           <p>✉️ contact@ere91.com</p>
         </div>
@@ -77,7 +76,6 @@ const Footer = () => {
     </li>
   </ul>
 </div>
-
       </div>
 
       <div className="footer-bottom">
@@ -86,6 +84,5 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
 
