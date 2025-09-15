@@ -43,7 +43,7 @@ const Footer = () => {
   <ul className="footer-socials">
     <li>
       <a
-        href="https://www.facebook.com/profile.php?id=100070063475044&locale=fr_FR"
+        href="https://www.facebook.com/profile.php?id=100070063475044"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook"
@@ -52,20 +52,10 @@ const Footer = () => {
         <FaFacebookF />
       </a>
     </li>
+    
     <li>
       <a
-        href="https://twitter.com/EuropeRapideExpo"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Twitter"
-        className="twitter social-icon"
-      >
-        <FaTwitter />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.instagram.com/EuropeRapideExpo"
+        href="https://www.instagram.com/accounts/onetap/?next=%2Feuroperapideexpo%2F"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
@@ -76,7 +66,7 @@ const Footer = () => {
     </li>
     <li>
       <a
-        href="https://www.linkedin.com/company/europe-rapide-expo"
+        href="https://www.linkedin.com/company/74368705/admin/dashboard/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
