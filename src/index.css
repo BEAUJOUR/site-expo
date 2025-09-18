@@ -1,18 +1,21 @@
+/* index.css */
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
-
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* Valeur standard : 100 (fin) à 900 (gras) */
+  font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
+  color: #222;
 }
 
 body.dark {
@@ -20,13 +23,11 @@ body.dark {
   color: #f0eaeae7;
 }
 
-/* Sticky footer layout (flex) - placez en haut du fichier CSS global */
+/* Root and layout containers */
 
-html, body, #root {
+#root {
   height: 100%;
 }
-
-/* site-wrapper : layout vertical complet */
 
 .site-wrapper {
   min-height: 100vh;
@@ -34,9 +35,8 @@ html, body, #root {
   flex-direction: column;
 }
 
-/* site-main prend l'espace restant et pousse le footer en bas */
 .site-main {
   flex: 1 1 auto;
-  /* facultatif : si tu veux un padding latéral ou vertical */
-  /* padding: 1rem 0; */
+  /* Optionnel : padding si nécessaire */
+  /* padding: 1rem; */
 }

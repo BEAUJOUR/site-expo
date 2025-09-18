@@ -17,12 +17,13 @@ const categories = [
   { id: "cuisines", title: "Cuisines", images: cuisinesImages },
   { id: "salons", title: "Salons Expo", images: salonsImages },
   { id: "dressings", title: "Dressings", images: dressingsImages },
-  
 ];
 
 export default function Projet() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [galleryKey, setGalleryKey] = useState(0);
+  const [imageTransition, setImageTransition] = useState(""); // "left" or "right"
   const cardRefs = useRef([]);
   const modalRef = useRef(null);
   const closeBtnRef = useRef(null);
@@ -46,41 +47,49 @@ export default function Projet() {
     }
   }, [selectedImage]);
 
-  const openImage = (src, index) => setSelectedImage({ src, index });
+  const openImage = (src, index) => {
+    setSelectedImage({ src, index });
+    setImageTransition(""); // reset transition
+  };
 
   const closeImage = () => setSelectedImage(null);
 
   const nextImage = () => {
     const nextIndex = (selectedImage.index + 1) % activeCategory.images.length;
+    setImageTransition("left");
     setSelectedImage({ src: activeCategory.images[nextIndex], index: nextIndex });
   };
 
   const prevImage = () => {
     const prevIndex = (selectedImage.index - 1 + activeCategory.images.length) % activeCategory.images.length;
+    setImageTransition("right");
     setSelectedImage({ src: activeCategory.images[prevIndex], index: prevIndex });
   };
 
   return (
     <div className="projet-container">
-      <h2>Découvrez Nos œuvres en Menuiserie</h2>
+      <h2 className="fade-in-up">Découvrez Nos œuvres en Menuiserie</h2>
 
       <div className="category-slider">
         {categories.map((cat, idx) => (
           <button
             key={cat.id}
-            className={`category-btn ${idx === activeCategoryIndex ? "active" : ""}`}
-            onClick={() => setActiveCategoryIndex(idx)}
+            className={`category-btn fade-in-up fade-in-delay-${idx + 1}`}
+            onClick={() => {
+              setActiveCategoryIndex(idx);
+              setGalleryKey(prev => prev + 1); // trigger re-animation
+            }}
           >
             {cat.title}
           </button>
         ))}
       </div>
 
-      <div className="gallery">
+      <div key={galleryKey} className="gallery gallery-fade-enter-active">
         {activeCategory.images.map((img, idx) => (
           <div
             key={idx}
-            className="card"
+            className={`card fade-in-zoom fade-in-delay-${(idx % 4) + 1}`}
             ref={(el) => (cardRefs.current[idx] = el)}
             onClick={() => openImage(img, idx)}
             tabIndex={0}
@@ -98,7 +107,14 @@ export default function Projet() {
               &times;
             </button>
             <button className="modal-arrow left" onClick={prevImage}>&#10094;</button>
-            <img className="modal-content" src={selectedImage.src} alt={activeCategory.title} />
+            <img
+              className={`modal-content ${
+                imageTransition === "left" ? "slide-left" : imageTransition === "right" ? "slide-right" : ""
+              }`}
+              src={selectedImage.src}
+              alt={activeCategory.title}
+              onAnimationEnd={() => setImageTransition("")}
+            />
             <button className="modal-arrow right" onClick={nextImage}>&#10095;</button>
             <div className="modal-title">{activeCategory.title}</div>
           </div>
