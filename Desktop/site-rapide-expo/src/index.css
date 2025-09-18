@@ -1,0 +1,42 @@
+/* index.css */
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+  color: #222;
+}
+
+body.dark {
+  background-color: #124660;
+  color: #f0eaeae7;
+}
+
+/* Root and layout containers */
+
+#root {
+  height: 100%;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1 1 auto;
+  /* Optionnel : padding si nécessaire */
+  /* padding: 1rem; */
+}
