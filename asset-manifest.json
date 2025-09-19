@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-expo/static/css/main.d7ef3ef8.css",
-    "main.js": "/site-expo/static/js/main.095297f6.js",
+    "main.js": "/site-expo/static/js/main.7443c7d3.js",
     "static/media/IMG_1100.jpg": "/site-expo/static/media/IMG_1100.75e93f601390150d62eb.jpg",
     "static/media/atelier-fabrique.png.jpg": "/site-expo/static/media/atelier-fabrique.png.75e93f601390150d62eb.jpg",
     "static/media/20231219_091234.jpg": "/site-expo/static/media/20231219_091234.64e38c753036dfb41b3d.jpg",
@@ -51,7 +51,6 @@
     "static/media/Armoire en chêne et porte ouverte.png": "/site-expo/static/media/Armoire en chêne et porte ouverte.0e12b2233f7d0d4ffe59.png",
     "static/media/Intérieur moderne d'un restaurant élégant.png": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant.ef5df1665e24a25e9291.png",
     "static/media/Cuisine moderne avec éléments en bois et pierre.png": "/site-expo/static/media/Cuisine moderne avec éléments en bois et pierre.f07f24c652cd9bbd0243.png",
-    "static/media/IMG_20200627_160556.jpg": "/site-expo/static/media/IMG_20200627_160556.6cb07405b2272a73aa78.jpg",
     "static/media/Salle de bain moderne et lumineuse.png": "/site-expo/static/media/Salle de bain moderne et lumineuse.445c15143864d1e71117.png",
     "static/media/Construction d'un panneau suspendu.png": "/site-expo/static/media/Construction d'un panneau suspendu.a7604f6a2c5a016c2bc7.png",
     "static/media/Cuisine moderne et élégante avec salle de bain.png": "/site-expo/static/media/Cuisine moderne et élégante avec salle de bain.e2379cbd3786403579d0.png",
@@ -72,10 +71,10 @@
     "static/media/IMG_20220111_101042_resized_20220111_111510933.jpg": "/site-expo/static/media/IMG_20220111_101042_resized_20220111_111510933.670350d499e9d58bbbfe.jpg",
     "index.html": "/site-expo/index.html",
     "main.d7ef3ef8.css.map": "/site-expo/static/css/main.d7ef3ef8.css.map",
-    "main.095297f6.js.map": "/site-expo/static/js/main.095297f6.js.map"
+    "main.7443c7d3.js.map": "/site-expo/static/js/main.7443c7d3.js.map"
   },
   "entrypoints": [
     "static/css/main.d7ef3ef8.css",
-    "static/js/main.095297f6.js"
+    "static/js/main.7443c7d3.js"
   ]
 }
