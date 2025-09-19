@@ -70,7 +70,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.774);
-  transition: transform 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+  transition: transform 0.3s ease, opacity 0.6s ease;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -131,28 +131,7 @@ body {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .services-page .services-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .services-page .services-list .service-card {
-    max-width: 90%;
-  }
-}
-/* Effets globaux */
-.hidden {
-  opacity: 0;
-}
-
-.show {
-  opacity: 1;
-}
-
-/* Animations */
+/* === ANIMATIONS === */
 .fade-in-up.show {
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -188,4 +167,17 @@ body {
 @keyframes zoomIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .services-page .services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-page .services-list .service-card {
+    max-width: 90%;
+  }
 }
