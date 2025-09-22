@@ -2,7 +2,6 @@
 
 import React from "react";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-import { FaTools, FaLightbulb, FaHandsHelping, FaLeaf } from "react-icons/fa";
 import "../style/apropos.css";
 
 function importAll(r) {

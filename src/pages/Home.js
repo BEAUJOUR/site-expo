@@ -160,13 +160,10 @@ const Home = () => {
       Vous avez un projet en tête ? Cliquez ci-dessous pour nous envoyer votre demande de devis. 
       Notre équipe vous répondra rapidement.
     </p>
-
-    <button 
-      className="btn-devis fade-in-right" 
-      onClick={() => navigate("/contact")}
-    >
-      Faire une demande de devis
-    </button>
+<p className="gallery-note fade-in-up">
+          
+            <strong onClick={() => navigate("/contact")}> Demande un devis</strong>
+          </p>
   </div>
 </section>
 
