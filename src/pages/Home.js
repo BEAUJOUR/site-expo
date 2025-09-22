@@ -50,11 +50,7 @@ const Home = () => {
         <div className="container">
           <h2 className="fade-in-left">Votre espace, notre passion</h2>
           <p className="fade-in-up">
-            Depuis plus de 20 ans, notre entreprise accompagne particuliers et
-            professionnels dans la réalisation de leurs projets d’agencement
-            intérieur et de menuiserie sur mesure. Alliant savoir-faire
-            artisanal et innovation, nous créons des espaces fonctionnels,
-            esthétiques et durables.
+           Spécialistes en agencement et menuiserie sur mesure depuis plus de 25 ans, nous accompagnons nos clients avec un savoir-faire artisanal et des solutions innovantes adaptées à chaque projet..
           </p>
           <p className="fade-in-right">
             Que vous rêviez d’une cuisine chaleureuse, d’un bureau optimisé ou
@@ -157,6 +153,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="devis-section fade-in-up">
+  <div className="container">
+    <h2 className="fade-in-down">Demande de devis gratuit</h2>
+    <p className="fade-in-left">
+      Vous avez un projet en tête ? Cliquez ci-dessous pour nous envoyer votre demande de devis. 
+      Notre équipe vous répondra rapidement.
+    </p>
+
+    <button 
+      className="btn-devis fade-in-right" 
+      onClick={() => navigate("/contact")}
+    >
+      Faire une demande de devis
+    </button>
+  </div>
+</section>
+
     </div>
   );
 };
