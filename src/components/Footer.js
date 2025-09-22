@@ -32,8 +32,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>{t("Contact") || "Contact"}</h3>
           <p>📍 91540 MENNECY </p>
-          <p>📞Standard: 01.60.87.20.02</p>
-          <p>✉️ contact@ere91.com</p>
+          <p>📞 <a href="tel:0160872002">01.60.87.20.02</a></p>
+<p>✉️ <a href="mailto:contact@ere91.com">contact@ere91.com</a></p>
+
         </div>
 
        {/* Bloc 4 : Réseaux sociaux */}

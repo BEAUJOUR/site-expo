@@ -91,15 +91,7 @@ export default function Contact() {
             placeholder="Votre nom"
           />
 
-          <label htmlFor="entreprise">Société</label>
-          <input
-            id="entreprise"
-            name="entreprise"
-            type="text"
-            value={formData.entreprise}
-            onChange={handleChange}
-            placeholder="Votre société (facultatif)"
-          />
+         
 
           <label htmlFor="email">Email</label>
           <input

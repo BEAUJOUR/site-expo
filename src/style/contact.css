@@ -137,6 +137,9 @@
   margin: 0 0 1rem;
   font-weight: 700;
 }
+.contact-left h2 {
+ margin-top: 15px;
+}
 
 .contact-right h3 {
   margin-top: 2.25rem;

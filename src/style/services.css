@@ -1,12 +1,4 @@
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 .dark .services-list p {
   color: #020202;
@@ -66,7 +58,7 @@ body {
 }
 
 .services-page .services-list .service-card {
-  background-color: #f9f9f9;
+  background-color: rgba(245, 245, 245, 0.897);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.774);
@@ -179,5 +171,60 @@ body {
 
   .services-page .services-list .service-card {
     max-width: 90%;
+  }
+}
+
+/* === CTA CONTACT === */
+.services-page .cta-contact {
+  background-color: #f9e30c;
+  color: green;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  /* border-radius: 1rem; */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.services-page .cta-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: green;
+}
+
+.services-page .cta-contact p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.services-page .cta-contact button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.services-page .cta-contact button:hover,
+.services-page .cta-contact button:focus {
+  /* background-color: #333; */
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-page .cta-contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-page .cta-contact p {
+    font-size: 1rem;
   }
 }
