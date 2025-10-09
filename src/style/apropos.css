@@ -85,13 +85,6 @@ font-family: "Libertinus Math", serif;
   position: relative;
 }
 
-/* .apropos-content li::before {
-  content: '★';
-  position: absolute;
-  left: 0;
-  color: #f9e30c;
-} */
-
 /* === ÉQUIPE === */
 .apropos-team {
   display: flex;
@@ -150,27 +143,204 @@ span {
 }
 
 /* === TÉMOIGNAGES === */
+/* === SLIDER TÉMOIGNAGES – STYLE EUROPE RAPIDE EXPO === */
 .apropos-testimonials {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem 0;
+}
+
+.apropos-testimonials h2 {
+  font-size: 2.2rem;
+  color: #f9e30c;
+  text-shadow: 2px 2px #020202;
+  font-family: "Libertinus Math", serif;
+  margin-bottom: 2rem;
+}
+
+/* Conteneur principal */
+.testimonials-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Bande défilante */
+.carousel-track {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  width: max-content;
+  animation: slideHorizontal 45s linear infinite;
+  will-change: transform;
 }
 
-.testimonial {
+/* Animation douce et infinie */
+@keyframes slideHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Carte Témoignage */
+.testimonial-card {
+  margin: 10px;
+  flex: 0 0 550px;
   background: #fffce6;
-  border-left: 5px solid #f9e30c;
-  padding: 1rem 1.5rem;
-  max-width: 700px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  font-style: italic;
-  opacity: 0;
-  animation: fadeInRight 0.8s ease forwards;
+  border: 2px solid #f9e30c;
+  border-radius: 14px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ height: 280px;
 }
 
-.testimonial.visible {
-  opacity: 1;
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+/* Texte et nom */
+.testimonial-text {
+  font-style: italic;
+  color: #222;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  position: relative;
+ 
+}
+
+.testimonial-text::before {
+
+  font-size: 2rem;
+  color: #f9e30c;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  font-family: serif;
+  opacity: 0.6;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: green;
+  font-size: 0.95rem;
+  text-align: right;
+  text-align: center;
+ 
+}
+
+/* Pause survol */
+.testimonials-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Effet fondu discret sur les bords */
+.testimonials-carousel::before,
+.testimonials-carousel::after {
+ 
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.testimonials-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 60%, transparent);
+}
+
+.testimonials-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 60%, transparent);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 260px;
+    padding: 1.3rem;
+  }
+
+  .carousel-track {
+    animation: slideHorizontal 30s linear infinite;
+  }
+
+  .testimonials-carousel::before,
+  .testimonials-carousel::after {
+    width: 40px;
+  }
+}
+/* === Responsive : Tablette moyenne === */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    flex: 0 0 360px;
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .testimonial-name {
+    font-size: 0.9rem;
+  }
+
+  .carousel-track {
+    animation: slideHorizontal 35s linear infinite;
+  }
+
+  .testimonials-carousel::before,
+  .testimonials-carousel::after {
+    width: 60px;
+  }
+}
+
+/* === Responsive : Mobile compact === */
+@media (max-width: 480px) {
+  .apropos-testimonials {
+    padding: 2rem 0;
+  }
+
+  .apropos-testimonials h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-card {
+    flex: 0 0 240px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .testimonial-name {
+    font-size: 0.85rem;
+    color: #006400; /* vert foncé lisible sur petit écran */
+  }
+
+  .carousel-track {
+    animation: slideHorizontal 25s linear infinite;
+  }
+
+  .testimonials-carousel::before,
+  .testimonials-carousel::after {
+    width: 30px;
+  }
+}
+
 
 /* === GALERIE === */
 .apropos-gallery .gallery {

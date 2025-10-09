@@ -8,29 +8,22 @@ import Projet from "./pages/Projet";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// 🔥 Import AOS
+import ScrollToTop from "./components/ScrollToTop"; // ✅
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-/**
- * AOSController
- * - Initialise AOS une seule fois au montage
- * - Rafraîchit AOS à chaque changement de route pour prendre en compte le DOM rendu
- */
 function AOSController() {
   const location = useLocation();
 
   useEffect(() => {
     Aos.init({
-      duration: 1000, // Durée de l'animation en ms
-      once: false,    // false => permet de rejouer l'animation en cas de navigation. Mettre true si tu veux que ça joue une seule fois.
-      // easing: 'ease-out-cubic',
+      duration: 1000,
+      once: false,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    // Refresh AOS après chaque navigation pour que les nouveaux éléments soient détectés
     Aos.refresh();
   }, [location]);
 
@@ -40,14 +33,11 @@ function AOSController() {
 function App() {
   return (
     <Router>
-      {/* Contrôle AOS : init + refresh on navigation */}
       <AOSController />
+      <ScrollToTop /> {/* ✅ remet le scroll en haut à chaque route */}
 
-      {/* site-wrapper = layout flex column (header / main / footer) */}
       <div className="site-wrapper">
         <Navbar />
-
-        {/* main qui prend tout l'espace restant et pousse le footer en bas */}
         <main className="site-main" role="main">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -58,7 +48,6 @@ function App() {
             <Route path="/*" element={<Home />} />
           </Routes>
         </main>
-
         <Footer />
       </div>
     </Router>

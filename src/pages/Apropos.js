@@ -134,20 +134,19 @@ const Apropos = () => {
           </h2>
           <ul className="animate-on-scroll fade-in-right valeurs-list">
             <li>
-             <strong>Qualité :</strong> Des
-              finitions soignées et des matériaux haut de gamme
+              <strong>Qualité :</strong> Des finitions soignées et des matériaux
+              haut de gamme
             </li>
             <li>
-              <strong>Innovation :</strong>{" "}
-              L’alliance du savoir-faire traditionnel et des outils numériques
+              <strong>Innovation :</strong> L’alliance du savoir-faire
+              traditionnel et des outils numériques
             </li>
             <li>
-            <strong>Écoute :</strong> Un
-              accompagnement personnalisé
+              <strong>Écoute :</strong> Un accompagnement personnalisé
             </li>
             <li>
-              <strong>Écoresponsabilité :</strong>{" "}
-              Circuits courts et matériaux certifiés
+              <strong>Écoresponsabilité :</strong> Circuits courts et matériaux
+              certifiés
             </li>
           </ul>
         </section>
@@ -173,16 +172,65 @@ const Apropos = () => {
             ))}
           </div>
         </section>
-
         {/* TÉMOIGNAGES */}
         <section
           className="apropos-testimonials container section animate-on-scroll fade-in-up"
           aria-labelledby="temoignages"
         >
           <h2 id="temoignages" className="animate-on-scroll fadeLeft">
-            Ils nous font confiance
+            Retours de nos clients
           </h2>
-          {/* (tes témoignages restent comme avant) */}
+
+          <div className="testimonials-carousel">
+            <div className="carousel-track">
+              {[
+                {
+                  name: "Ingrid InTouch",
+                  header: "Chers Tous",
+                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
+                },
+                {
+                  name: "Kejian",
+                  header: "Bonjour Monsieur GARAGANTA,",
+                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
+                },
+
+                {
+                  name: "Client particulier",
+                   header: "Bonjour Monsieur GARAGANTA,",
+                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
+                },
+              
+              ]
+                // On double les cartes pour créer une boucle fluide
+                .concat([
+                 {
+                  name: "Ingrid InTouch",
+                  header: "Chers Tous",
+                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
+                },
+                {
+                  name: "Kejian",
+                  header: "Bonjour Monsieur GARAGANTA,",
+                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
+                },
+
+                {
+                  name: "Client particulier",
+                   header: "Bonjour Monsieur GARAGANTA,",
+                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
+                },
+                ])
+                .map((t, i) => (
+                  <div key={i} className="testimonial-card">
+                    {/* <img src={t.img} alt={t.name} loading="lazy" /> */}
+                    <p className="testimonial-text">“{t.header}”</p>
+                    <p className="testimonial-text">“{t.text}”</p>
+                    <p className="testimonial-name">{t.name}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
         </section>
 
         {/* POURQUOI NOUS */}
@@ -216,30 +264,28 @@ const Apropos = () => {
         {/* CTA */}
         <section className="apropos-cta container section animate-on-scroll fade-in-up">
           <h2>Prêts à donner vie à vos idées ?</h2>
-          <p>
-            Notre équipe vous accompagne de la conception à la réalisation.
-          </p>
+          <p>Notre équipe vous accompagne de la conception à la réalisation.</p>
           <button onClick={() => (window.location.href = "/contact")}>
             Contactez-nous
           </button>
         </section>
 
-          {/* LOCALISATION */}
-      <section className="apropos-location container section animate-on-scroll fade-in-up">
-        <h2 className="animate-on-scroll fade-in-down">Nous trouver</h2>
-        <div className="map-container animate-on-scroll growIn">
-          <iframe
-            title="Europe Rapide Expo"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.0893106115652!2d2.446855870950003!3d48.56184103677699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5dbb47bbdce1d%3A0x82c7bdcd66fe3bf0!2sEurope%20Rapide%20Expo!5e1!3m2!1sfr!2sfr!4v1751613272043!5m2!1sfr!2sfr"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
-      </section>
+        {/* LOCALISATION */}
+        <section className="apropos-location container section animate-on-scroll fade-in-up">
+          <h2 className="animate-on-scroll fade-in-down">Nous trouver</h2>
+          <div className="map-container animate-on-scroll growIn">
+            <iframe
+              title="Europe Rapide Expo"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.0893106115652!2d2.446855870950003!3d48.56184103677699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5dbb47bbdce1d%3A0x82c7bdcd66fe3bf0!2sEurope%20Rapide%20Expo!5e1!3m2!1sfr!2sfr!4v1751613272043!5m2!1sfr!2sfr"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </section>
       </div>
     </main>
   );
