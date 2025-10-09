@@ -45,21 +45,6 @@
     <noscript>Activez JavaScript pour profiter de toutes les fonctionnalités.</noscript>
     <div id="root"></div>
 
-    <!-- Script de redirection GitHub Pages -->
-    <script>
-      (function () {
-        var pathname = window.location.pathname;
-
-        // Vérifie si on est bien dans ton projet "site-expo"
-        if (pathname.startsWith("/site-expo/")) {
-          var subPath = pathname.replace("/site-expo", "");
-
-          // Si on n'est pas à la racine, redirige vers la version hash (#)
-          if (subPath && subPath !== "/") {
-            window.location.replace("/site-expo/#" + subPath);
-          }
-        }
-      })();
-    </script>
+  
   </body>
 </html>
