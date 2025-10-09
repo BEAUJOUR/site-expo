@@ -23,34 +23,38 @@ const Home = () => {
   return (
     <div className="home fade-in-up">
       <header className="hero fade-in-left-animate">
-  <div
-    className="background-layer"
-    style={{
-      backgroundImage: `url(${expo})`,
-    }}
-  ></div>
-  <div className="overlay fade-in-zoom-animate">
-    <div className="hero-content fade-in-up-animate">
-      <h1 className="fade-in-up-animate">EUROPE RAPIDE EXPO</h1>
-      <p className="fade-in-left-animate">
-        Des créations sur mesure qui donnent vie à vos espaces
-      </p>
-      <p className="fade-in-right-animate">
-        Explorez nos expositions uniques et laissez-vous inspirer par
-        l’innovation.
-      </p>
-      <div className="cta-button fade-in-zoom-animate">
-        <button onClick={() => navigate("/contact")}>Contactez-nous</button>
-      </div>
-    </div>
-  </div>
-</header>
+        <div
+          className="background-layer"
+          style={{
+            backgroundImage: `url(${expo})`,
+          }}
+        ></div>
+        <div className="overlay fade-in-zoom-animate">
+          <div className="hero-content fade-in-up-animate">
+            <h1 className="fade-in-up-animate">EUROPE RAPIDE EXPO</h1>
+            <p className="fade-in-left-animate">
+              Des créations sur mesure qui donnent vie à vos espaces
+            </p>
+            <p className="fade-in-right-animate">
+              Explorez nos expositions uniques et laissez-vous inspirer par
+              l’innovation.
+            </p>
+            <div className="cta-button fade-in-zoom-animate">
+              <button onClick={() => navigate("/contact")}>
+                Contactez-nous
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <section className="intro fade-in-down">
         <div className="container">
           <h2 className="fade-in-left">Votre espace, notre passion</h2>
           <p className="fade-in-up">
-           Spécialistes en agencement et menuiserie sur mesure depuis plus de 25 ans, nous accompagnons nos clients avec un savoir-faire artisanal et des solutions innovantes adaptées à chaque projet..
+            Spécialistes en agencement et menuiserie sur mesure depuis plus de
+            25 ans, nous accompagnons nos clients avec un savoir-faire artisanal
+            et des solutions innovantes adaptées à chaque projet..
           </p>
           <p className="fade-in-right">
             Que vous rêviez d’une cuisine chaleureuse, d’un bureau optimisé ou
@@ -58,7 +62,8 @@ const Home = () => {
             concrétiser vos envies avec rigueur et créativité.
           </p>
           <p className="gallery-note fade-in-left">
-            Veuillez nous <strong onClick={() => navigate("/contact")}>Contacter</strong>
+            Veuillez nous{" "}
+            <strong onClick={() => navigate("/contact")}>Contacter</strong>
           </p>
         </div>
       </section>
@@ -67,16 +72,17 @@ const Home = () => {
         <div className="container">
           <h2 className="fade-in-up">Nos domaines d’expertise</h2>
           <p className="fade-in-left">
-            Nous proposons une large gamme de prestations adaptées à vos besoins :
+            Nous proposons une large gamme de prestations adaptées à vos besoins
+            :
           </p>
           <ul>
             <li className="fade-in-right">
-              Agencement d’intérieur personnalisé : optimisation et design de vos
-              espaces de vie et de travail
+              Agencement d’intérieur personnalisé : optimisation et design de
+              vos espaces de vie et de travail
             </li>
             <li className="fade-in-left">
-              Menuiserie artisanale : création de mobilier, dressings, escaliers,
-              menuiseries sur mesure
+              Menuiserie artisanale : création de mobilier, dressings,
+              escaliers, menuiseries sur mesure
             </li>
             <li className="fade-in-right">
               Conseil & accompagnement : de l’étude à la réalisation, un suivi
@@ -106,7 +112,11 @@ const Home = () => {
                 src={src}
                 alt={`Réalisation ${index + 1}`}
                 loading="lazy"
-                style={{ width: "100%", maxWidth: "400px", borderRadius: "8px" }}
+                style={{
+                  width: "100%",
+                  maxWidth: "400px",
+                  borderRadius: "8px",
+                }}
               />
             ))}
           </div>
@@ -153,20 +163,81 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="devis-section fade-in-up">
-  <div className="container">
-    <h2 className="fade-in-down">Demande de devis gratuit</h2>
-    <p className="fade-in-left">
-      Vous avez un projet en tête ? Cliquez ci-dessous pour nous envoyer votre demande de devis. 
-      Notre équipe vous répondra rapidement.
-    </p>
-<p className="gallery-note fade-in-up">
-          
-            <strong onClick={() => navigate("/contact")}> Demande un devis</strong>
-          </p>
-  </div>
-</section>
+      {/* TÉMOIGNAGES */}
+        <section
+          className="apropos-testimonials container section animate-on-scroll fade-in-up"
+          aria-labelledby="temoignages"
+        >
+          <h2 id="temoignages" className="animate-on-scroll fadeLeft">
+           Ils partagent leur expérience avec Europe Rapide Expo
+          </h2>
 
+          <div className="testimonials-carousel">
+            <div className="carousel-track">
+              {[
+                {
+                  name: "Ingrid InTouch",
+                  header: "Chers Tous",
+                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
+                },
+                {
+                  name: "Kejian",
+                  header: "Bonjour Monsieur GARAGANTA,",
+                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
+                },
+
+                {
+                  name: "Client particulier",
+                   header: "Bonjour Monsieur GARAGANTA,",
+                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
+                },
+              
+              ]
+                // On double les cartes pour créer une boucle fluide
+                .concat([
+                 {
+                  name: "Ingrid InTouch",
+                  header: "Chers Tous",
+                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
+                },
+                {
+                  name: "Kejian",
+                  header: "Bonjour Monsieur GARAGANTA,",
+                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
+                },
+
+                {
+                  name: "Client particulier",
+                   header: "Bonjour Monsieur GARAGANTA,",
+                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
+                },
+                ])
+                .map((t, i) => (
+                  <div key={i} className="testimonial-card">
+                    {/* <img src={t.img} alt={t.name} loading="lazy" /> */}
+                    <p className="testimonial-text">“{t.header}”</p>
+                    <p className="testimonial-text">“{t.text}”</p>
+                    <p className="testimonial-name">{t.name}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </section>
+      <section className="devis-section fade-in-up">
+        <div className="container">
+          <h2 className="fade-in-down">Demande de devis gratuit</h2>
+          <p className="fade-in-left">
+            Vous avez un projet en tête ? Cliquez ci-dessous pour nous envoyer
+            votre demande de devis. Notre équipe vous répondra rapidement.
+          </p>
+          <p className="gallery-note fade-in-up">
+            <strong onClick={() => navigate("/contact")}>
+              {" "}
+              Demande un devis
+            </strong>
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
