@@ -97,7 +97,7 @@ const Apropos = () => {
             Stand et Événementiel
           </h2>
           <p className="animate-on-scroll fade-in-up">
-            Experts du stand depuis plus de 20 ans, nous vous accompagnons dans
+            Experts du stand depuis plus de 25 ans, nous vous accompagnons dans
             vos projets d’aménagements éphémères, showrooms ou expositions.
             Votre conseiller dédié gère : plans, fabrication, logistique,
             montage et démontage.

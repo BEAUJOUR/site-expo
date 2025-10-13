@@ -111,7 +111,7 @@ const Services = () => {
           className="hidden fade-in-up"
           ref={(el) => el && sectionsRef.current.push(el)}
         >
-          Experts en fabrication et montage de stands depuis plus de 20 ans,
+          Experts en fabrication et montage de stands depuis plus de 25 ans,
           nous vous accompagnons dans tous vos projets d’agencement éphémère :
           showroom, expositions, salons...
         </p>
