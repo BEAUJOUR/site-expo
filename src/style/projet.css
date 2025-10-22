@@ -151,7 +151,7 @@ body.dark .projet-container button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: auto;
-  gap: 1.5rem;
+  gap: 1.20rem;
   margin-bottom: 4rem;
   justify-content: center;
 }
@@ -159,7 +159,7 @@ body.dark .projet-container button {
 .card {
   position: relative;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   overflow: hidden;
   cursor: pointer;
   background: var(--color-surface);
@@ -446,4 +446,34 @@ body.dark .cta-projet button:hover {
   .cta-projet p {
     font-size: 1rem;
   }
+}
+
+
+/* === PATCH NETTETÉ (append-only) === */
+
+/* Évite le flou dû au contexte 3D */
+.gallery .card {
+  transform-style: flat;
+}
+
+/* Stabilise le rendu des vignettes (downscaling propre) */
+.gallery .card img {
+  image-rendering: auto !important;  /* laisse le navigateur choisir le meilleur filtre */
+  backface-visibility: hidden;
+  transform: none;                   /* pas de transform résiduel sur l'image */
+  will-change: auto;
+}
+
+/* Colonnes nettes sur desktop (évite largeurs fractionnelles .33px) */
+@media (min-width: 769px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, 320px);
+    justify-content: center;
+  }
+}
+
+/* Assure que l'anim de zoom ne laisse aucun scale actif (moins de flou) */
+@keyframes zoomIn {
+  0%   { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: none; }
 }

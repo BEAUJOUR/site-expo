@@ -1,32 +1,50 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "../style/projet.css";
 
-function importImages(context) {
-  return context.keys().map(context);
+// === UTILS ===
+const byName = (a, b) => a.localeCompare(b);
+const basename = (p) => p.split("/").pop().replace("_thumb.webp", "");
+
+/** mappe { name, thumb, full } */
+function mapThumbsAndFull(thumbCtx, fullCtx) {
+  const thumbs = thumbCtx.keys().sort(byName);
+  const fulls = fullCtx.keys().sort(byName);
+  const result = [];
+
+  for (const thumbKey of thumbs) {
+    const base = basename(thumbKey);
+    const fullMatch = fulls.find((f) => f.includes(base));
+    if (fullMatch) {
+      result.push({
+        name: base,
+        thumb: thumbCtx(thumbKey),
+        full: fullCtx(fullMatch),
+      });
+    }
+  }
+  return result;
 }
 
-const salle_de_bain = importImages(
-  require.context(
-    "../assets/projets/salle_de_bain",
-    false,
-    /\.(jpg|jpeg|png|webp)$/
-  )
+// === IMPORTS IMAGES ===
+const cuisinesImages = mapThumbsAndFull(
+  require.context("../assets/projets/cuisines/thumbs", false, /\.(webp)$/i),
+  require.context("../assets/projets/cuisines/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
-const cuisinesImages = importImages(
-  require.context("../assets/projets/cuisines", false, /\.(jpg|jpeg|png|webp)$/)
+const salonsImages = mapThumbsAndFull(
+  require.context("../assets/projets/salons/thumbs", false, /\.(webp)$/i),
+  require.context("../assets/projets/salons/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
-const salonsImages = importImages(
-  require.context("../assets/projets/salons", false, /\.(jpg|jpeg|png|webp)$/)
+const meublesImages = mapThumbsAndFull(
+  require.context("../assets/projets/meubles/thumbs", false, /\.(webp)$/i),
+  require.context("../assets/projets/meubles/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
-const dressingsImages = importImages(
-  require.context(
-    "../assets/projets/dressings",
-    false,
-    /\.(jpg|jpeg|png|webp)$/
-  )
+const dressingsImages = mapThumbsAndFull(
+  require.context("../assets/projets/dressings/thumbs", false, /\.(webp)$/i),
+  require.context("../assets/projets/dressings/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
-const meublesImages = importImages(
-  require.context("../assets/projets/meubles", false, /\.(jpg|jpeg|png|webp)$/)
+const salle_de_bain = mapThumbsAndFull(
+  require.context("../assets/projets/salle_de_bain/thumbs", false, /\.(webp)$/i),
+ require.context("../assets/projets/salle_de_bain/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
 
 const categories = [
@@ -37,24 +55,32 @@ const categories = [
   { id: "dressings", title: "Dressings", images: dressingsImages },
 ];
 
+  
+
+  
+
+
+
+// === COMPONENT ===
 export default function Projet() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [galleryKey, setGalleryKey] = useState(0);
-  const [imageTransition, setImageTransition] = useState(""); // "left" or "right"
-  const cardRefs = useRef([]);
-  const modalRef = useRef(null);
+  const [imageTransition, setImageTransition] = useState("");
   const closeBtnRef = useRef(null);
 
   const activeCategory = categories[activeCategoryIndex];
 
   useEffect(() => {
-    function onKey(e) {
+    const onKey = (e) => {
       if (e.key === "Escape") setSelectedImage(null);
-    }
+      if (!selectedImage) return;
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [selectedImage, activeCategoryIndex]);
 
   useEffect(() => {
     if (selectedImage) {
@@ -65,72 +91,91 @@ export default function Projet() {
     }
   }, [selectedImage]);
 
-  const openImage = (src, index) => {
-    setSelectedImage({ src, index });
-    setImageTransition(""); // reset transition
+  const openImage = (full, index) => {
+    setSelectedImage({ full, index });
+    setImageTransition("");
   };
 
-  const closeImage = () => setSelectedImage(null);
+  const closeImage = useCallback(() => setSelectedImage(null), []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
+    if (!selectedImage) return;
     const nextIndex = (selectedImage.index + 1) % activeCategory.images.length;
     setImageTransition("left");
     setSelectedImage({
-      src: activeCategory.images[nextIndex],
+      full: activeCategory.images[nextIndex].full,
       index: nextIndex,
     });
-  };
+  }, [selectedImage, activeCategory]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
+    if (!selectedImage) return;
     const prevIndex =
       (selectedImage.index - 1 + activeCategory.images.length) %
       activeCategory.images.length;
     setImageTransition("right");
     setSelectedImage({
-      src: activeCategory.images[prevIndex],
+      full: activeCategory.images[prevIndex].full,
       index: prevIndex,
     });
-  };
+  }, [selectedImage, activeCategory]);
 
   return (
     <div className="projet-container">
-      <h2 className="fade-in-up">Découvrez Nos œuvres en Menuiserie</h2>
+      <h2>Découvrez Nos œuvres en Menuiserie</h2>
 
-      <div className="category-slider">
-        {categories.map((cat, idx) => (
-          <button
-            key={cat.id}
-            className={`category-btn fade-in-up fade-in-delay-${idx + 1}`}
-            onClick={() => {
-              setActiveCategoryIndex(idx);
-              setGalleryKey((prev) => prev + 1); // trigger re-animation
-            }}
-          >
-            {cat.title}
-          </button>
-        ))}
+      <div className="category-slider" role="tablist" aria-label="Catégories">
+        {categories.map((cat, idx) => {
+          const isActive = idx === activeCategoryIndex;
+          return (
+            <button
+              key={cat.id}
+              role="tab"
+              aria-selected={isActive}
+              className={`category-btn ${isActive ? "active" : ""}`}
+              onClick={() => {
+                setActiveCategoryIndex(idx);
+                setGalleryKey((prev) => prev + 1);
+              }}
+            >
+              {cat.title}
+            </button>
+          );
+        })}
       </div>
 
-      <div key={galleryKey} className="gallery gallery-fade-enter-active">
+      {/* Galerie avec miniatures */}
+      <div key={galleryKey} className="gallery">
         {activeCategory.images.map((img, idx) => (
           <div
-            key={idx}
-            className={`card fade-in-zoom fade-in-delay-${(idx % 4) + 1}`}
-            ref={(el) => (cardRefs.current[idx] = el)}
-            onClick={() => openImage(img, idx)}
+            key={img.name + idx}
+            className="card"
+            onClick={() => openImage(img.full, idx)}
             tabIndex={0}
+            role="button"
+            aria-label={`${activeCategory.title} ${idx + 1}`}
           >
             <img
-              src={img}
+              src={img.thumb}
+              srcSet={`${img.thumb} 1x, ${img.full} 2x`}
               alt={`${activeCategory.title} ${idx + 1}`}
               loading="lazy"
               decoding="async"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+                imageRendering: "auto",
+              }}
             />
             <div className="card-info">{activeCategory.title}</div>
           </div>
         ))}
       </div>
 
+      {/* Modale plein écran */}
       {selectedImage && (
         <div
           className="modal"
@@ -139,11 +184,7 @@ export default function Projet() {
           aria-modal="true"
           aria-labelledby="modal-title"
         >
-          <div
-            className="modal-box"
-            onClick={(e) => e.stopPropagation()}
-            ref={modalRef}
-          >
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
             <button
               className="close-btn"
               onClick={closeImage}
@@ -152,13 +193,17 @@ export default function Projet() {
             >
               &times;
             </button>
+
             <button
               className="modal-arrow left"
-              onClick={prevImage}
-              aria-label="Image précédente"
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
             >
               &#10094;
             </button>
+
             <img
               className={`modal-content ${
                 imageTransition === "left"
@@ -167,33 +212,35 @@ export default function Projet() {
                   ? "slide-right"
                   : ""
               }`}
-              src={selectedImage.src}
+              src={selectedImage.full}
               alt={`${activeCategory.title} ${selectedImage.index + 1}`}
               onAnimationEnd={() => setImageTransition("")}
             />
+
             <button
               className="modal-arrow right"
-              onClick={nextImage}
-              aria-label="Image suivante"
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
             >
               &#10095;
             </button>
+
             <div id="modal-title" className="modal-title">
               {activeCategory.title}
             </div>
           </div>
         </div>
       )}
-     <section className="cta-projet">
-  <h2>Passez de l’idée à l’action</h2>
-  <p>
-    Des idées ? Nous les transformons en réalisations sur mesure.
-  </p>
-  <button onClick={() => (window.location.href = "/contact")}>
-    Contactez-nous
-  </button>
-</section>
 
+      <section className="cta-projet">
+        <h2>Passez de l’idée à l’action</h2>
+        <p>Des idées ? Nous les transformons en réalisations sur mesure.</p>
+        <button onClick={() => (window.location.href = "/contact")}>
+          Contactez-nous
+        </button>
+      </section>
     </div>
   );
 }

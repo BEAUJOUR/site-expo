@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "../style/services.css";
-import endoftext from "../assets/Atelier/endoftext.png";
-import expo from "../assets/chantier/expo.png";
-import conception from "../assets/Atelier/conception.png";
+import endoftext from "../assets/savoir_faire/ATELIER8_thumb.webp";
+import expo from "../assets/savoir_faire/Construction d'un panneau suspendu_thumb.webp";
+import conception from "../assets/savoir_faire/Atelier de menuiserie et rangement minimaliste_thumb.webp";
 import menuiserie from "../assets/Atelier/menuiserie.png";
 import { Link } from "react-router-dom";
 
