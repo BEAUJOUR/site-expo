@@ -179,13 +179,16 @@ npm run make:thumbs
 
 🖼️ Taille max recommandée : 3 Mo / image
 
-👨‍💻 Auteur
-Jean Danor Beaujour (Bicool)
-Métreur TCE – Développeur Web React & Node.js
-🏢 Europe Rapide Expo – Agencement & Menuiserie sur mesure
-📧 contact@ere91.com
-🌐 https://beaujour.github.io/site-expo/
-🐙 GitHub – BEAUJOUR
+## 👨‍💻 Auteur
+
+**Jean Danor Beaujour (Bicool)**  
+Métreur TCE – Dessinateur Projeteur – Développeur Web React & Node.js  
+Consultant en automatisation IA  
+
+🏢 **BJD-PRO**  
+📧 [beaujourbicool@gmail.com](mailto:beaujourbicool@gmail.com)  
+🐙 [GitHub – BEAUJOUR](https://github.com/BEAUJOUR)
+
 
 ✨ Europe Rapide Expo
 L’art de l’agencement sur mesure, allié à la puissance du digital.
