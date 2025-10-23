@@ -65,6 +65,7 @@
   text-shadow: 0 0 8px #f9e30c, 0 0 20px #f9e30c, 0 0 40px #f9e30c;
   cursor: default;
   transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   font-family: 'Playfair Display','Libertinus Math',serif;
 }
 
 .footer-logo:hover {

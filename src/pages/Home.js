@@ -1,7 +1,8 @@
 import "../style/home.css";
 import { useNavigate } from "react-router-dom";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-import expo from "../assets/chantier/expo.png";
+// import expo from "../assets/chantier/expo.png";
+import Hero from "../components/Hero";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -22,7 +23,7 @@ const Home = () => {
 
   return (
     <div className="home fade-in-up">
-      <header className="hero fade-in-left-animate">
+      {/* <header className="hero fade-in-left-animate">
         <div
           className="background-layer"
           style={{
@@ -46,7 +47,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Hero/>
 
       <section className="intro fade-in-down">
         <div className="container">

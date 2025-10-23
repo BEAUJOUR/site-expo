@@ -1,0 +1,325 @@
+Structure du dossier pour le volume Windows
+Le num�ro de s�rie du volume est B87C-6C4A
+C:\USERS\OFFICE\DESKTOP\SITE_RAPIDE_EXPO_COPIE\SRC
+|   App.js
+|   index.css
+|   index.js
+|   package.json
+|   README.md
+|   
++---assets
+|   +---Atelier
+|   |       ATELIER10.jpg
+|   |       ATELIER13 - Copie.jpg
+|   |       ATELIER14 - Copie.jpg
+|   |       ATELIER17 - Copie.jpg
+|   |       ATELIER18 - Copie.jpg
+|   |       ATELIER19 - Copie.jpg
+|   |       ATELIER3.jpg
+|   |       ATELIER5.jpg
+|   |       ATELIER7 - Copie.jpg
+|   |       ATELIER8.jpg
+|   |       conception.png
+|   |       endoftext.png
+|   |       image006.jpg
+|   |       IMG_1096.JPG
+|   |       IMG_1099.JPG
+|   |       IMG_E9741.JPG
+|   |       menuiserie.png
+|   |       SALON4.JPG
+|   |       
+|   +---chantier
+|   |       20220219_111659.jpg
+|   |       20230529_105544.jpg
+|   |       20231219_091046.jpg
+|   |       20231219_091234.jpg
+|   |       20240826_124715.jpg
+|   |       20240826_124805.jpg
+|   |       20240826_124958.jpg
+|   |       20240826_125256.jpg
+|   |       ATELIER19.jpg
+|   |       ATELIER8.jpg
+|   |       biblo.png
+|   |       expo.png
+|   |       exposition_salon.png
+|   |       expo_2.png
+|   |       IMG_0541.JPG
+|   |       IMG_20200224_161158.jpg
+|   |       IMG_20200627_160556.jpg
+|   |       IMG_20211117_114404_1.jpg
+|   |       IMG_20220111_101042_resized_20220111_111510933.jpg
+|   |       meuble_salon.png
+|   |       SALON14.JPG
+|   |       SALON16.jpg
+|   |       SALON20.jpg
+|   |       SALON23.jpg
+|   |       salon_expo.png
+|   |       
+|   +---galerie
+|   |       moderne_bureau_lumineux_thumb.webp
+|   |       R�ception moderne de l'Expo Europe Rapide_thumb.webp
+|   |       Syst�me_rangement_lumineux_thumb.webp
+|   |       
+|   +---projets
+|   |   +---cuisines
+|   |   |   |   20220219_111659.jpg
+|   |   |   |   Cuisine moderne avec �l�ments en bois et pierre.png
+|   |   |   |   Cuisine moderne avec �le en marbre.png
+|   |   |   |   Cuisine moderne et bar lumineux.png
+|   |   |   |   Cuisine moderne et lumineuse.png
+|   |   |   |   Cuisine moderne et �l�gante avec salle de bain.png
+|   |   |   |   Cuisine moderne et �pur�e.png
+|   |   |   |   Cuisine �l�gante en bois et marbre.png
+|   |   |   |   IMG_20220111_101042_resized_20220111_111510933.jpg
+|   |   |   |   
+|   |   |   +---fixed
+|   |   |   |       20220219_111659.webp
+|   |   |   |       Cuisine moderne avec �l�ments en bois et pierre.webp
+|   |   |   |       Cuisine moderne avec �le en marbre.webp
+|   |   |   |       Cuisine moderne et bar lumineux.webp
+|   |   |   |       Cuisine moderne et lumineuse.webp
+|   |   |   |       Cuisine moderne et �l�gante avec salle de bain.webp
+|   |   |   |       Cuisine moderne et �pur�e.webp
+|   |   |   |       Cuisine �l�gante en bois et marbre.webp
+|   |   |   |       IMG_20220111_101042_resized_20220111_111510933.webp
+|   |   |   |       
+|   |   |   \---thumbs
+|   |   |           20220219_111659_thumb.webp
+|   |   |           Cuisine moderne avec �l�ments en bois et pierre_thumb.webp
+|   |   |           Cuisine moderne avec �le en marbre_thumb.webp
+|   |   |           Cuisine moderne et bar lumineux_thumb.webp
+|   |   |           Cuisine moderne et lumineuse_thumb.webp
+|   |   |           Cuisine moderne et �l�gante avec salle de bain_thumb.webp
+|   |   |           Cuisine moderne et �pur�e_thumb.webp
+|   |   |           Cuisine �l�gante en bois et marbre_thumb.webp
+|   |   |           IMG_20220111_101042_resized_20220111_111510933_thumb.webp
+|   |   |           
+|   |   +---dressings
+|   |   |   |   20240826_124715.jpg
+|   |   |   |   20240826_124805.jpg
+|   |   |   |   Armoire blanche int�gr�e et d�tails �l�gants.png
+|   |   |   |   Armoire en ch�ne et porte ouverte.png
+|   |   |   |   Armoire minimaliste sous ciel pentu.png
+|   |   |   |   Closet moderne et organis�.png
+|   |   |   |   dressing_hotel.png
+|   |   |   |   IMG_0541.JPG
+|   |   |   |   Placard moderne avec vue sur nature.png
+|   |   |   |   
+|   |   |   +---fixed
+|   |   |   |       20240826_124715.webp
+|   |   |   |       20240826_124805.webp
+|   |   |   |       Armoire blanche int�gr�e et d�tails �l�gants.webp
+|   |   |   |       Armoire en ch�ne et porte ouverte.webp
+|   |   |   |       Armoire minimaliste sous ciel pentu.webp
+|   |   |   |       Closet moderne et organis�.webp
+|   |   |   |       dressing_hotel.webp
+|   |   |   |       IMG_0541.webp
+|   |   |   |       Placard moderne avec vue sur nature.webp
+|   |   |   |       
+|   |   |   \---thumbs
+|   |   |           20240826_124715_thumb.webp
+|   |   |           20240826_124805_thumb.webp
+|   |   |           Armoire blanche int�gr�e et d�tails �l�gants_thumb.webp
+|   |   |           Armoire en ch�ne et porte ouverte_thumb.webp
+|   |   |           Armoire minimaliste sous ciel pentu_thumb.webp
+|   |   |           Closet moderne et organis�_thumb.webp
+|   |   |           dressing_hotel_thumb.webp
+|   |   |           IMG_0541_thumb.webp
+|   |   |           Placard moderne avec vue sur nature_thumb.webp
+|   |   |           
+|   |   +---meubles
+|   |   |   |   20231219_091234.jpg
+|   |   |   |   Banc.png
+|   |   |   |   biblioth�que_en_bois.png
+|   |   |   |   biblo.png
+|   |   |   |   Chambre.png
+|   |   |   |   Coin_salon_�l�gant.png
+|   |   |   |   Commode.png
+|   |   |   |   Espace_bureau_moderne.png
+|   |   |   |   Espace_travail.png
+|   |   |   |   Int�rieur_moderne2.png
+|   |   |   |   meuble_en_marbre.png
+|   |   |   |   meuble_salon.png
+|   |   |   |   moderne_bureau_lumineux.png
+|   |   |   |   moderne_courbes.png
+|   |   |   |   Salle_conf�rence_moderne.png
+|   |   |   |   Syst�me_rangement_lumineux.png
+|   |   |   |   
+|   |   |   +---fixed
+|   |   |   |       20231219_091234.webp
+|   |   |   |       Banc.webp
+|   |   |   |       biblioth�que_en_bois.webp
+|   |   |   |       biblo.webp
+|   |   |   |       Chambre.webp
+|   |   |   |       Coin_salon_�l�gant.webp
+|   |   |   |       Commode.webp
+|   |   |   |       Espace_bureau_moderne.webp
+|   |   |   |       Espace_travail.webp
+|   |   |   |       Int�rieur_moderne2.webp
+|   |   |   |       meuble_en_marbre.webp
+|   |   |   |       meuble_salon.webp
+|   |   |   |       moderne_bureau_lumineux.webp
+|   |   |   |       moderne_courbes.webp
+|   |   |   |       Salle_conf�rence_moderne.webp
+|   |   |   |       Syst�me_rangement_lumineux.webp
+|   |   |   |       
+|   |   |   \---thumbs
+|   |   |           20231219_091234_thumb.webp
+|   |   |           Banc_thumb.webp
+|   |   |           biblioth�que_en_bois_thumb.webp
+|   |   |           biblo_thumb.webp
+|   |   |           Chambre_thumb.webp
+|   |   |           Coin_salon_�l�gant_thumb.webp
+|   |   |           Commode_thumb.webp
+|   |   |           Espace_bureau_moderne_thumb.webp
+|   |   |           Espace_travail_thumb.webp
+|   |   |           Int�rieur_moderne2_thumb.webp
+|   |   |           meuble_en_marbre_thumb.webp
+|   |   |           meuble_salon_thumb.webp
+|   |   |           moderne_bureau_lumineux_thumb.webp
+|   |   |           moderne_courbes_thumb.webp
+|   |   |           Salle_conf�rence_moderne_thumb.webp
+|   |   |           Syst�me_rangement_lumineux_thumb.webp
+|   |   |           
+|   |   +---salle_de_bain
+|   |   |   |   20231219_091234.jpg
+|   |   |   |   Image 1 sept. 2025, 14_06_32.png
+|   |   |   |   Salle de bain moderne avec marbre.png
+|   |   |   |   Salle de bain moderne en marbre.png
+|   |   |   |   Salle de bain moderne et lumineuse (1).png
+|   |   |   |   Salle de bain moderne et lumineuse.png
+|   |   |   |   Salle de bain �l�gante en marbre.png
+|   |   |   |   Vanit� moderne en marbre et bois.png
+|   |   |   |   
+|   |   |   +---fixed
+|   |   |   |       20231219_091234.webp
+|   |   |   |       Salle de bain moderne avec marbre.webp
+|   |   |   |       Salle de bain moderne en marbre.webp
+|   |   |   |       Salle de bain moderne et lumineuse blanc.webp
+|   |   |   |       Salle de bain moderne et lumineuse.webp
+|   |   |   |       Salle de bain �l�gante en marbre.webp
+|   |   |   |       Vanit� moderne en marbre et bois.webp
+|   |   |   |       
+|   |   |   \---thumbs
+|   |   |           20231219_091234_thumb.webp
+|   |   |           Image 1 sept. 2025, 14_06_32_thumb.webp
+|   |   |           Salle de bain moderne avec marbre_thumb.webp
+|   |   |           Salle de bain moderne en marbre_thumb.webp
+|   |   |           Salle de bain moderne et lumineuse (1)_thumb.webp
+|   |   |           Salle de bain moderne et lumineuse_thumb.webp
+|   |   |           Salle de bain �l�gante en marbre_thumb.webp
+|   |   |           Vanit� moderne en marbre et bois_thumb.webp
+|   |   |           
+|   |   +---salons
+|   |   |   |   Cuisine moderne aux panneaux rouges.png
+|   |   |   |   Espace d'exposition moderne et �pur�.png
+|   |   |   |   expo.png
+|   |   |   |   expo2.png
+|   |   |   |   expo3.png
+|   |   |   |   exposition_salon.png
+|   |   |   |   Int�rieur moderne avec bureau d'accueil.png
+|   |   |   |   Int�rieur moderne d'un restaurant �l�gant.png
+|   |   |   |   Int�rieur moderne minimaliste et �l�gant (1).png
+|   |   |   |   R�ception moderne de l'Expo Europe Rapide.png
+|   |   |   |   salon_expo.png
+|   |   |   |   
+|   |   |   +---fixed
+|   |   |   |       Cuisine moderne aux panneaux rouges.webp
+|   |   |   |       Espace d'exposition moderne et �pur�.webp
+|   |   |   |       expo.webp
+|   |   |   |       expo2.webp
+|   |   |   |       expo3.webp
+|   |   |   |       exposition_salon.webp
+|   |   |   |       Int�rieur moderne avec bureau d'accueil.webp
+|   |   |   |       Int�rieur moderne d'un restaurant �l�gant.webp
+|   |   |   |       Int�rieur moderne minimaliste et �l�gant (1).webp
+|   |   |   |       R�ception moderne de l'Expo Europe Rapide.webp
+|   |   |   |       salon_expo.webp
+|   |   |   |       
+|   |   |   \---thumbs
+|   |   |           Cuisine moderne aux panneaux rouges_thumb.webp
+|   |   |           Espace d'exposition moderne et �pur�_thumb.webp
+|   |   |           expo2_thumb.webp
+|   |   |           expo3_thumb.webp
+|   |   |           exposition_salon_thumb.webp
+|   |   |           expo_thumb.webp
+|   |   |           Int�rieur moderne avec bureau d'accueil_thumb.webp
+|   |   |           Int�rieur moderne d'un restaurant �l�gant_thumb.webp
+|   |   |           Int�rieur moderne minimaliste et �l�gant (1)_thumb.webp
+|   |   |           R�ception moderne de l'Expo Europe Rapide_thumb.webp
+|   |   |           salon_expo_thumb.webp
+|   |   |           
+|   |   \---savoir_faire
+|   |       |   Atelier de menuiserie et rangement minimaliste.png
+|   |       |   atelier.jpg
+|   |       |   ATELIER8.jpg
+|   |       |   Construction d'un panneau suspendu.png
+|   |       |   IMG_1092.jpg
+|   |       |   IMG_1100.jpg
+|   |       |   mistrade.png
+|   |       |   salon_expo.png
+|   |       |   
+|   |       +---fixed
+|   |       |       Atelier de menuiserie et rangement minimaliste.webp
+|   |       |       atelier.webp
+|   |       |       ATELIER8.webp
+|   |       |       Construction d'un panneau suspendu.webp
+|   |       |       IMG_1092.webp
+|   |       |       IMG_1100.webp
+|   |       |       mistrade.webp
+|   |       |       salon_expo.webp
+|   |       |       
+|   |       \---thumbs
+|   |               Atelier de menuiserie et rangement minimaliste_thumb.webp
+|   |               ATELIER8_thumb.webp
+|   |               atelier_thumb.webp
+|   |               Construction d'un panneau suspendu_thumb.webp
+|   |               IMG_1092_thumb.webp
+|   |               IMG_1100_thumb.webp
+|   |               mistrade_thumb.webp
+|   |               salon_expo_thumb.webp
+|   |               
+|   \---savoir_faire
+|           Atelier de menuiserie et rangement minimaliste_thumb.webp
+|           ATELIER8_thumb.webp
+|           atelier_thumb.webp
+|           Construction d'un panneau suspendu_thumb.webp
+|           IMG_1092_thumb.webp
+|           IMG_1100_thumb.webp
+|           mistrade_thumb.webp
+|           salon_expo_thumb.webp
+|           
++---components
+|   |   Footer.js
+|   |   Navbar.js
+|   |   ScrollToTop.js
+|   |   
+|   \---styles-component
+|           footer.css
+|           navbar.css
+|           
++---hooks
+|       useScrollAnimation.js
+|       
++---pages
+|       Apropos.js
+|       Contact.js
+|       Home.js
+|       Projet.js
+|       Services.js
+|       
+\---style
+        apropos.css
+        contact.css
+        home.css
+        projet.css
+        services.css
+        
+Structure du dossier pour le volume Windows
+Le num�ro de s�rie du volume est B87C-6C4A
+C:\USERS\OFFICE\DESKTOP\SITE_RAPIDE_EXPO_COPIE\SCRIPTS
+    fix-images.cjs
+    make-thumbs.js
+    
+Aucun sous-dossier existant 
+

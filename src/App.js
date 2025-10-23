@@ -36,9 +36,9 @@ function App() {
       <AOSController />
       <ScrollToTop /> {/* ✅ remet le scroll en haut à chaque route */}
 
-      <div className="site-wrapper">
+      
         <Navbar />
-        <main className="site-main" role="main">
+       
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/apropos" element={<Apropos />} />
@@ -47,9 +47,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<Home />} />
           </Routes>
-        </main>
+       
         <Footer />
-      </div>
+      
     </Router>
   );
 }

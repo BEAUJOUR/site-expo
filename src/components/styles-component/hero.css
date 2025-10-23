@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* === HERO CINÉMATIQUE EXPO === */
+.hero-fixed {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  font-family: 'Poppins','Roboto','Open Sans',sans-serif;
+  background: black;
+}
+
+/* ✨ Apparition élégante du Hero au chargement */
+.hero-fixed.ready {
+  animation: fadeAppear 1s ease-out;
+}
+@keyframes fadeAppear {
+  from { opacity: 0; transform: scale(1.01); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ✅ Empêche toute animation ou fondu au premier rendu */
+.hero-fixed.loading .hero-bg {
+  transition: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+/* ✅ Active les animations uniquement après le chargement */
+.hero-fixed.ready .hero-bg.active {
+  animation: heroCineRight 20s ease-in-out infinite alternate;
+  transition: background-image 1s ease, opacity 0.8s ease;
+}
+
+/* === FOND PRINCIPAL === */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 1;
+  filter: brightness(0.85);
+  transition: background-image 1s ease, opacity 0.8s ease;
+}
+
+/* Panoramique lent (droite ↔ gauche) */
+@keyframes heroCineRight {
+  0% { transform: scale(1.05) translateX(-2%); }
+  50% { transform: scale(1.1) translateX(2%); }
+  100% { transform: scale(1.08) translateX(-1%); }
+}
+
+/* === FONDU + FLASH DORÉ DIRECTIONNEL === */
+.fade-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards, flashGoldDirectional 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ✨ Flash doré diagonal et directionnel */
+@keyframes flashGoldDirectional {
+  0% {
+    box-shadow: inset 0 0 0 rgba(255,215,0,0);
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,215,0,0.15), transparent);
+    filter: brightness(1.1) saturate(1.3);
+  }
+  40% {
+    box-shadow: inset 0 0 300px rgba(255,215,0,0.5);
+    background-image: linear-gradient(135deg, rgba(255,215,0,0.4), rgba(255,255,255,0.2), transparent);
+    filter: brightness(1.4) saturate(1.8);
+  }
+  100% {
+    box-shadow: inset 0 0 0 rgba(255,215,0,0);
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,215,0,0.15), transparent);
+    filter: brightness(1.1) saturate(1.3);
+  }
+}
+
+/* === OVERLAY === */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 80%);
+}
+
+/* === CONTENU === */
+.hero-content {
+  max-width: 55%;
+  line-height: 1.6;
+}
+.hero-content h1 {
+  font-family: 'Playfair Display','Libertinus Math',serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f9e30c;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-family: 'Poppins','Roboto','Open Sans',sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+
+/* === CTA === */
+.cta-button {
+  margin-top: 1.8rem;
+  animation: zoomIn 1s ease forwards 1.3s;
+}
+.cta-button button {
+  background-color: green;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,128,0,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cta-button button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,128,0,0.6);
+}
+
+/* === MINI CARTES FLIP 3D === */
+.hero-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  perspective: 1000px;
+}
+
+.thumb-card {
+  width: 110px;
+  height: 70px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* 💫 flip + halo doré au survol */
+.thumb-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+.thumb-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(circle at center, rgba(255,215,0,0.6) 0%, rgba(255,215,0,0.1) 60%, transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(0.8);
+}
+.thumb-card:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+  animation: glowPulse 1s ease-in-out;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0px rgba(255,215,0,0.0); }
+  50% { box-shadow: 0 0 30px rgba(255,215,0,0.6); }
+  100% { box-shadow: 0 0 0px rgba(255,215,0,0.0); }
+}
+
+/* FACES */
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flip-front span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 3px 0;
+}
+.flip-back {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flip-back span {
+  background: rgba(0,0,0,0.6);
+  color: #f9e30c;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+  .hero-thumbnails {
+    flex-direction: row;
+    right: 50%;
+    bottom: 2%;
+    transform: translateX(50%);
+  }
+  .thumb-card {
+    width: 85px;
+    height: 55px;
+  }
+}
+
+
+/* === BOUTON SCROLL DOWN === */
+.scroll-down {
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  cursor: pointer;
+  color: #f9e30c;
+  animation: bounceArrow 2s infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.scroll-down:hover {
+  filter: brightness(1.4) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Animation douce de la flèche */
+@keyframes bounceArrow {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
