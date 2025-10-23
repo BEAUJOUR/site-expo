@@ -1,21 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import expo from "../assets/projets/salons/expo.png";
 import image1 from "../assets/projets/salons/Reception_moderne_de_Expo_Europe_Rapide.png";
 import image2 from "../assets/projets/cuisines/Cuisine_moderne_lumineuse.png";
 import image3 from "../assets/projets/salons/moderne_avec_bureau_accueil.png";
-import { ChevronDown } from "lucide-react"; // ✅ icône flèche moderne
 import "./styles-component/hero.css";
 
 export default function Hero() {
   const navigate = useNavigate();
+
   const [bgImage, setBgImage] = useState(expo);
   const [nextImage, setNextImage] = useState(null);
   const [isReady, setIsReady] = useState(false);
 
+  // 🎯 Parallaxe inertielle
+  const [parallax, setParallax] = useState({ x: 0, y: 0 });
+  const target = useRef({ x: 0, y: 0 });
+  const current = useRef({ x: 0, y: 0 });
+
   useEffect(() => {
     const timer = setTimeout(() => setIsReady(true), 300);
     return () => clearTimeout(timer);
+  }, []);
+
+  // 🌀 Écoute souris
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      target.current.x = (e.clientX / window.innerWidth - 0.5) * 4;
+      target.current.y = (e.clientY / window.innerHeight - 0.5) * 4;
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  // ⚡ Interpolation fluide (inertie)
+  useEffect(() => {
+    let frame;
+    const smoothFollow = () => {
+      current.current.x += (target.current.x - current.current.x) * 0.05;
+      current.current.y += (target.current.y - current.current.y) * 0.05;
+      setParallax({ x: current.current.x, y: current.current.y });
+      frame = requestAnimationFrame(smoothFollow);
+    };
+    smoothFollow();
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const miniCards = [
@@ -34,23 +62,17 @@ export default function Hero() {
     }
   };
 
-  // ✅ Fonction scroll fluide
-  const scrollToNext = () => {
-    const nextSection = document.querySelector("#realisations");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <header className={`hero-fixed ${isReady ? "ready" : "loading"}`}>
-      {/* Fond principal */}
+      {/* Fond principal avec effet inertiel */}
       <div
         className={`hero-bg ${isReady ? "active" : "idle"}`}
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          transform: `scale(1.1) translate(${parallax.x}%, ${parallax.y}%)`,
+        }}
       ></div>
 
-      {/* Transition + flash doré */}
       {isReady && nextImage && (
         <div
           className="hero-bg fade-layer"
@@ -69,7 +91,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mini cartes interactives */}
         <div className="hero-thumbnails">
           {miniCards.map((img) => (
             <div
@@ -92,11 +113,6 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* ✅ Bouton scroll vers la section suivante */}
-      <div className="scroll-down" onClick={scrollToNext}>
-        <ChevronDown size={36} strokeWidth={2.5} />
       </div>
     </header>
   );
