@@ -1,0 +1,21 @@
+body.modal-open .navbar {
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Masque la navbar quand une modale est ouverte */
+body.modal-open nav,
+body.modal-open .navbar,
+body.modal-open header.navbar {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Reviens normalement quand la modale est fermée */
+nav,
+.navbar,
+header.navbar {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}

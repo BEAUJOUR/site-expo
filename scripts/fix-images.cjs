@@ -7,31 +7,33 @@
  * - Sharpen doux pour restaurer les détails
  * - Conversion en WebP haute qualité (95%)
  *
- * Sortie : /fixed_pro/
+ * Sortie : /fixed/
  */
 
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
 
-// === Dossiers à traiter ===
 const categories = [
   "cuisines",
   "salons",
   "meubles",
   "dressings",
   "salle_de_bain",
-  "savoir_faire"
+  "savoir_faire",
 ];
 
-// === Traitement avancé ===
 for (const folder of categories) {
+  console.log(`\n📂 Traitement du dossier : ${folder}`);
+
   const inputDir = path.resolve(`./src/assets/projets/${folder}`);
   const outputDir = path.resolve(`./src/assets/projets/${folder}/fixed`);
 
   fs.mkdirSync(outputDir, { recursive: true });
 
-  const files = fs.readdirSync(inputDir).filter((f) => f.match(/\.(jpg|jpeg|png|webp)$/i));
+  const files = fs
+    .readdirSync(inputDir)
+    .filter((f) => f.match(/\.(jpg|jpeg|png|webp)$/i));
 
   for (const file of files) {
     const inputPath = path.join(inputDir, file);
@@ -39,9 +41,9 @@ for (const folder of categories) {
     const outputPath = path.join(outputDir, outputName);
 
     sharp(inputPath)
-      .resize({ width: 2400, withoutEnlargement: false }) // upscale 2x max
-      .blur(0.4) // anti-zigzag léger
-      .modulate({ brightness: 1.03, saturation: 1.05 }) // boost couleur
+      .resize({ width: 2400, withoutEnlargement: false })
+      .blur(0.5) // ✅ corrigé (0.3 mini)
+      .modulate({ brightness: 1.03, saturation: 1.05 })
       .sharpen({
         sigma: 1.0,
         m1: 0.9,

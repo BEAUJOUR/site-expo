@@ -30,9 +30,10 @@ const cuisinesImages = mapThumbsAndFull(
   require.context("../assets/projets/cuisines/thumbs", false, /\.(webp)$/i),
   require.context("../assets/projets/cuisines/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
+
 const salonsImages = mapThumbsAndFull(
   require.context("../assets/projets/salons/thumbs", false, /\.(webp)$/i),
-  require.context("../assets/projets/salons/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
+  require.context("../assets/projets/salons", false, /\.(jpg|jpeg|png|webp)$/i)
 );
 const meublesImages = mapThumbsAndFull(
   require.context("../assets/projets/meubles/thumbs", false, /\.(webp)$/i),
@@ -204,18 +205,31 @@ export default function Projet() {
               &#10094;
             </button>
 
-            <img
-              className={`modal-content ${
-                imageTransition === "left"
-                  ? "slide-left"
-                  : imageTransition === "right"
-                  ? "slide-right"
-                  : ""
-              }`}
-              src={selectedImage.full}
-              alt={`${activeCategory.title} ${selectedImage.index + 1}`}
-              onAnimationEnd={() => setImageTransition("")}
-            />
+           <img
+  className={`modal-content ${
+    imageTransition === "left"
+      ? "slide-left"
+      : imageTransition === "right"
+      ? "slide-right"
+      : ""
+  }`}
+  src={selectedImage.full}
+  alt={`${activeCategory.title} ${selectedImage.index + 1}`}
+  onAnimationEnd={() => setImageTransition("")}
+  style={{
+    maxWidth: "min(90vw, 1600px)",
+    maxHeight: "85vh",
+    width: "auto",
+    height: "auto",
+    objectFit: "contain",
+    imageRendering: "auto",
+    transform: "none",
+    backfaceVisibility: "hidden",
+    filter: "contrast(104%) saturate(105%) brightness(103%)",
+    transition: "opacity 0.4s ease, transform 0.4s ease",
+  }}
+/>
+
 
             <button
               className="modal-arrow right"
