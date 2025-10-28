@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/projet.css";
 
 // === UTILS ===
@@ -69,6 +70,7 @@ export default function Projet() {
   const [galleryKey, setGalleryKey] = useState(0);
   const [imageTransition, setImageTransition] = useState("");
   const closeBtnRef = useRef(null);
+   const navigate = useNavigate();
 
   const activeCategory = categories[activeCategoryIndex];
 
@@ -251,9 +253,8 @@ export default function Projet() {
       <section className="cta-projet">
         <h2>Passez de l’idée à l’action</h2>
         <p>Des idées ? Nous les transformons en réalisations sur mesure.</p>
-        <button onClick={() => (window.location.href = "/contact")}>
-          Contactez-nous
-        </button>
+       <button onClick={() => navigate("/contact")}>Contactez-nous</button>
+
       </section>
     </div>
   );
