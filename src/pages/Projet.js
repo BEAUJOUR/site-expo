@@ -46,7 +46,7 @@ const dressingsImages = mapThumbsAndFull(
 );
 const salle_de_bain = mapThumbsAndFull(
   require.context("../assets/projets/salle_de_bain/thumbs", false, /\.(webp)$/i),
- require.context("../assets/projets/salle_de_bain/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
+  require.context("../assets/projets/salle_de_bain/fixed", false, /\.(jpg|jpeg|png|webp)$/i)
 );
 
 const categories = [
@@ -57,12 +57,6 @@ const categories = [
   { id: "dressings", title: "Dressings", images: dressingsImages },
 ];
 
-  
-
-  
-
-
-
 // === COMPONENT ===
 export default function Projet() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
@@ -70,37 +64,11 @@ export default function Projet() {
   const [galleryKey, setGalleryKey] = useState(0);
   const [imageTransition, setImageTransition] = useState("");
   const closeBtnRef = useRef(null);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const activeCategory = categories[activeCategoryIndex];
 
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === "Escape") setSelectedImage(null);
-      if (!selectedImage) return;
-      if (e.key === "ArrowRight") nextImage();
-      if (e.key === "ArrowLeft") prevImage();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [selectedImage, activeCategoryIndex]);
-
-  useEffect(() => {
-    if (selectedImage) {
-      document.body.classList.add("modal-open");
-      setTimeout(() => closeBtnRef.current?.focus(), 0);
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-  }, [selectedImage]);
-
-  const openImage = (full, index) => {
-    setSelectedImage({ full, index });
-    setImageTransition("");
-  };
-
-  const closeImage = useCallback(() => setSelectedImage(null), []);
-
+  // ✅ Définir les fonctions avant le useEffect
   const nextImage = useCallback(() => {
     if (!selectedImage) return;
     const nextIndex = (selectedImage.index + 1) % activeCategory.images.length;
@@ -122,6 +90,34 @@ export default function Projet() {
       index: prevIndex,
     });
   }, [selectedImage, activeCategory]);
+
+  // ✅ useEffect après les fonctions
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setSelectedImage(null);
+      if (!selectedImage) return;
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedImage, activeCategoryIndex, nextImage, prevImage]);
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.classList.add("modal-open");
+      setTimeout(() => closeBtnRef.current?.focus(), 0);
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [selectedImage]);
+
+  const openImage = (full, index) => {
+    setSelectedImage({ full, index });
+    setImageTransition("");
+  };
+
+  const closeImage = useCallback(() => setSelectedImage(null), []);
 
   return (
     <div className="projet-container">
@@ -207,31 +203,30 @@ export default function Projet() {
               &#10094;
             </button>
 
-           <img
-  className={`modal-content ${
-    imageTransition === "left"
-      ? "slide-left"
-      : imageTransition === "right"
-      ? "slide-right"
-      : ""
-  }`}
-  src={selectedImage.full}
-  alt={`${activeCategory.title} ${selectedImage.index + 1}`}
-  onAnimationEnd={() => setImageTransition("")}
-  style={{
-    maxWidth: "min(90vw, 1600px)",
-    maxHeight: "85vh",
-    width: "auto",
-    height: "auto",
-    objectFit: "contain",
-    imageRendering: "auto",
-    transform: "none",
-    backfaceVisibility: "hidden",
-    filter: "contrast(104%) saturate(105%) brightness(103%)",
-    transition: "opacity 0.4s ease, transform 0.4s ease",
-  }}
-/>
-
+            <img
+              className={`modal-content ${
+                imageTransition === "left"
+                  ? "slide-left"
+                  : imageTransition === "right"
+                  ? "slide-right"
+                  : ""
+              }`}
+              src={selectedImage.full}
+              alt={`${activeCategory.title} ${selectedImage.index + 1}`}
+              onAnimationEnd={() => setImageTransition("")}
+              style={{
+                maxWidth: "min(90vw, 1600px)",
+                maxHeight: "85vh",
+                width: "auto",
+                height: "auto",
+                objectFit: "contain",
+                imageRendering: "auto",
+                transform: "none",
+                backfaceVisibility: "hidden",
+                filter: "contrast(104%) saturate(105%) brightness(103%)",
+                transition: "opacity 0.4s ease, transform 0.4s ease",
+              }}
+            />
 
             <button
               className="modal-arrow right"
@@ -253,8 +248,7 @@ export default function Projet() {
       <section className="cta-projet">
         <h2>Passez de l’idée à l’action</h2>
         <p>Des idées ? Nous les transformons en réalisations sur mesure.</p>
-       <button onClick={() => navigate("/contact")}>Contactez-nous</button>
-
+        <button onClick={() => navigate("/contact")}>Contactez-nous</button>
       </section>
     </div>
   );

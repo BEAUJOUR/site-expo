@@ -36,8 +36,8 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center 40%;
+  background-size: cover;           /* plein écran */
+  background-position: center 40%;  /* cadrage harmonieux */
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 1;
@@ -46,9 +46,11 @@
   transition: background-image 1s ease, opacity 0.8s ease, transform 10s ease-in-out;
   animation: heroDepth 25s ease-in-out infinite alternate;
   will-change: transform, filter;
+  transition: background-image 1s ease, opacity 0.8s ease
 }
 
 /* 🎥 effet de profondeur douce */
+/* 🎥 Effet caméra panoramique fluide et ample */
 @keyframes heroDepth {
   0% {
     transform: scale(1.08) translate(-2%, -2%);
@@ -71,6 +73,7 @@
     filter: brightness(0.9) saturate(1.1);
   }
 }
+
 
 /* === FONDU + FLASH DORÉ DIRECTIONNEL === */
 .fade-layer {
@@ -186,6 +189,7 @@
   transition: transform 0.6s ease;
 }
 
+/* 💫 flip + halo doré au survol */
 .thumb-card:hover .flip-inner {
   transform: rotateY(180deg);
 }
@@ -211,6 +215,7 @@
   100% { box-shadow: 0 0 0px rgba(255,215,0,0.0); }
 }
 
+/* FACES */
 .flip-inner {
   width: 100%;
   height: 100%;
@@ -279,67 +284,28 @@
   }
 }
 
-/* === FLÈCHE DOUBLE DORÉE CINÉMATIQUE === */
+/* === BOUTON SCROLL DOWN === */
 .scroll-down {
   position: absolute;
-  bottom: 3%;
+  bottom: 2.5%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 3;
   cursor: pointer;
-  opacity: 0.9;
   color: #f9e30c;
-  animation: bounceDouble 2.2s infinite ease-in-out;
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.5s ease;
+  animation: bounceArrow 2s infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .scroll-down:hover {
+  filter: brightness(1.4) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
   transform: translateX(-50%) scale(1.1);
-  filter: brightness(1.4) drop-shadow(0 0 25px rgba(255, 215, 0, 0.9));
 }
-
-.scroll-down svg.double-arrow {
-  stroke: #f9e30c;
-  stroke-width: 3.8;
-  width: 58px;
-  height: 58px;
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6))
-          drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
-  transition: filter 0.3s ease;
-}
-
-.scroll-down::after {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 215, 0, 0.25) 0%,
-    rgba(255, 215, 0, 0.08) 50%,
-    transparent 80%
-  );
-  animation: haloGlow 3s ease-in-out infinite;
-  z-index: -1;
-}
-
-@keyframes bounceDouble {
+@keyframes bounceArrow {
   0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 12px); }
+  50% { transform: translate(-50%, 8px); }
 }
+  /* === ANIMATION TEXTE CINÉMATIQUE === */
 
-@keyframes haloGlow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
-/* === ANIMATION TEXTE CINÉMATIQUE === */
 .hero-content h1,
 .hero-content p,
 .cta-button {
@@ -349,6 +315,7 @@
   transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
 
+/* Quand le Hero est prêt → apparition fluide */
 .hero-fixed.ready .hero-content h1 {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -404,6 +371,7 @@
   100% { background-position: 200% 50%; }
 }
 
+/* Survol — éclat plus fort */
 .hero-content h1:hover {
   animation: goldFlash 0.8s ease-in-out forwards;
 }
@@ -412,4 +380,101 @@
   0% { filter: brightness(1); text-shadow: 0 0 0px gold; }
   50% { filter: brightness(1.4); text-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
   100% { filter: brightness(1); text-shadow: 0 0 0px gold; }
+}
+ 
+/* === 🌟 AFFICHAGE RESPONSIVE DU FOND === */
+
+/* Tablettes : effet immersif, mais stable */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    transform: none !important;
+    animation: heroDepthTablet 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes heroDepthTablet {
+    0%   { transform: scale(1.02) translateY(-1%); }
+    50%  { transform: scale(1.05) translateY(1%); }
+    100% { transform: scale(1.02) translateY(-1%); }
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-thumbnails {
+    flex-direction: row;
+    bottom: 2%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .scroll-down {
+    bottom: 1.5%;
+  }
+}
+
+/* === 🎯 MODE MOBILE : IMAGE PLEIN ÉCRAN, LÉGER MOUVEMENT DOUX === */
+@media (max-width: 480px) {
+  .hero-fixed {
+    height: 100vh;
+    background-color: #000;
+  }
+
+  .hero-bg {
+    background-size: cover !important;
+    background-position: center 18% !important; /* 🔹 légèrement relevé */
+    background-repeat: no-repeat !important;
+    background-color: #000 !important;
+    transform: scale(1.005); /* ⚙️ Zoom réduit à 0.5 % */
+    animation: heroFloatMobile 22s ease-in-out infinite alternate;
+    transition: transform 1s ease-out, background-position 1s ease-in-out;
+  }
+
+  /* ✨ Animation quasi statique — mouvement subtil */
+  @keyframes heroFloatMobile {
+    0%   { transform: scale(1.005) translateY(0); }
+    50%  { transform: scale(1.01) translateY(-0.5%); }
+    100% { transform: scale(1.005) translateY(0); }
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-thumbnails {
+    display: none !important;
+  }
+
+  .scroll-down {
+    bottom: 2%;
+  }
 }
