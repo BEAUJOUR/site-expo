@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.c5983e0b.css",
-    "main.js": "/site-expo/static/js/main.9ea22452.js",
+    "main.css": "/site-expo/static/css/main.d5752505.css",
+    "main.js": "/site-expo/static/js/main.0d689abf.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/salon_expo.png": "/site-expo/static/media/salon_expo.548ed0636d8fb0672ac8.png",
     "static/media/exposition_salon.png": "/site-expo/static/media/exposition_salon.891e22dcceef9353e314.png",
@@ -118,11 +118,11 @@
     "static/media/meuble_salon_thumb.webp": "/site-expo/static/media/meuble_salon_thumb.08b7edaf37678a3dffc7.webp",
     "static/media/Cuisine moderne aux panneaux rouges_thumb.webp": "/site-expo/static/media/Cuisine moderne aux panneaux rouges_thumb.cb16d9083c554d2d1aef.webp",
     "index.html": "/site-expo/index.html",
-    "main.c5983e0b.css.map": "/site-expo/static/css/main.c5983e0b.css.map",
-    "main.9ea22452.js.map": "/site-expo/static/js/main.9ea22452.js.map"
+    "main.d5752505.css.map": "/site-expo/static/css/main.d5752505.css.map",
+    "main.0d689abf.js.map": "/site-expo/static/js/main.0d689abf.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5983e0b.css",
-    "static/js/main.9ea22452.js"
+    "static/css/main.d5752505.css",
+    "static/js/main.0d689abf.js"
   ]
 }
