@@ -12,6 +12,7 @@ export default function Hero() {
   const [bgImage, setBgImage] = useState(expo);
   const [nextImage, setNextImage] = useState(null);
   const [isReady, setIsReady] = useState(false);
+  const [showArrow, setShowArrow] = useState(true);
 
   // 🎯 Parallaxe inertielle
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
@@ -46,6 +47,15 @@ export default function Hero() {
     return () => cancelAnimationFrame(frame);
   }, []);
 
+  // 🔻 Flèche disparaît quand on scrolle
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowArrow(window.scrollY < 80);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const miniCards = [
     { id: 1, src: image1, label: "Stand", alt: "Stand design" },
     { id: 2, src: image2, label: "Cuisine", alt: "Cuisine expo" },
@@ -60,6 +70,10 @@ export default function Hero() {
         setNextImage(null);
       }, 800);
     }
+  };
+
+  const scrollDown = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
@@ -113,6 +127,27 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
+        {/* ⬇️ Flèche scroll dorée animée */}
+        {showArrow && (
+          <div className="scroll-down" onClick={scrollDown}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 8 12 14 18 8" />
+      <polyline points="6 13 12 19 18 13" />
+
+            </svg>
+          </div>
+        )}
       </div>
     </header>
   );

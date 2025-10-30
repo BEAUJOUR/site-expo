@@ -1,8 +1,19 @@
 // Fichier : src/pages/Apropos.jsx
-
 import React from "react";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/apropos.css";
+
+function StatItem({ value, label, suffix, speed }) {
+  const [ref, count] = useCountOnVisible(value, speed);
+  return (
+    <div className="stat-item" ref={ref}>
+      <span>{count}{suffix}</span>
+      <p>{label}</p>
+    </div>
+  );
+}
+
 
 function importAll(r) {
   return r.keys().map((key) => ({
@@ -21,7 +32,6 @@ const images = importAll(
 
 const Apropos = () => {
   useScrollAnimation(".animate-on-scroll", "visible");
-
   return (
     <main
       className="apropos"
@@ -64,29 +74,20 @@ const Apropos = () => {
           </ul>
         </section>
 
-        {/* CHIFFRES CLÉS */}
-        <section
-          className="apropos-stats container section animate-on-scroll fade-in-up"
-          aria-labelledby="chiffres"
-        >
-          <h2 id="chiffres" className="animate-on-scroll flipIn">
-            Nos chiffres clés
-          </h2>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <span>25+</span>
-              <p>Années d’expérience</p>
-            </div>
-            <div className="stat-item">
-              <span>500+</span>
-              <p>Projets réalisés</p>
-            </div>
-            <div className="stat-item">
-              <span>300+</span>
-              <p>Clients satisfaits</p>
-            </div>
-          </div>
-        </section>
+         {/* CHIFFRES CLÉS */}
+      <section
+        className="apropos-stats container section animate-on-scroll fade-in-up"
+        aria-labelledby="chiffres"
+      >
+        <h2 id="chiffres" className="animate-on-scroll flipIn">
+          Nos chiffres clés
+        </h2>
+        <div className="stats-grid">
+          <StatItem value={25} label="Années d’expérience" suffix="+" speed={2500}/>
+          <StatItem value={500} label="Projets réalisés" suffix="+" speed={2500}/>
+          <StatItem value={300} label="Clients satisfaits" suffix="+" speed={2500}/>
+        </div>
+      </section>
 
         {/* STAND */}
         <section

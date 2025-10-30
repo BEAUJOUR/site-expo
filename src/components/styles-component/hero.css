@@ -36,8 +36,8 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;           /* plein écran */
-  background-position: center 40%;  /* cadrage harmonieux */
+  background-size: cover;
+  background-position: center 40%;
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 1;
@@ -46,11 +46,9 @@
   transition: background-image 1s ease, opacity 0.8s ease, transform 10s ease-in-out;
   animation: heroDepth 25s ease-in-out infinite alternate;
   will-change: transform, filter;
-  transition: background-image 1s ease, opacity 0.8s ease
 }
 
 /* 🎥 effet de profondeur douce */
-/* 🎥 Effet caméra panoramique fluide et ample */
 @keyframes heroDepth {
   0% {
     transform: scale(1.08) translate(-2%, -2%);
@@ -73,7 +71,6 @@
     filter: brightness(0.9) saturate(1.1);
   }
 }
-
 
 /* === FONDU + FLASH DORÉ DIRECTIONNEL === */
 .fade-layer {
@@ -189,7 +186,6 @@
   transition: transform 0.6s ease;
 }
 
-/* 💫 flip + halo doré au survol */
 .thumb-card:hover .flip-inner {
   transform: rotateY(180deg);
 }
@@ -215,7 +211,6 @@
   100% { box-shadow: 0 0 0px rgba(255,215,0,0.0); }
 }
 
-/* FACES */
 .flip-inner {
   width: 100%;
   height: 100%;
@@ -284,28 +279,67 @@
   }
 }
 
-/* === BOUTON SCROLL DOWN === */
+/* === FLÈCHE DOUBLE DORÉE CINÉMATIQUE === */
 .scroll-down {
   position: absolute;
-  bottom: 2.5%;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 5;
   cursor: pointer;
+  opacity: 0.9;
   color: #f9e30c;
-  animation: bounceArrow 2s infinite;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: bounceDouble 2.2s infinite ease-in-out;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.5s ease;
 }
-.scroll-down:hover {
-  filter: brightness(1.4) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
-  transform: translateX(-50%) scale(1.1);
-}
-@keyframes bounceArrow {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 8px); }
-}
-  /* === ANIMATION TEXTE CINÉMATIQUE === */
 
+.scroll-down:hover {
+  transform: translateX(-50%) scale(1.1);
+  filter: brightness(1.4) drop-shadow(0 0 25px rgba(255, 215, 0, 0.9));
+}
+
+.scroll-down svg.double-arrow {
+  stroke: #f9e30c;
+  stroke-width: 3.8;
+  width: 58px;
+  height: 58px;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6))
+          drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.25) 0%,
+    rgba(255, 215, 0, 0.08) 50%,
+    transparent 80%
+  );
+  animation: haloGlow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes bounceDouble {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 12px); }
+}
+
+@keyframes haloGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* === ANIMATION TEXTE CINÉMATIQUE === */
 .hero-content h1,
 .hero-content p,
 .cta-button {
@@ -315,7 +349,6 @@
   transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
 
-/* Quand le Hero est prêt → apparition fluide */
 .hero-fixed.ready .hero-content h1 {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -371,7 +404,6 @@
   100% { background-position: 200% 50%; }
 }
 
-/* Survol — éclat plus fort */
 .hero-content h1:hover {
   animation: goldFlash 0.8s ease-in-out forwards;
 }
