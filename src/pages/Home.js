@@ -23,31 +23,6 @@ const Home = () => {
 
   return (
     <div className="home fade-in-up">
-      {/* <header className="hero fade-in-left-animate">
-        <div
-          className="background-layer"
-          style={{
-            backgroundImage: `url(${expo})`,
-          }}
-        ></div>
-        <div className="overlay fade-in-zoom-animate">
-          <div className="hero-content fade-in-up-animate">
-            <h1 className="fade-in-up-animate">EUROPE RAPIDE EXPO</h1>
-            <p className="fade-in-left-animate">
-              Des créations sur mesure qui donnent vie à vos espaces
-            </p>
-            <p className="fade-in-right-animate">
-              Explorez nos expositions uniques et laissez-vous inspirer par
-              l’innovation.
-            </p>
-            <div className="cta-button fade-in-zoom-animate">
-              <button onClick={() => navigate("/contact")}>
-                Contactez-nous
-              </button>
-            </div>
-          </div>
-        </div>
-      </header> */}
       <Hero/>
 
       <section className="intro fade-in-down">
@@ -184,13 +159,13 @@ const Home = () => {
                 },
                 {
                   name: "Kejian",
-                  header: "Bonjour Monsieur GARAGANTA,",
+                  header: "Bonjour Monsieur GARGANTA,",
                   text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
                 },
 
                 {
                   name: "Client particulier",
-                   header: "Bonjour Monsieur GARAGANTA,",
+                   header: "Bonjour Monsieur GARGANTA,",
                   text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
                 },
               
@@ -204,13 +179,13 @@ const Home = () => {
                 },
                 {
                   name: "Kejian",
-                  header: "Bonjour Monsieur GARAGANTA,",
+                  header: "Bonjour Monsieur GARGANTA,",
                   text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
                 },
 
                 {
                   name: "Client particulier",
-                   header: "Bonjour Monsieur GARAGANTA,",
+                   header: "Bonjour Monsieur GARGANTA,",
                   text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
                 },
                 ])

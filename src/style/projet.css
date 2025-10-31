@@ -22,10 +22,18 @@
     animation: zoomIn 0.5s ease-out forwards;
   }
 
-  .fade-in-delay-1 { animation-delay: 0.2s; }
-  .fade-in-delay-2 { animation-delay: 0.4s; }
-  .fade-in-delay-3 { animation-delay: 0.6s; }
-  .fade-in-delay-4 { animation-delay: 0.8s; }
+  .fade-in-delay-1 {
+    animation-delay: 0.2s;
+  }
+  .fade-in-delay-2 {
+    animation-delay: 0.4s;
+  }
+  .fade-in-delay-3 {
+    animation-delay: 0.6s;
+  }
+  .fade-in-delay-4 {
+    animation-delay: 0.8s;
+  }
 
   .gallery-fade-enter {
     opacity: 0;
@@ -146,7 +154,8 @@ body.dark .projet-container button {
   color: var(--color-accent);
   font-weight: 500;
   cursor: pointer;
-  transition: background-position 0.4s ease, color 0.4s ease, transform 0.2s ease;
+  transition: background-position 0.4s ease, color 0.4s ease,
+    transform 0.2s ease;
 }
 
 .category-btn:hover {
@@ -161,12 +170,11 @@ body.dark .projet-container button {
   transform: none;
 }
 
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: auto;
-  gap: 1.20rem;
+  gap: 1.2rem;
   margin-bottom: 4rem;
   justify-content: center;
 }
@@ -185,7 +193,7 @@ body.dark .projet-container button {
 }
 .card:hover {
   transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -234,31 +242,25 @@ body.dark .projet-container button {
   position: relative;
   background: #f9e30c;
   border-radius: var(--radius);
-  width:100vw;
-  height:95vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   /* box-shadow: var(--shadow); */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   animation: fadeIn 0.3s ease;
   /* margin-top: 65px; */
 }
 
-.modal-content {
-  width:100vw;
-  height:85vh;
-  object-fit: contain;
-}
-
 .modal-title {
-  padding: 1rem;
+  display: none;
+  /* padding:1rem;
   font-size: 1.2rem;
   font-weight: 600;
-  text-align: center;
+  text-align: center; */
 }
-
-
 
 @keyframes fadeIn {
   from {
@@ -290,16 +292,17 @@ body.dark .projet-container button {
   align-items: center;
   justify-content: center;
 }
-body.dark .modal-arrow,.close-btn {
+body.dark .modal-arrow,
+.close-btn {
   background-color: green;
   color: #f9e30c;
 }
-.modal-arrow:hover{
-  background-color:green;
+.modal-arrow:hover {
+  background-color: green;
   color: #f9e30c;
 }
 
-body.dark .modal-arrow:hover{
+body.dark .modal-arrow:hover {
   background-color: #f9e30c;
   color: green;
 }
@@ -333,8 +336,8 @@ body.dark .modal-arrow:hover{
   color: #f9e30c;
   transform: rotate(90deg) scale(1.1);
 }
-body.dark .close-btn{
-  background-color:green;
+body.dark .close-btn {
+  background-color: green;
   color: #f9e30c;
 }
 body.dark .close-btn:hover {
@@ -348,10 +351,8 @@ body.dark .close-btn:hover {
   }
 }
 
-
 /* === CTA PROJET === */
 .cta-projet {
- 
   background: #f9e30c;
   color: #020202;
   text-align: center;
@@ -366,13 +367,13 @@ body.dark .close-btn:hover {
 
 .cta-projet h2 {
   font-size: 2rem;
-padding : 15px 0 0;
+  padding: 15px 0 0;
   font-weight: 700;
 }
 
 .cta-projet p {
   font-size: 1.125rem;
- margin: 20px;
+  margin: 20px;
 }
 
 .cta-projet button {
@@ -420,12 +421,18 @@ body.dark .cta-projet button:hover {
 
 /* Stabilise le rendu des vignettes (downscaling propre) */
 .gallery .card img {
-  image-rendering: auto !important;  /* laisse le navigateur choisir le meilleur filtre */
+  image-rendering: auto !important; /* laisse le navigateur choisir le meilleur filtre */
   backface-visibility: hidden;
-  transform: none;                   /* pas de transform résiduel sur l'image */
+  transform: none; /* pas de transform résiduel sur l'image */
   will-change: auto;
 }
-
+.modal-content {
+    width: 100vw;
+    height: 90vh;
+    border-radius: 10px;
+    object-fit: contain;
+    display: block;
+  }
 /* Colonnes nettes sur desktop (évite largeurs fractionnelles .33px) */
 @media (min-width: 768px) {
   .gallery {
@@ -470,14 +477,7 @@ body.dark .cta-projet button:hover {
     border-radius: 0;
     padding: 0;
   }
-
-  .modal-content {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: contain;
-    display: block;
-  }
+  
 
   .modal-title {
     font-size: 1rem;
@@ -497,7 +497,6 @@ body.dark .cta-projet button:hover {
   .cta-projet p {
     font-size: 1rem;
   }
-  
 }
 
 /* === ENTRÉE CINÉMATIQUE DORÉE === */
@@ -583,6 +582,13 @@ body.dark .cta-projet button:hover {
 }
 
 @keyframes glowBar {
-  0%, 100% { opacity: 0.6; width: 70px; }
-  50% { opacity: 1; width: 120px; }
+  0%,
+  100% {
+    opacity: 0.6;
+    width: 70px;
+  }
+  50% {
+    opacity: 1;
+    width: 120px;
+  }
 }

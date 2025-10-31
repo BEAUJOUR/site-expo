@@ -192,13 +192,13 @@ const Apropos = () => {
                 },
                 {
                   name: "Kejian",
-                  header: "Bonjour Monsieur GARAGANTA,",
+                  header: "Bonjour Monsieur GARGANTA,",
                   text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
                 },
 
                 {
                   name: "Client particulier",
-                   header: "Bonjour Monsieur GARAGANTA,",
+                   header: "Bonjour Monsieur GARGANTA,",
                   text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
                 },
               
@@ -212,13 +212,13 @@ const Apropos = () => {
                 },
                 {
                   name: "Kejian",
-                  header: "Bonjour Monsieur GARAGANTA,",
+                  header: "Bonjour Monsieur GARGANTA,",
                   text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
                 },
 
                 {
                   name: "Client particulier",
-                   header: "Bonjour Monsieur GARAGANTA,",
+                   header: "Bonjour Monsieur GARGANTA,",
                   text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
                 },
                 ])
