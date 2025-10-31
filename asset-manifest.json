@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.6a6ba5a9.css",
+    "main.css": "/site-expo/static/css/main.b2113775.css",
     "main.js": "/site-expo/static/js/main.cb39cb97.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/Minimalist_Exhibition_Stand_jour.png": "/site-expo/static/media/Minimalist_Exhibition_Stand_jour.ad19eed6e0ceb75a0db1.png",
@@ -130,11 +130,11 @@
     "static/media/meuble_salon_thumb.webp": "/site-expo/static/media/meuble_salon_thumb.08b7edaf37678a3dffc7.webp",
     "static/media/Cuisine moderne aux panneaux rouges_thumb.webp": "/site-expo/static/media/Cuisine moderne aux panneaux rouges_thumb.cb16d9083c554d2d1aef.webp",
     "index.html": "/site-expo/index.html",
-    "main.6a6ba5a9.css.map": "/site-expo/static/css/main.6a6ba5a9.css.map",
+    "main.b2113775.css.map": "/site-expo/static/css/main.b2113775.css.map",
     "main.cb39cb97.js.map": "/site-expo/static/js/main.cb39cb97.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a6ba5a9.css",
+    "static/css/main.b2113775.css",
     "static/js/main.cb39cb97.js"
   ]
 }
