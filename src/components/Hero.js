@@ -9,9 +9,9 @@ import image3 from "../assets/projets/salons/moderne_avec_bureau_accueil.png";
 
 // 🖼️ Import miniatures
 import expoThumb from "../assets/projets/salons/thumbs/expo_thumb.webp";
-import image1Thumb from "../assets/projets/salons/thumbs/Réception_moderne_Expo_Europe_Rapide_thumb.webp";
+import image1Thumb from "../assets/projets/salons/thumbs/Reception_moderne_de_Expo_Europe_Rapide_thumb.webp";
 import image2Thumb from "../assets/projets/cuisines/thumbs/Cuisine_moderne_lumineuse_thumb.webp";
-import image3Thumb from "../assets/projets/salons/thumbs/Intérieur_moderne_bureau_accueil_thumb.webp";
+import image3Thumb from "../assets/projets/salons/thumbs/moderne_avec_bureau_accueil_thumb.webp";
 
 import "./styles-component/hero.css";
 
