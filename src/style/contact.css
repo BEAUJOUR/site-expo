@@ -16,38 +16,51 @@
   --shadow: rgba(0,0,0,0.08);
 }
 
+/* ============================
+   CONTACT.CSS – Palette anthracite premium
+   Icônes réseaux : AUCUNE couleur modifiée
+   ============================ */
 
 /* Container layout */
 .contact-container{
   display:flex;
   min-height:100vh;
   font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color:var(--text-dark);
-  background:transparent;
-  width: 100%;
+  color:var(--text);
+  background:var(--bg);
+  width:100%;
 }
 
 /* --- Left: Form --- */
 .contact-left{
   flex:1 1 50%;
-  min-width:0; /* important pour éviter overflow */
-  background-color:var(--bg-yellow);
+  min-width:0;
+  background-color:var(--card-bg);
   padding:3rem 2rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  color:#000;
+  color:var(--text);
 }
 
 .contact-left h2{
   font-size:2rem;
   margin:0 0 1.25rem;
   font-weight:700;
+  color:var(--accent); /* TITRE dans ta palette */
 }
 
 /* Form */
-.contact-form{display:flex;flex-direction:column}
-.contact-form label{margin-bottom:.3rem;font-weight:600}
+.contact-form{
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-form label{
+  margin-bottom:.3rem;
+  font-weight:600;
+  color:var(--text);
+}
 
 /* Inputs / textarea */
 .contact-form input,
@@ -55,44 +68,41 @@
   width:100%;
   padding:.7rem 1rem;
   margin-bottom:1.1rem;
-  border:none;
+  border:1px solid var(--accent-soft);
   border-radius:8px;
-  background:var(--field-bg);
-  color:#000;
+  background:var(--section-bg);
+  color:var(--text);
   font-size:1rem;
-  font-family:inherit;
   transition:box-shadow .15s ease, background-color .2s ease;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
 
 /* Placeholder */
 .contact-form input::placeholder,
-.contact-form textarea::placeholder{color:#666}
+.contact-form textarea::placeholder{
+  color:rgba(0,0,0,0.45);
+}
 
 /* Focus */
 .contact-form input:focus,
 .contact-form textarea:focus{
   outline:none;
-  box-shadow:0 0 0 3px rgba(0,128,0,0.12);
-  background-color:#fdf6b2;
+  box-shadow:0 0 0 3px var(--accent-soft);
+  background-color:var(--card-bg);
 }
 
-/* Textarea: non redimensionnable, auto-grow handled en JS */
+/* Textarea non resizable */
 .contact-form textarea{
   resize:none;
   min-height:140px;
   max-height:480px;
-  overflow:auto; /* scroll interne au-delà de max-height */
+  overflow:auto;
   line-height:1.4;
-  white-space:pre-wrap;
-  word-wrap:break-word;
 }
 
 /* Submit button */
 .btn-submit{
-  background-color:var(--btn-green);
-  color:#fff;
+  background-color:var(--accent);
+  color:var(--accent-contrast);
   font-weight:700;
   font-size:1.05rem;
   padding:.85rem 1.1rem;
@@ -100,15 +110,19 @@
   border-radius:15px;
   cursor:pointer;
   transition:background-color .2s ease, transform .12s ease;
-  align-self:flex-start;
   width:100%;
 }
-.btn-submit:hover{background-color:var(--primary-green);transform:scale(1.03)}
 
-/* Success / error messages */
+.btn-submit:hover{
+  background-color:var(--gold);
+  color:#000;
+  transform:scale(1.03);
+}
+
+/* Success / error */
 .success-msg{
-  background-color:var(--primary-green);
-  color:#fff;
+  background-color:var(--accent);
+  color:var(--accent-contrast);
   padding:1rem;
   border-radius:10px;
   font-weight:700;
@@ -116,240 +130,125 @@
   margin-bottom:1rem;
 }
 .error-msg{
-  background:#9b2c2c;color:#fff;
-  padding:.9rem;border-radius:8px;
-  margin-bottom:1rem;font-weight:600;
+  background:#9b2c2c;
+  color:#fff;
+  padding:.9rem;
+  border-radius:8px;
+  margin-bottom:1rem;
+  font-weight:600;
 }
 
-/* --- Right: Info & social --- */
+/* --- Right: Info --- */
 .contact-right{
   flex:1 1 50%;
   min-width:0;
-  background:#f9f9f9;
+  background:var(--section-bg);
   padding:3rem 2rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  color:var(--text);
 }
 
-.contact-right h2 {
-  font-size: 2rem;
-  margin: 0 0 1rem;
-  font-weight: 700;
-}
-.contact-left h2 {
- margin-top: 15px;
+.contact-right h2{
+  font-size:2rem;
+  margin:0 0 1rem;
+  font-weight:700;
+  color:var(--accent);
 }
 
-.contact-right h3 {
-  margin-top: 2.25rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-  /* color: var(--text-dark); */
+.contact-right h3{
+  margin-top:2.25rem;
+  font-weight:600;
+  font-size:1.5rem;
+  color:var(--text);
 }
 
-
-.location-info p{margin:.35rem 0;
+.location-info p{
+  margin:.35rem 0;
   font-size:1.05rem;
   word-break:break-word;
 }
 
-/* Social icons */
+/* Social icons – COULEURS D'ORIGINE PRÉSERVÉES */
 .social-icons{
-  margin-top:1rem;padding:0;
-  list-style:none;display:flex;
+  margin-top:1rem;
+  padding:0;
+  list-style:none;
+  display:flex;
   gap:1.25rem;
 }
+
 .social-icons li a{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:48px;height:48px;border-radius:50%;
-  background:#e6e6e6;color:var(--text-dark);
-  font-size:1.6rem;border:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#e6e6e6;      /* inchangé */
+  color:var(--text);        /* texte normal */
+  font-size:1.6rem;
   transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
-.social-icons li a:hover{transform:scale(1.12);outline:none}
-.social-icons li a.facebook:hover{background:#1877f2;color:#fff;box-shadow:0 0 12px #1877f233}
-.social-icons li a.twitter:hover{background:#1DA1F2;color:#fff;box-shadow:0 0 12px #1DA1F233}
-.social-icons li a.instagram:hover{background:#e1306c;color:#fff;box-shadow:0 0 12px #e1306c99}
-.social-icons li a.linkedin:hover{background:#0077b5;color:#fff;box-shadow:0 0 12px #0077b599}
-.social-icons li a.youtube:hover{background:#ff0000;color:#fff;box-shadow:0 0 12px #ff000088}
-.social-icons li a.whatsapp:hover{background:#25d366;color:#fff;box-shadow:0 0 12px #25d36688}
 
-/* Accessibility helper for required fields */
-.contact-form input[required],
-.contact-form textarea[required]{box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02)}
+.social-icons li a:hover{ transform:scale(1.12); }
 
-/* Transitions globales */
-.contact-left,
-.contact-right,
-.contact-form input,
-.contact-form textarea,
-.btn-submit{transition:background-color .25s ease,color .25s ease,box-shadow .2s ease,transform .12s ease}
+/* couleurs officielles (inchangées) */
+.social-icons li a.facebook:hover  { background:#1877f2; color:#fff; box-shadow:0 0 12px #1877f233; }
+.social-icons li a.twitter:hover   { background:#1DA1F2; color:#fff; box-shadow:0 0 12px #1DA1F233; }
+.social-icons li a.instagram:hover { background:#e1306c; color:#fff; box-shadow:0 0 12px #e1306c99; }
+.social-icons li a.linkedin:hover  { background:#0077b5; color:#fff; box-shadow:0 0 12px #0077b599; }
+.social-icons li a.youtube:hover   { background:#ff0000; color:#fff; box-shadow:0 0 12px #ff000088; }
+.social-icons li a.whatsapp:hover  { background:#25d366; color:#fff; box-shadow:0 0 12px #25d36688; }
 
 /* Responsive */
 @media (max-width:768px){
   .contact-container{flex-direction:column}
-  .contact-left,.contact-right{flex:none;width:100%;padding:2rem 1.25rem}
-  .btn-submit{width:100%;text-align:center}
-  .contact-right h3{margin-top:1.25rem}
+  .contact-left,.contact-right{width:100%;padding:2rem 1.25rem}
+  .btn-submit{width:100%}
 }
 
-/* ========== Dark mode (apply class on <body>) ========== */
+/* ========== Dark mode ========== */
 body.dark{
-  background:var(--dark-bg);
-  color:var(--text-light);
+  background:var(--hero-bg);
+  color:var(--text);
 }
 
-/* Left/right backgrounds in dark mode */
 body.dark .contact-left{
-  background:var(--dark-bg);
-  color:var(--text-light);
-}
-body.dark .contact-right{
-  background:rgba(0,0,0,0.06);
-  color:var(--text-light);
+  background:var(--hero-bg);
+  color:var(--text);
 }
 
-/* Inputs / textarea in dark mode: off-white text */
+body.dark .contact-right{
+  background:var(--section-bg);
+  color:var(--text);
+}
+
 body.dark .contact-form input,
 body.dark .contact-form textarea{
-  background:rgba(255,255,255,0.04);
-  color:var(--dark-field-text); /* blanc cassé demandé */
-  border:1px solid rgba(255,255,255,0.06);
-  box-shadow:none;
+  background:var(--hero-bg);
+  color:var(--text);
+  border:1px solid var(--accent-soft);
 }
 
-/* Placeholders in dark mode (doux) */
 body.dark .contact-form input::placeholder,
 body.dark .contact-form textarea::placeholder{
-  color:rgba(243,244,239,0.6); /* blanc cassé plus transparent */
+  color:rgba(255,255,255,0.35);
 }
 
-/* Focus in dark mode (accessible) */
-body.dark .contact-form input:focus,
-body.dark .contact-form textarea:focus{
-  box-shadow:0 0 0 3px rgba(255,255,255,0.06);
-  background:rgba(255,255,255,0.03);
-}
-h2.dark, h3.dark {
-  color: var(--text-light);
-}
-/* Buttons & messages in dark */
-body.dark .btn-submit{background:green;color:#edeff0}
-body.dark .btn-submit:hover
-{background:var(--bg-yellow);
-  transform:scale(1.03);
-  color:var(--primary-green);
-}
-body.dark .success-msg{background:#0fa372;color:#e9fff5a9}
-body.dark .error-msg{background:#9b2c2c;color:#fff4f4}
-
-/* Social icons in dark */
-body.dark .social-icons li a{background:rgba(255,255,255,0.04);color:var(--text-light)}
-body.dark .social-icons li a.facebook:hover{box-shadow:0 0 12px #1877f233;color:#fff}
-body.dark .social-icons li a.twitter:hover{box-shadow:0 0 12px #1DA1F233;color:#fff}
-body.dark .social-icons li a.instagram:hover{box-shadow:0 0 12px #e1306c33;color:#fff}
-body.dark .social-icons li a.linkedin:hover{box-shadow:0 0 12px #0077b533;color:#fff}
-body.dark .social-icons li a.youtube:hover{box-shadow:0 0 12px #ff000033;color:#fff}
-body.dark .social-icons li a.whatsapp:hover{box-shadow:0 0 12px #25d36633;color:#fff}
-
-/* Safety: ensure boxes don't break layout */
-body.dark .contact-left,
-body.dark .contact-right{min-width:0}
-
-/* =========================
-   FIX OVERFLOW HORIZONTAL & SAFE RESPONSIVE RULES
-   (ajoutées pour éviter que la page "bouge" gauche/droite sur petits écrans)
-   ========================= */
-
-/* 1) Empêche tout défilement horizontal global (sécurise petit écran) */
-html, body {
-  overflow-x: hidden;
+body.dark .btn-submit{
+  background:var(--accent);
+  color:var(--accent-contrast);
 }
 
-/* 2) Ensure flex children never force overflow (double sécurité) */
-.contact-container,
-.contact-left,
-.contact-right {
-  min-width: 0;
+body.dark .btn-submit:hover{
+  background:var(--gold);
+  color:#000;
 }
 
-/* 3) Images / SVG inside contact must be responsive */
-.contact-container img,
-.contact-container svg,
-.contact-container picture {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Icônes sociales dark — COULEURS INCHANGEES */
+body.dark .social-icons li a{
+  background:rgba(255,255,255,0.05);
+  color:var(--text);
 }
-
-/* 4) Inputs / textarea : box-sizing + max-width to avoid overflow */
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-@media (max-width:768px){
-  
-  .contact-left{
-    padding-top: 1.5rem;   /* ✅ réduit l’espace en haut */
-    padding-bottom: 2rem;  /* garde du confort en bas */
-  }
-  .contact-left h2{
-    text-align: center;    /* optionnel : centrer le titre */
-    margin-top: 2.5rem;
-  }
-}
-
-
-/* 5) Réduire les paddings horizontaux sur très petits écrans */
-@media (max-width: 420px) {
-  .contact-left,
-  .contact-right {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* 6) Si un panel mobile (menu) est positionné absolute/fixed, assure qu'il ne dépasse pas */
-.nav-links,
-.navbar .nav-links {
-  max-width: 100vw;
-  box-sizing: border-box;
-}
-
-/* 7) Optional debug helper (décommente pour repérer overflow) */
-/* * { outline: 1px solid rgba(255,0,0,0.06); } */
-
-/* Aligne la checkbox + texte en ligne sans décalage */
-.consent-wrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.consent-wrapper label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-.consent-wrapper input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  /* accent-color: var(--btn-green);  */
-  cursor: pointer;
-  margin: 0;
-}
-
-.consent-wrapper span {
-  display: inline;
-  line-height: 1.3;
-  /* color: black; */
-}
-

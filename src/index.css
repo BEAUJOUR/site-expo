@@ -1,4 +1,39 @@
-/* === index.css === */
+:root {
+  --bg: #f4f2ef; /* beige pierre clair */
+  --text: #191919; /* noir graphite */
+
+  --accent: #61676dcc; /* gris bleu anthracite ultra pro */
+  --accent-contrast: #ffffff; /* blanc pur pour texte sur accent */
+  --accent-soft: rgba(47, 61, 74, 0.08); /* fond léger */
+  --radius: 12px;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --transition: 0.3s ease;
+
+  /* Hero & sections */
+  --hero-bg: #0f1417; /* noir anthracite profond */
+  --section-bg: rgba(0, 0, 0, 0.05);
+
+  /* Option gold très discret (pour titres / borders) */
+  --gold: #c3a96b; /* or doux mat, pas flashy */
+}
+
+body.dark {
+  --bg: #0b0d0e;
+  --text: #e8e8e8;
+
+  --accent: #445566; /* anthracite bleu adouci */
+  --accent-contrast: #0b0d0e;
+  --accent-soft: rgba(68, 85, 102, 0.12);
+
+  --card-bg: #16191b;
+  --hero-bg: #07090a;
+  --section-bg: rgba(255, 255, 255, 0.04);
+
+  --gold: #bda36b;
+}
+
+/* === HTML & BODY === */
 
 html {
   scroll-behavior: smooth;
@@ -14,15 +49,10 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: whitesmoke;
-  color: #222;
-  transition: background-color 0.4s ease, color 0.4s ease; /* ✅ adoucir le changement de mode */
-}
 
-/* Mode sombre */
-body.dark {
-  background-color: #124660;
-  color: #f0eaeae7;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Racine React */
@@ -30,8 +60,17 @@ body.dark {
   height: 100%;
 }
 
+/* Contenu principal (si tu l'utilises) */
+.site-main {
+  animation: fadeInSite 0.5s ease-out;
+}
 
-/* Animation d'apparition du contenu à chaque changement de page */
+/* body.dark .site-main {
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: background-color 0.4s ease;
+} */
+
+/* Animation d'apparition du contenu */
 @keyframes fadeInSite {
   from {
     opacity: 0;
@@ -45,16 +84,11 @@ body.dark {
   }
 }
 
-/* Variante du mode sombre pour fond du contenu */
-body.dark .site-main {
-  background-color: rgba(255, 255, 255, 0.03);
-  transition: background-color 0.4s ease;
-}
-
-/* ✅ Animation d'apparition douce de la navbar (facultatif) */
+/* Navbar */
 .navbar {
   animation: slideDownNavbar 0.5s ease-out;
 }
+
 @keyframes slideDownNavbar {
   from {
     opacity: 0;

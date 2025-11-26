@@ -1,7 +1,8 @@
 import "../style/home.css";
 import { useNavigate } from "react-router-dom";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-// import expo from "../assets/chantier/expo.png";
+import useCountOnVisible from "../hooks/useCountOnVisible";
+import expo from "../assets/Atelier/ATELIER18-Copie.jpg";
 import Hero from "../components/Hero";
 
 function importAll(r) {
@@ -11,6 +12,18 @@ function importAll(r) {
 const imageUrls = importAll(
   require.context("../assets/galerie", false, /\.(png|jpe?g|webp)$/)
 );
+function StatItem({ value, label, suffix, speed }) {
+  const [ref, count] = useCountOnVisible(value, speed);
+  return (
+    <div className="stat-item" ref={ref}>
+      <span>
+        {count}
+        {suffix}
+      </span>
+      <p>{label}</p>
+    </div>
+  );
+}
 
 const Home = () => {
   const navigate = useNavigate();
@@ -23,183 +36,108 @@ const Home = () => {
 
   return (
     <div className="home fade-in-up">
-      <Hero/>
-
+      <Hero />
       <section className="intro fade-in-down">
         <div className="container">
-          <h2 className="fade-in-left">Votre espace, notre passion</h2>
-          <p className="fade-in-up">
-            Spécialistes en agencement et menuiserie sur mesure depuis plus de
-            25 ans, nous accompagnons nos clients avec un savoir-faire artisanal
-            et des solutions innovantes adaptées à chaque projet..
+          <h2 className="fade-in-up">Votre espace, notre passion</h2>
+          <p className="fade-in-left">
+            Spécialisée dans la <strong>fabrication et de la pose de stanrds</strong>
+            publicitaires réalisés pour des bureaux d’études et destinés aux
+            salons professionnels, en France et à l'internationnal.
+            <br />
+            Nous intervenons également dans l’agencement d’espaces Événementiel,
+            de showrooms et de bureaux, en garantissant qualifiés, rigueur et
+            respect des délais.
           </p>
           <p className="fade-in-right">
-            Que vous rêviez d’une cuisine chaleureuse, d’un bureau optimisé ou
-            d’un mobilier unique, notre équipe met tout en œuvre pour
-            concrétiser vos envies avec rigueur et créativité.
+            En parallèle, notre activité d'agencement pour les
+            particulierscomprend la conception et la réalisation sur mesure de
+            cuisines, salles de bains, dressings et chambres, alliant design,
+            fonctionnalité et savoir-faire artisanal.
           </p>
-          <p className="gallery-note fade-in-left">
+          {/* <p className="gallery-note fade-in-left">
             Veuillez nous{" "}
             <strong onClick={() => navigate("/contact")}>Contacter</strong>
-          </p>
+          </p> */}
         </div>
       </section>
-
-      <section className="services-preview fade-in-up">
-        <div className="container">
-          <h2 className="fade-in-up">Nos domaines d’expertise</h2>
-          <p className="fade-in-left">
-            Nous proposons une large gamme de prestations adaptées à vos besoins
-            :
-          </p>
-          <ul>
-            <li className="fade-in-right">
-              Agencement d’intérieur personnalisé : optimisation et design de
-              vos espaces de vie et de travail
-            </li>
-            <li className="fade-in-left">
-              Menuiserie artisanale : création de mobilier, dressings,
-              escaliers, menuiseries sur mesure
-            </li>
-            <li className="fade-in-right">
-              Conseil & accompagnement : de l’étude à la réalisation, un suivi
-              complet et personnalisé
-            </li>
-          </ul>
-          <p className="fade-in-up">
-            Découvrez en détail toutes nos prestations sur la page
-            <strong onClick={() => navigate("/services")}> Services</strong>
-          </p>
+      {/* CHIFFRES CLÉS */}
+      <section
+        className="apropos-stats container section animate-on-scroll fade-in-up"
+        aria-labelledby="chiffres"
+      >
+        <h2 id="chiffres" className="animate-on-scroll flipIn">
+          Nos chiffres clés
+        </h2>
+        <div className="stats-grid">
+          <StatItem
+            value={25}
+            label="Années d’expérience"
+            suffix="+"
+            speed={2500}
+          />
+          <StatItem
+            value={500}
+            label="Projets réalisés"
+            suffix="+"
+            speed={2500}
+          />
+          <StatItem
+            value={300}
+            label="Clients satisfaits"
+            suffix="+"
+            speed={2500}
+          />
         </div>
       </section>
 
       <section className="suggestions fade-in-left">
         <div className="container">
           <h2 className="fade-in-up">Galerie inspiration</h2>
-          <p className="fade-in-right">
-            Parcourez une sélection de nos réalisations et laissez-vous inspirer
-            par la diversité de nos créations.
-          </p>
 
           <div className="gallery">
             {imageUrls.map((src, index) => (
-              <img
-                key={index}
-                className="fade-in-zoom"
-                src={src}
-                alt={`Réalisation ${index + 1}`}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  maxWidth: "400px",
-                  borderRadius: "8px",
-                }}
-              />
+              <div key={index} className="gallery-item fade-in-zoom">
+                <p className="gallery-caption">Inspiration {index + 1}</p>
+
+                <img
+                  src={src}
+                  alt={`Réalisation ${index + 1}`}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    maxWidth: "400px",
+                    borderRadius: "8px",
+                  }}
+                />
+              </div>
             ))}
+
+           
           </div>
+ {/* === BLOC TEXTE + IMAGE === */}
+            <div className="extra-block fade-in-up">
+              <div className="extra-text">
+                <h3>Qui sommes-nous ?</h3>
+                {/* <p>
+                  Fabrication sur-mesure, optimisation d’espace et finitions
+                  haut de gamme. Votre projet mérite le meilleur.
+                </p> */}
+              </div>
 
-          <p className="gallery-note fade-in-up">
-            Retrouvez l’ensemble de nos projets sur la page
-            <strong onClick={() => navigate("/projet")}> Réalisations</strong>
-          </p>
-        </div>
-      </section>
-
-      <section className="values fade-in-right">
-        <div className="container">
-          <h2 className="fade-in-up">Pourquoi choisir notre entreprise ?</h2>
-          <div className="values-list">
-            <article className="fade-in-left">
-              <h3>Qualité artisanale</h3>
-              <p>
-                Chaque projet est une création unique, réalisée avec soin et
-                précision par nos artisans qualifiés.
-              </p>
-            </article>
-            <article className="fade-in-up">
-              <h3>Design personnalisé</h3>
-              <p>
-                Nous adaptons nos solutions à vos goûts et contraintes pour un
-                résultat à la fois esthétique et fonctionnel.
-              </p>
-            </article>
-            <article className="fade-in-down">
-              <h3>Respect des délais</h3>
-              <p>
-                Une gestion rigoureuse garantit la livraison dans les temps
-                convenus, sans compromis sur la qualité.
-              </p>
-            </article>
-            <article className="fade-in-right">
-              <h3>Engagement durable</h3>
-              <p>
-                Nous privilégions des matériaux écologiques et des techniques
-                responsables pour des aménagements durables.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      {/* TÉMOIGNAGES */}
-        <section
-          className="apropos-testimonials container section animate-on-scroll fade-in-up"
-          aria-labelledby="temoignages"
-        >
-          <h2 id="temoignages" className="animate-on-scroll fadeLeft">
-           Ils partagent leur expérience avec Europe Rapide Expo
-          </h2>
-
-          <div className="testimonials-carousel">
-            <div className="carousel-track">
-              {[
-                {
-                  name: "Ingrid InTouch",
-                  header: "Chers Tous",
-                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
-                },
-                {
-                  name: "Kejian",
-                  header: "Bonjour Monsieur GARGANTA,",
-                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
-                },
-
-                {
-                  name: "Client particulier",
-                   header: "Bonjour Monsieur GARGANTA,",
-                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
-                },
-              
-              ]
-                // On double les cartes pour créer une boucle fluide
-                .concat([
-                 {
-                  name: "Ingrid InTouch",
-                  header: "Chers Tous",
-                  text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
-                },
-                {
-                  name: "Kejian",
-                  header: "Bonjour Monsieur GARGANTA,",
-                  text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
-                },
-
-                {
-                  name: "Client particulier",
-                   header: "Bonjour Monsieur GARGANTA,",
-                  text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
-                },
-                ])
-                .map((t, i) => (
-                  <div key={i} className="testimonial-card">
-                    {/* <img src={t.img} alt={t.name} loading="lazy" /> */}
-                    <p className="testimonial-text">“{t.header}”</p>
-                    <p className="testimonial-text">“{t.text}”</p>
-                    <p className="testimonial-name">{t.name}</p>
-                  </div>
-                ))}
+              <img
+                src={expo}
+                alt="Présentation"
+                className="extra-image"
+              />
             </div>
-          </div>
-        </section>
+          {/* <p className="gallery-note fade-in-up">
+      Retrouvez l’ensemble de nos projets sur la page
+      <strong onClick={() => navigate("/projet")}> Réalisations</strong>
+    </p> */}
+        </div>
+      </section>
+
       <section className="devis-section fade-in-up">
         <div className="container">
           <h2 className="fade-in-down">Demande de devis gratuit</h2>

@@ -9,10 +9,11 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"; // ✅
-import "./app.css";
+// import "./index.css";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Evenement from "./pages/Evenement";
 
 function AOSController() {
   const location = useLocation();
@@ -42,6 +43,7 @@ function App() {
        
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/evenement" element={<Evenement />} />
             <Route path="/apropos" element={<Apropos />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projet" element={<Projet />} />

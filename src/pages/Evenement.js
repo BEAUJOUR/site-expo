@@ -1,0 +1,63 @@
+// src/pages/Evenement.js
+import React from "react";
+import "../style/evenement.css";
+import headerImg from "../assets/savoir_faire/atelier_thumb.webp";
+
+// 🟦 Fonction Webpack pour charger un dossier complet
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+// 🟦 Charge toutes les images du dossier /assets/evenements
+const gallery = importAll(
+  require.context("../assets/evenement", false, /\.(png|jpe?g|webp)$/)
+);
+
+export default function Evenement() {
+  return (
+    <div className="event-page">
+
+      {/* ===== HEADER ===== */}
+      <header
+        className="event-header"
+        style={{ backgroundImage: `url(${headerImg})` }}
+      >
+        <div className="overlay">
+          <h1 className="event-title">Rigueur, qualité, expériance: Notre engagement depuis 25 ans. </h1>
+        </div>
+      </header>
+
+      {/* ===== SECTION TEXTE ===== */}
+      <section className="event-section">
+        <div className="event-text-block">
+          <h2>Un savoir-faire au cœur de chaque évènement</h2>
+          <p>Nous vous proposons des projets clés en main réalisés par une équipe investie et dynamique qui mettres son professionnalisme
+             à votre service en respectant les exigences de qualifié, de delais et de finitition. </p>
+          <p></p>
+          <p>
+            Europe Rapide Expo crée des installations professionnelles élégantes
+            et sur-mesure pour vos expositions, stands et présentations.
+          </p>
+          <p>
+            Chaque réalisation reflète votre identité, votre image et votre
+            excellence.
+          </p>
+        </div>
+      </section>
+
+      {/* ===== GALERIE ===== */}
+      <section className="event-gallery-section">
+        <h2 className="gallery-title">Galerie d’Évènements</h2>
+
+        <div className="masonry">
+          {gallery.map((src, idx) => (
+            <div className="masonry-item" key={idx}>
+              <img src={src} alt={"event " + idx} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  );
+}

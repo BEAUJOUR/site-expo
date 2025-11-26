@@ -1,18 +1,18 @@
 // Fichier : src/pages/Apropos.jsx
 import React from "react";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-import useCountOnVisible from "../hooks/useCountOnVisible";
+// import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/apropos.css";
 
-function StatItem({ value, label, suffix, speed }) {
-  const [ref, count] = useCountOnVisible(value, speed);
-  return (
-    <div className="stat-item" ref={ref}>
-      <span>{count}{suffix}</span>
-      <p>{label}</p>
-    </div>
-  );
-}
+// function StatItem({ value, label, suffix, speed }) {
+//   const [ref, count] = useCountOnVisible(value, speed);
+//   return (
+//     <div className="stat-item" ref={ref}>
+//       <span>{count}{suffix}</span>
+//       <p>{label}</p>
+//     </div>
+//   );
+// }
 
 
 function importAll(r) {
@@ -75,7 +75,7 @@ const Apropos = () => {
         </section>
 
          {/* CHIFFRES CLÉS */}
-      <section
+      {/* <section
         className="apropos-stats container section animate-on-scroll fade-in-up"
         aria-labelledby="chiffres"
       >
@@ -87,7 +87,7 @@ const Apropos = () => {
           <StatItem value={500} label="Projets réalisés" suffix="+" speed={2500}/>
           <StatItem value={300} label="Clients satisfaits" suffix="+" speed={2500}/>
         </div>
-      </section>
+      </section> */}
 
         {/* STAND */}
         <section

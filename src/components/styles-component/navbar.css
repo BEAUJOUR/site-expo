@@ -1,69 +1,54 @@
+/* === NAVBAR — IDENTIQUE À LA TIENNE MAIS AVEC VARIABLES === */
 
-
-/* variables (partager la même max-width que le site principal) */
-:root {
-  --max-width: 1200px;
-  --container-padding: 1rem; /* si besoin garder un padding interne */
-  --navbar-height: 58px; /* valeur de fallback, peut être mise à jour via JS */
-  --navbar-bg: #f9e30c;
-  --navbar-color: #ffffff;
-  --accent: #006600;
+/* reset */
+* {
+  box-sizing: border-box;
 }
 
-/* reset utile */
-* { box-sizing: border-box; }
-
-/* navbar fixed en haut */
 .navbar {
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  background-color: var(--navbar-bg);
-  color: var(--navbar-color);
-  padding: 0.4em 0;        /* on retire padding horizontal pour le placer dans .navbar-container */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 1300;
+
+  background-color: var(--accent);     /* 🔥 ancien jaune remplacé */
+  color: var(--accent-contrast);       /* 🔥 texte clair */
+
+  padding: 0.4em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: background-color 0.3s ease;
-  height: var(--navbar-height);
+  height: var(--navbar-height, 58px);
 }
+
 .navbar-container,
 .nav-links {
   display: flex;
-  align-items: center;   /* centre verticalement */
+  align-items: center;
 }
 
-/* Container centré et aligné avec le reste du site */
 .navbar-container {
   width: 90%;
-  max-width: var(--max-width);
+  max-width: 1200px; /* utilise var si tu veux */
   margin: 0 auto;
-  padding: 0 var(--container-padding);
-  display: flex;
-  align-items: center;
+  padding: 0 1rem;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* logo block - parent */
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
- 
-  
 }
 
-
-/* image logo - hauteur fixe, largeur auto pour ne pas déformer */
 .logo img {
   height: 52px;
   width: auto;
-  align-items: center;
-  justify-content: center;
 }
 
-/* controls (dark mode, burger etc.) */
+/* CONTROLS */
 .nav-controls {
   display: flex;
   align-items: center;
@@ -71,81 +56,70 @@
   margin-left: auto;
 }
 
-/* generic nav buttons */
+/* BOUTONS */
 .nav-select,
 .nav-btn {
   background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--accent-contrast);  /* 🔥 changé */
+  color: var(--accent-contrast);             /* 🔥 changé */
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
-  
-}
-.nav-select:hover,
-.nav-btn:hover { 
-background-color: rgba(255,255,255,0.12); 
 }
 
-/* burger button */
+.nav-select:hover,
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* BURGER MOBILE */
 .menu-toggle {
-  display: none; /* visible only on mobile */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
 }
 
-/* nav links - inline list */
+/* LINKS (desktop) */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0;            /* important: remove auto-centering that misaligned layout */
-  align-items: center;
+  margin: 0;
   padding-left: 0;
 }
 
-/* link styles */
 .nav-links li a {
-  color: var(--accent);
+  color: var(--accent-contrast);           /* 🔥 changé */
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   transition: color 0.2s ease;
 }
-.nav-links li a:hover,
-.nav-links li a:focus { color: #fff; }
 
-/* dark mode variants for links */
-.navbar .nav-links.dark li a {
-  color: var(--navbar-color) !important;
+.nav-links li a:hover {
+  color: var(--bg); /* contraste sur hover */
 }
-.navbar .nav-links.dark li a:hover { color: var(--accent) !important; }
 
-/* small screens: mobile menu panel */
+/* === MOBILE MENU === */
 @media (max-width: 768px) {
-
-  /* make navbar container full width padding wise */
   .navbar-container {
     width: 100%;
-    max-width: 100%;
     padding: 0 1rem;
   }
 
-  .menu-toggle { display: block; }
-
-  .nav-controls {
-    margin-left: 0;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-links {
     position: absolute;
-    top: calc(var(--navbar-height, 64px) + 8px);
+    top: calc(var(--navbar-height) + 8px);
     right: 0;
-    background-color: var(--navbar-bg);
+    background-color: var(--accent);   /* 🔥 */
     width: 100%;
     max-width: 320px;
     flex-direction: column;
@@ -163,59 +137,47 @@ background-color: rgba(255,255,255,0.12);
 
   .nav-links li a {
     font-size: 1.1rem;
-    display: block;
-    color: #fff;
+    color: var(--accent-contrast);
   }
 }
 
-/* very small devices tweak */
+/* Mobile mini */
 @media (max-width: 350px) {
   .logo img {
     height: 47px;
   }
 }
 
-/* accessible focus */
+/* FOCUS ACCESSIBLE */
 .nav-links li a:focus {
   outline: 3px solid rgba(255,255,255,0.12);
   outline-offset: 3px;
 }
 
-/* animation langue (if used elsewhere) */
-@keyframes fadeLang {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+/* === DARK MODE AUTOMATIQUE (GRÂCE AUX VARIABLES) === */
 
-/* dark mode class on body to flip navbar */
 body.dark .navbar {
-  background-color: #124660;
+  background-color: var(--accent);       /* déjà remplacé via variables */
 }
-body.dark .nav-links li a { color: #fff; }
+
+body.dark .nav-links li a {
+  color: var(--accent-contrast);
+}
+
 body.dark .nav-select,
-body.dark .nav-btn { border-color: #ccc; color: #eee; }
-
-/* ensure navbar sits above modal/backdrop */
-.modal { z-index: 1200; }
-.navbar { z-index: 1300; } /* keep nav above modal backdrop if needed */
-/* Dark uniquement pour le composant navbar (scoped) */
-
-
-/* nav-links inside navbar when navbar has .dark */
-
-.navbar .nav-links.dark li a{
-  color: #f9e30c !important;
-  transition: color .18s ease !important;
-}
-.navbar .nav-links.dark li a:hover {
-  color: white !important;
-  transition: color .18s ease !important;
+body.dark .nav-btn {
+  border-color: var(--accent-contrast);
+  color: var(--accent-contrast);
 }
 
-
-/* mobile panel background when navbar is dark OR ul has .dark */
 .nav-links.dark {
-  background-color: #124660 !important;
+  background-color: var(--accent) !important;
 }
 
+.nav-links.dark li a {
+  color: var(--accent-contrast) !important;
+}
 
+.nav-links.dark li a:hover {
+  color: var(--bg) !important;
+}
