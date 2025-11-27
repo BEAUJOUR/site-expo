@@ -16,38 +16,45 @@ const gallery = importAll(
 export default function Evenement() {
   return (
     <div className="event-page">
-
       {/* ===== HEADER ===== */}
       <header
         className="event-header"
         style={{ backgroundImage: `url(${headerImg})` }}
       >
         <div className="overlay">
-          <h1 className="event-title">Rigueur, qualité, expériance: Notre engagement depuis 25 ans. </h1>
+          <h1 className="event-title">
+            Rigueur, qualité, expériance: Notre engagement depuis 25 ans.{" "}
+          </h1>
         </div>
       </header>
 
       {/* ===== SECTION TEXTE ===== */}
       <section className="event-section">
         <div className="event-text-block">
-          <h2>Un savoir-faire au cœur de chaque évènement</h2>
-          <p>Nous vous proposons des projets clés en main réalisés par une équipe investie et dynamique qui mettres son professionnalisme
-             à votre service en respectant les exigences de qualifié, de delais et de finitition. </p>
-          <p></p>
+          <h2>??????????????????????????????</h2>
           <p>
+            Nous vous proposons des projets clés en main réalisés par une équipe
+            investie et dynamique qui mettres son professionnalisme à votre
+            service en respectant les exigences de qualifié, de delais et de
+            finitition.{" "}
+          </p>
+
+          {/* <p>
             Europe Rapide Expo crée des installations professionnelles élégantes
             et sur-mesure pour vos expositions, stands et présentations.
           </p>
           <p>
             Chaque réalisation reflète votre identité, votre image et votre
             excellence.
-          </p>
+          </p> */}
         </div>
       </section>
 
       {/* ===== GALERIE ===== */}
       <section className="event-gallery-section">
-        <h2 className="gallery-title">Galerie d’Évènements</h2>
+        <h2 className="gallery-title">???????
+          
+        </h2>
 
         <div className="masonry">
           {gallery.map((src, idx) => (
@@ -57,7 +64,6 @@ export default function Evenement() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }

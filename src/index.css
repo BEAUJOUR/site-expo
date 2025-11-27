@@ -56,9 +56,9 @@ body {
 }
 
 /* Racine React */
-#root {
+/* #root {
   height: 100%;
-}
+} */
 
 /* Contenu principal (si tu l'utilises) */
 .site-main {

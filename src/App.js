@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
-import Services from "./pages/Services";
-import Projet from "./pages/Projet";
+
+
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop"; // ✅
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Evenement from "./pages/Evenement";
+import QuiSommesNous from "./pages/QuiSommesNous";
 
 function AOSController() {
   const location = useLocation();
@@ -45,8 +46,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/evenement" element={<Evenement />} />
             <Route path="/apropos" element={<Apropos />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/projet" element={<Projet />} />
+         
+            <Route path="/quisommesnous" element={<QuiSommesNous />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<Home />} />
           </Routes>

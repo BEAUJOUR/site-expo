@@ -2,7 +2,7 @@ import "../style/home.css";
 import { useNavigate } from "react-router-dom";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import useCountOnVisible from "../hooks/useCountOnVisible";
-import expo from "../assets/Atelier/ATELIER18-Copie.jpg";
+import expo from "../assets/Atelier/ATELIER8.jpg";
 import Hero from "../components/Hero";
 
 function importAll(r) {
@@ -41,19 +41,24 @@ const Home = () => {
         <div className="container">
           <h2 className="fade-in-up">Votre espace, notre passion</h2>
           <p className="fade-in-left">
-            Spécialisée dans la <strong>fabrication et de la pose de stanrds</strong>
-            publicitaires réalisés pour des bureaux d’études et destinés aux
-            salons professionnels, en France et à l'internationnal.
+            Spécialisée dans la{" "}
+            <strong>fabrication et de la pose de stanrds publicitaires</strong>{" "}
+            réalisés pour des <strong>bureaux d’études</strong> et destinés aux
+            <strong> salons professionnels</strong>, en <strong>France</strong>{" "}
+            et <strong>à l'internationnal</strong>.
             <br />
-            Nous intervenons également dans l’agencement d’espaces Événementiel,
-            de showrooms et de bureaux, en garantissant qualifiés, rigueur et
-            respect des délais.
+            Nous intervenons également dans l’
+            <strong>agencement d’espaces Événementiel</strong>, de{" "}
+            <strong> showrooms</strong> et de <strong>bureaux</strong>, en
+            garantissant qualifiés, rigueur et respect des délais.
           </p>
           <p className="fade-in-right">
-            En parallèle, notre activité d'agencement pour les
-            particulierscomprend la conception et la réalisation sur mesure de
-            cuisines, salles de bains, dressings et chambres, alliant design,
-            fonctionnalité et savoir-faire artisanal.
+            En parallèle, notre activité d'
+            <strong>agencement pour les particuliers</strong> comprend la{" "}
+            <strong>conception et la réalisation sur mesure</strong> de{" "}
+            <strong>cuisines, salles de bains, dressings et chambres</strong>,
+            alliant <strong>design, fonctionnalité </strong>et <strong>savoir-faire
+            artisanal</strong>.
           </p>
           {/* <p className="gallery-note fade-in-left">
             Veuillez nous{" "}
@@ -112,29 +117,20 @@ const Home = () => {
                 />
               </div>
             ))}
-
-           
           </div>
- {/* === BLOC TEXTE + IMAGE === */}
-            <div className="extra-block fade-in-up">
-              <div className="extra-text">
-                <h3>Qui sommes-nous ?</h3>
-                {/* <p>
+          {/* === BLOC TEXTE + IMAGE === */}
+          <div className="extra-block fade-in-up">
+            <div className="extra-text">
+              <h3>Qui sommes-nous ?</h3>
+              {/* <p>
                   Fabrication sur-mesure, optimisation d’espace et finitions
                   haut de gamme. Votre projet mérite le meilleur.
                 </p> */}
-              </div>
-
-              <img
-                src={expo}
-                alt="Présentation"
-                className="extra-image"
-              />
             </div>
-          {/* <p className="gallery-note fade-in-up">
-      Retrouvez l’ensemble de nos projets sur la page
-      <strong onClick={() => navigate("/projet")}> Réalisations</strong>
-    </p> */}
+
+            <img src={expo} alt="Présentation" className="extra-image" />
+          </div>
+        
         </div>
       </section>
 

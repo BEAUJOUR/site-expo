@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "../style/contact.css";
 
 export default function Contact() {
@@ -91,8 +87,6 @@ export default function Contact() {
             placeholder="Votre nom"
           />
 
-         
-
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -115,26 +109,21 @@ export default function Contact() {
             placeholder="Votre message..."
           />
 
-          <div className="consent-wrapper">
-            <label htmlFor="consent">
-              
-              <input type="checkbox" id="consent" name="consent" required />
-              <p>
-                En soumettant ce formulaire, j'accepte que les informations
-                saisies soient exploitées dans le cadre strict de ma demande *
-              </p>
-            </label>
-          </div>
-
           <button type="submit" className="btn-submit">
             Envoyer
           </button>
+          <div className="consent-wrapper">
+            <label htmlFor="consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              <p>
+                J’autorise Europe Rapide Expo à collecter et traiter mes données
+                personnelles uniquement dans le cadre de la gestion de ma
+                demande, conformément au Règlement Général sur la Protection des
+                Données (RGPD). *
+              </p>
+            </label>
+          </div>
         </form>
-
-        <p className="rgpd-note">
-          Europe Rapide Expo respecte la loi RGPD. Vos données sont utilisées
-          uniquement pour traiter votre demande.
-        </p>
       </section>
 
       <section className="contact-right" data-aos="fade-down-left">
@@ -165,7 +154,7 @@ export default function Contact() {
               <FaFacebookF />
             </a>
           </li>
-          
+
           <li>
             <a
               href="https://www.instagram.com/accounts/onetap/?next=%2Feuroperapideexpo%2F"

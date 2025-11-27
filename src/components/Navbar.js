@@ -94,27 +94,19 @@ const Navbar = () => {
               to="/apropos"
               onClick={() => setMenuOpen(false)}
             >
-              {"Infos"}
+              {"À propos"}
             </Link>
           </li>
           <li role="none">
             <Link
               role="menuitem"
-              to="/services"
+              to="/quisommesnous"
               onClick={() => setMenuOpen(false)}
             >
-              {"Services"}
+              {"Qui sommes-nous ?"}
             </Link>
           </li>
-          <li role="none">
-            <Link
-              role="menuitem"
-              to="/projet"
-              onClick={() => setMenuOpen(false)}
-            >
-              {"Projet"}
-            </Link>
-          </li>
+        
           <li role="none">
             <Link
               role="menuitem"

@@ -14,9 +14,9 @@ export default function Hero() {
 
       <div className="hero-overlay hero-simple-overlay">
         <div className="hero-content hero-simple-content">
-          <p className="hero-simple-text">
+          <h1 className="hero-simple-text">
             Des stang aux intérieus sur mesure : Un savoir faire, deux univers
-          </p>
+          </h1>
         </div>
       </div>
     </header>
