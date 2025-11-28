@@ -3,7 +3,7 @@
 import useScrollAnimation from "../hooks/useScrollAnimation";
 // import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/apropos.css";
-import ImageApropos from "../assets/Atelier/ATELIER10.jpg";
+import ImageApropos from "../assets/projets/cuisines/fixed/Cuisine_moderne_avec_île_en_marbre.webp";
 
 
 function importAll(r) {
@@ -24,7 +24,7 @@ const img= importAll(
   require.context("../assets/img", false, /\.(png|jpe?g|webp)$/)
 );
 
-const Apropos = () => {
+const Agencement = () => {
   useScrollAnimation(".animate-on-scroll", "visible");
   return (
     <>
@@ -61,20 +61,7 @@ const Apropos = () => {
             </p>
           </section>
 
-          {/* CHIFFRES CLÉS */}
-          {/* <section
-        className="apropos-stats container section animate-on-scroll fade-in-up"
-        aria-labelledby="chiffres"
-      >
-        <h2 id="chiffres" className="animate-on-scroll flipIn">
-          Nos chiffres clés
-        </h2>
-        <div className="stats-grid">
-          <StatItem value={25} label="Années d’expérience" suffix="+" speed={2500}/>
-          <StatItem value={500} label="Projets réalisés" suffix="+" speed={2500}/>
-          <StatItem value={300} label="Clients satisfaits" suffix="+" speed={2500}/>
-        </div>
-      </section> */}
+       
    <section
             className="apropos-gallery container section animate-on-scroll fade-in-up"
             aria-labelledby="galerie"
@@ -155,4 +142,4 @@ const Apropos = () => {
   );
 };
 
-export default Apropos;
+export default Agencement;

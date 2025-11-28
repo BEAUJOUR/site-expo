@@ -5,7 +5,7 @@ import headerImg from "../assets/Atelier/IMG_1099.JPG";
 import atelier1 from "../assets/Atelier/IMG_1093.JPG";
 import atelier2 from "../assets/Atelier/IMG_1098.JPG";
 import atelier3 from "../assets/Atelier/IMG_7254.JPG";
-import atelier4 from "../assets/img/1.jpg";
+import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
 import Testimonials from "../components/Testimonials";
 
@@ -47,7 +47,7 @@ export default function QuiSommesNous() {
         </p>
 
         <p>
-          Un espace de stockage de <strong>1 200 m²</strong> et notre service
+          Un espace de stockage de <strong>1 300 m²</strong> et notre service
           interne de <strong>logistique & transport</strong> garantissent une
           gestion optimale et continue de chaque projet, du lancement jusqu’à la
           livraison finale.
@@ -90,7 +90,7 @@ export default function QuiSommesNous() {
         <div className="atelier-row atelier" >
           <div className="atelier-text">
             <p>
-              Un espace de stockage de <strong>1200 m²</strong> garantissant une
+              Un espace de stockage de <strong>1300 m²</strong> garantissant une
               gestion fluide.
             </p>
           </div>

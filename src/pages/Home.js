@@ -1,5 +1,7 @@
 import "../style/home.css";
 // import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import useCountOnVisible from "../hooks/useCountOnVisible";
 import expo from "../assets/Atelier/ATELIER8.jpg";
@@ -43,7 +45,7 @@ const Home = () => {
           {/* <h2 className="fade-in-up">Votre espace, notre passion</h2> */}
           <p className="fade-in-left">
             Spécialisée dans la{" "}
-            <strong>fabrication et de la pose de stanrds publicitaires</strong>{" "}
+            <strong>fabrication et de la pose de stands publicitaires</strong>{" "}
             réalisés pour des <strong>bureaux d’études</strong> et destinés aux
             <strong> salons professionnels</strong>, en <strong>France</strong>{" "}
             et <strong>à l'internationnal</strong>.
@@ -58,8 +60,8 @@ const Home = () => {
             <strong>agencement pour les particuliers</strong> comprend la{" "}
             <strong>conception et la réalisation sur mesure</strong> de{" "}
             <strong>cuisines, salles de bains, dressings et chambres</strong>,
-            alliant <strong>design, fonctionnalité </strong>et <strong>savoir-faire
-            artisanal</strong>.
+            alliant <strong>design, fonctionnalité </strong>et{" "}
+            <strong>savoir-faire artisanal</strong>.
           </p>
           {/* <p className="gallery-note fade-in-left">
             Veuillez nous{" "}
@@ -99,58 +101,48 @@ const Home = () => {
 
       <section className="suggestions fade-in-left">
         <div className="container">
-          <h2 className="fade-in-up">??????????</h2>
-          {/* <h2 className="fade-in-up">Galerie inspiration</h2> */}
+  <h2 className="fade-in-up">??????????</h2>
 
-          <div className="gallery">
-            {imageUrls.map((src, index) => (
-              <div key={index} className="gallery-item fade-in-zoom">
-                <p className="gallery-caption">Inspiration  {index + 1}</p>
+  {/* GALERIE CLIQUABLE – CÔTE À CÔTE */}
+  <div className="gallery-grid">
 
-                <img
-                  src={src}
-                  alt={`Réalisation ${index + 1}`}
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    maxWidth: "400px",
-                    borderRadius: "8px",
-                  }}
-                />
-              </div>
-            ))}
+    <Link
+      to="/evenement"
+      className="gallery-item fade-in-zoom gallery-link"
+    >
+      <h3 className="gallery-caption">Événementiel</h3>
+
+      <img
+        src={imageUrls[0]}
+        alt="Réalisation événementielle"
+        className="gallery-image"
+      />
+    </Link>
+
+    <Link
+      to="/agencement"
+      className="gallery-item fade-in-zoom gallery-link"
+    >
+      <h3 className="gallery-caption">Agencement</h3>
+
+      <img
+        src={imageUrls[1]}
+        alt="Réalisation Agencement"
+        className="gallery-image"
+      />
+    </Link>
+
+  </div>
+</div>
+
+        <Link to="/quisommesnous" className="extra-block fade-in-up extra-link">
+          <div className="extra-text">
+            <h3>Qui sommes-nous ?</h3>
           </div>
-          {/* === BLOC TEXTE + IMAGE === */}
-          <div className="extra-block fade-in-up">
-            <div className="extra-text">
-              <h3>Qui sommes-nous ?</h3>
-              {/* <p>
-                  Fabrication sur-mesure, optimisation d’espace et finitions
-                  haut de gamme. Votre projet mérite le meilleur.
-                </p> */}
-            </div>
 
-            <img src={expo} alt="Présentation" className="extra-image" />
-          </div>
-        
-        </div>
+          <img src={expo} alt="Présentation" className="extra-image" />
+        </Link>
       </section>
-
-      {/* <section className="devis-section fade-in-up">
-        <div className="container">
-          <h2 className="fade-in-down">Demande de devis gratuit</h2>
-          <p className="fade-in-left">
-            Vous avez un projet en tête ? Cliquez ci-dessous pour nous envoyer
-            votre demande de devis. Notre équipe vous répondra rapidement.
-          </p>
-          <p className="gallery-note fade-in-up">
-            <strong onClick={() => navigate("/contact")}>
-              {" "}
-              Demande un devis
-            </strong>
-          </p>
-        </div>
-      </section> */}
     </div>
   );
 };

@@ -91,10 +91,10 @@ const Navbar = () => {
           <li role="none">
             <Link
               role="menuitem"
-              to="/apropos"
+              to="/agencement"
               onClick={() => setMenuOpen(false)}
             >
-              {"À propos"}
+              {"Agencement"}
             </Link>
           </li>
           <li role="none">

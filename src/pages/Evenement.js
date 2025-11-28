@@ -1,7 +1,7 @@
 // src/pages/Evenement.js
 import React from "react";
 import "../style/evenement.css";
-import headerImg from "../assets/savoir_faire/atelier_thumb.webp";
+import headerImg from "../assets/projets/salons/expo.png";
 
 // 🟦 Fonction Webpack pour charger un dossier complet
 function importAll(r) {
