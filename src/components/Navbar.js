@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {/* Ajout de la classe 'dark' sur le <ul> quand darkMode est true */}
         <ul
-          className={`nav-links ${menuOpen ? "active" : ""} ${
+          className={`nav-links cascade-nav ${menuOpen ? "active" : ""} ${
             darkMode ? "dark" : ""
           }`}
           role="menubar"

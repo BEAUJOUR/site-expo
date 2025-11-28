@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.f75fd3f1.css",
-    "main.js": "/site-expo/static/js/main.1dd9b69d.js",
+    "main.css": "/site-expo/static/css/main.c0cf8839.css",
+    "main.js": "/site-expo/static/js/main.ac63fc39.js",
     "static/media/IMG_1099.JPG": "/site-expo/static/media/IMG_1099.67b54f7b2d69abb2aa0a.JPG",
+    "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1093.JPG": "/site-expo/static/media/IMG_1093.fb0e56807fd72bd94f37.JPG",
     "static/media/IMG_1098.JPG": "/site-expo/static/media/IMG_1098.86c4ca0b630fef17a6e3.JPG",
     "static/media/image003 .jpg": "/site-expo/static/media/image003 .7ec333e8560f57322a6e.jpg",
-    "static/media/ATELIER10.jpg": "/site-expo/static/media/ATELIER10.c500462cb0dbd2b411ca.jpg",
     "static/media/image003.jpg": "/site-expo/static/media/image003.71213dd1f69f8b887bee.jpg",
     "static/media/ATELIER8.jpg": "/site-expo/static/media/ATELIER8.975c1d5d85bf1cd518cf.jpg",
     "static/media/IMG_7254.JPG": "/site-expo/static/media/IMG_7254.d2cb67906495712788df.JPG",
     "static/media/1.jpg": "/site-expo/static/media/1.eb99d90757b2fb9e1f51.jpg",
     "static/media/image002.jpg": "/site-expo/static/media/image002.193bb2c9fe0af8b420ce.jpg",
     "static/media/s4-alon_expo.webp": "/site-expo/static/media/s4-alon_expo.b96ae2a33e5156cb9bb6.webp",
+    "static/media/Cuisine_moderne_avec_île_en_marbre.webp": "/site-expo/static/media/Cuisine_moderne_avec_île_en_marbre.1f566db8338d92a61a09.webp",
     "static/media/1-expo2.webp": "/site-expo/static/media/1-expo2.e8bf75e4c608f22c8982.webp",
     "static/media/3-exposition_salon.webp": "/site-expo/static/media/3-exposition_salon.eb5f57ab127c45635f5c.webp",
     "static/media/2-Espace_exposition_moderne_épuré.webp": "/site-expo/static/media/2-Espace_exposition_moderne_épuré.3f69c550aa7d3aaff199.webp",
+    "static/media/38.jpg": "/site-expo/static/media/38.89927486c8f7226265ae.jpg",
     "static/media/43.jpg": "/site-expo/static/media/43.b8eb707533ce3c04273b.jpg",
     "static/media/IMG_0225.jpg": "/site-expo/static/media/IMG_0225.930b52f6870cf7896e66.jpg",
     "static/media/IMG_0229.jpg": "/site-expo/static/media/IMG_0229.b00a5add1d102fd87292.jpg",
@@ -25,17 +27,14 @@
     "static/media/125.jpg": "/site-expo/static/media/125.cb9243ba573c49cb83e8.jpg",
     "static/media/126.jpg": "/site-expo/static/media/126.2823e1e3cab0e405ddb7.jpg",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb.13612d004afffd9316b1.webp",
-    "static/media/atelier_thumb.webp": "/site-expo/static/media/atelier_thumb.01f5b13fbafe1be9d4ce.webp",
     "static/media/Cuisine moderne avec île en marbre_thumb.webp": "/site-expo/static/media/Cuisine moderne avec île en marbre_thumb.42e60a6028d4a5e1dffc.webp",
     "static/media/1-expo_thumb.webp": "/site-expo/static/media/1-expo_thumb.b3761966b589a33e6385.webp",
-    "static/media/Cuisine moderne avec éléments en bois et pierre_thumb.webp": "/site-expo/static/media/Cuisine moderne avec éléments en bois et pierre_thumb.708a4a5ee09e7c802926.webp",
     "static/media/Cuisine_moderne_elements_bois_pierre_thumb.webp": "/site-expo/static/media/Cuisine_moderne_elements_bois_pierre_thumb.708a4a5ee09e7c802926.webp",
     "static/media/Cuisine_moderne_élégante_thumb.webp": "/site-expo/static/media/Cuisine_moderne_élégante_thumb.93c2fc7b135d9c7b1370.webp",
     "static/media/20220219_111659_thumb.webp": "/site-expo/static/media/20220219_111659_thumb.61014405e7a6ffa033ff.webp",
     "static/media/Intérieur moderne minimaliste et élégant (1)_thumb.webp": "/site-expo/static/media/Intérieur moderne minimaliste et élégant (1)_thumb.2aba105ca7c32f627fdf.webp",
     "static/media/Placard moderne avec vue sur nature_thumb.webp": "/site-expo/static/media/Placard moderne avec vue sur nature_thumb.f2addc860f4c83c41889.webp",
     "static/media/Closet moderne et organisé_thumb.webp": "/site-expo/static/media/Closet moderne et organisé_thumb.978976c3a721a77c5f0b.webp",
-    "static/media/Cuisine élégante en bois et marbre_thumb.webp": "/site-expo/static/media/Cuisine élégante en bois et marbre_thumb.ec6116c195249d82108b.webp",
     "static/media/Cuisine_bois_marbre_thumb.webp": "/site-expo/static/media/Cuisine_bois_marbre_thumb.ec6116c195249d82108b.webp",
     "static/media/Armoire minimaliste sous ciel pentu_thumb.webp": "/site-expo/static/media/Armoire minimaliste sous ciel pentu_thumb.4a5352a3df88772010a0.webp",
     "static/media/20240826_124715_thumb.webp": "/site-expo/static/media/20240826_124715_thumb.ad38ef0fc64fa9e0c1f0.webp",
@@ -46,11 +45,11 @@
     "static/media/Armoire en chêne et porte ouverte_thumb.webp": "/site-expo/static/media/Armoire en chêne et porte ouverte_thumb.15fc0f8b8b069a9c0f8f.webp",
     "static/media/Armoire blanche intégrée et détails élégants_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb.d05ed0c47e55d935c31b.webp",
     "index.html": "/site-expo/index.html",
-    "main.f75fd3f1.css.map": "/site-expo/static/css/main.f75fd3f1.css.map",
-    "main.1dd9b69d.js.map": "/site-expo/static/js/main.1dd9b69d.js.map"
+    "main.c0cf8839.css.map": "/site-expo/static/css/main.c0cf8839.css.map",
+    "main.ac63fc39.js.map": "/site-expo/static/js/main.ac63fc39.js.map"
   },
   "entrypoints": [
-    "static/css/main.f75fd3f1.css",
-    "static/js/main.1dd9b69d.js"
+    "static/css/main.c0cf8839.css",
+    "static/js/main.ac63fc39.js"
   ]
 }

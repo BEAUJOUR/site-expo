@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/qui.css";
 
-import headerImg from "../assets/Atelier/IMG_1099.JPG";
+import headerImg from "../assets/Atelier/ATELIER8.jpg";
 import atelier1 from "../assets/Atelier/IMG_1093.JPG";
 import atelier2 from "../assets/Atelier/IMG_1098.JPG";
 import atelier3 from "../assets/Atelier/IMG_7254.JPG";

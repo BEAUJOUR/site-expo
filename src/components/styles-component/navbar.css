@@ -1,6 +1,6 @@
-/* === NAVBAR — IDENTIQUE À LA TIENNE MAIS AVEC VARIABLES === */
-
-/* reset */
+/* ================================
+   NAVBAR — STYLE DE BASE
+================================ */
 * {
   box-sizing: border-box;
 }
@@ -13,12 +13,12 @@
   width: 100%;
   z-index: 1300;
 
-  background-color: var(--accent);     /* 🔥 ancien jaune remplacé */
-  color: var(--accent-contrast);       /* 🔥 texte clair */
+  background-color: var(--accent);
+  color: var(--accent-contrast);
 
   padding: 0.4em 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: var(--navbar-height, 58px);
 }
 
@@ -30,25 +30,25 @@
 
 .navbar-container {
   width: 90%;
-  max-width: 1200px; /* utilise var si tu veux */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
+/* ================================
+   LOGO
+================================ */
 .logo img {
   height: 52px;
   width: auto;
+  animation: fadeDown 0.7s ease forwards;
 }
 
-/* CONTROLS */
+/* ================================
+   CONTROLS
+================================ */
 .nav-controls {
   display: flex;
   align-items: center;
@@ -56,34 +56,53 @@
   margin-left: auto;
 }
 
-/* BOUTONS */
 .nav-select,
 .nav-btn {
   background: transparent;
-  border: 1px solid var(--accent-contrast);  /* 🔥 changé */
-  color: var(--accent-contrast);             /* 🔥 changé */
+  border: 1px solid var(--accent-contrast);
+  color: var(--accent-contrast);
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .nav-select:hover,
 .nav-btn:hover {
   background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
-/* BURGER MOBILE */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
+/* ================================
+   ANIMATION LINK (cascade du bas)
+================================ */
+.nav-links li {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: riseUp 0.6s ease forwards;
 }
 
-/* LINKS (desktop) */
+.nav-links li:nth-child(1) { animation-delay: .1s; }
+.nav-links li:nth-child(2) { animation-delay: .2s; }
+.nav-links li:nth-child(3) { animation-delay: .3s; }
+.nav-links li:nth-child(4) { animation-delay: .4s; }
+.nav-links li:nth-child(5) { animation-delay: .5s; }
+
+@keyframes riseUp {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation logo */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   LINKS (desktop)
+================================ */
 .nav-links {
   list-style: none;
   display: flex;
@@ -93,33 +112,53 @@
 }
 
 .nav-links li a {
-  color: var(--accent-contrast);           /* 🔥 changé */
+  color: var(--accent-contrast);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.2s ease;
+  transition: 0.35s ease;
+  position: relative;
 }
 
+/* HOVER : changement couleur + effet soulignement */
 .nav-links li a:hover {
-  color: var(--bg); /* contraste sur hover */
+  color: var(--gold);
 }
 
-/* === MOBILE MENU === */
-@media (max-width: 768px) {
-  .navbar-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   MOBILE MENU
+================================ */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
 
   .nav-links {
     position: absolute;
     top: calc(var(--navbar-height) + 8px);
     right: 0;
-    background-color: var(--accent);   /* 🔥 */
+    background-color: var(--accent);
     width: 100%;
     max-width: 320px;
     flex-direction: column;
@@ -135,49 +174,34 @@
     transform: translateX(0);
   }
 
-  .nav-links li a {
-    font-size: 1.1rem;
-    color: var(--accent-contrast);
+  .nav-links li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: riseUp 0.6s ease forwards;
   }
 }
 
-/* Mobile mini */
-@media (max-width: 350px) {
-  .logo img {
-    height: 47px;
-  }
-}
-
-/* FOCUS ACCESSIBLE */
+/* ================================
+   ACCESSIBILITÉ FOCUS
+================================ */
 .nav-links li a:focus {
-  outline: 3px solid rgba(255,255,255,0.12);
+  outline: 3px solid rgba(255,255,255,0.22);
   outline-offset: 3px;
 }
 
-/* === DARK MODE AUTOMATIQUE (GRÂCE AUX VARIABLES) === */
-
+/* ================================
+   DARK MODE
+================================ */
 body.dark .navbar {
-  background-color: var(--accent);       /* déjà remplacé via variables */
+  background-color: var(--accent);
 }
 
 body.dark .nav-links li a {
   color: var(--accent-contrast);
 }
 
-body.dark .nav-select,
-body.dark .nav-btn {
+body.dark .nav-btn,
+body.dark .nav-select {
   border-color: var(--accent-contrast);
   color: var(--accent-contrast);
-}
-
-.nav-links.dark {
-  background-color: var(--accent) !important;
-}
-
-.nav-links.dark li a {
-  color: var(--accent-contrast) !important;
-}
-
-.nav-links.dark li a:hover {
-  color: var(--bg) !important;
 }
