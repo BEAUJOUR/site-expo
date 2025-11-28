@@ -132,6 +132,44 @@
   margin-top: 1.5rem;
   /* box-shadow: 0 4px 15px rgba(0,0,0,0.06); */
 }
+/* === SECTION : Nos chiffres clés === */
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  background: var(--card-bg);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  flex: 1 1 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: var(--text);
+}
+
 
 /* Texte en haut à gauche */
 .extra-text {
@@ -269,12 +307,6 @@
   transform: scale(1);
 }
 
-/* === SLIDER TÉMOIGNAGES – STYLE EUROPE RAPIDE EXPO === */
-.apropos-testimonials {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 3rem 0;
-}
 
 
 
@@ -291,22 +323,6 @@
   }
 }
 
-/* === Responsive Témoignages === */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 260px;
-    padding: 1.3rem;
-  }
-
-  .carousel-track {
-    animation: slideHorizontal 30s linear infinite;
-  }
-
-  .testimonials-carousel::before,
-  .testimonials-carousel::after {
-    width: 40px;
-  }
-}
 
 
 

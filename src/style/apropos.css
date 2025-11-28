@@ -16,7 +16,7 @@ body {
 
 /* === HERO === */
 .apropos-hero {
-  background-image: url("https://i.postimg.cc/TdmDRLXm/conception.png");
+ 
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -34,16 +34,20 @@ body {
   align-items: center;
   justify-content: center;
   animation: fadeIn 1.5s ease-in-out;
+ 
 }
 
 .apropos-hero h1 {
-  color: #fff;
+  color: var(--accent-contrast); /* remplace le #fff */
   font-size: 3.2rem;
   text-align: center;
   padding: 1rem;
   animation: slideDown 1.2s ease;
-  text-shadow : 2px 2px #020202;
-font-family: "Libertinus Math", serif;
+  
+  /* Remplace le text-shadow noir par ton héro BG assombri */
+  text-shadow: 2px 2px 6px var(--hero-bg);
+
+  font-family: "Libertinus Math", serif;
 }
 
 /* === CONTAINER === */
@@ -60,11 +64,12 @@ font-family: "Libertinus Math", serif;
 .container h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
-  color: #f9e30c;
+  color: var(--accent); /* ancien #f9e30c */
   position: relative;
-  text-shadow : 2px 2px #020202;
-font-family: "Libertinus Math", serif;
+  /* text-shadow: 2px 2px var(--hero-bg);  */
+  font-family: "Libertinus Math", serif;
 }
+
 
 /* === CONTENU === */
 .container p,
@@ -101,16 +106,17 @@ font-family: "Libertinus Math", serif;
 }
 .team-grid,
 span {
-  color: green;
+  color: var(--accent);
 }
+
 .testimonial {
-  color: green;
+  color: var(--accent);
 }
 
 .team-card {
-  background-color: #ffffffa8;
+  background-color: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.274);
+  box-shadow: var(--shadow);
   text-align: center;
   padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -118,6 +124,7 @@ span {
   animation: zoomIn 0.8s ease forwards;
   opacity: 0;
 }
+
 
 .team-card.visible {
   opacity: 1;
@@ -134,9 +141,10 @@ span {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.8rem;
-  border: 3px solid #f9e30c;
+  border: 3px solid var(--gold);
   transition: transform 0.3s ease;
 }
+
 
 .team-card:hover img {
   transform: rotate(2deg) scale(1.05);
@@ -150,134 +158,23 @@ span {
   padding: 3rem 0;
 }
 
-.apropos-testimonials h2 {
+.container h2 {
   font-size: 2.2rem;
-  color: #f9e30c;
+  margin-bottom: 1rem;
+  color: var(--gold);            /* 🔥 Remplace #f9e30c */
+  position: relative;
   text-shadow: 2px 2px #020202;
   font-family: "Libertinus Math", serif;
-  margin-bottom: 2rem;
 }
 
-/* Conteneur principal */
-.testimonials-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-}
 
-/* Bande défilante */
-.carousel-track {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  animation: slideHorizontal 45s linear infinite;
-  will-change: transform;
-}
 
-/* Animation douce et infinie */
-@keyframes slideHorizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-/* Carte Témoignage */
-.testimonial-card {
-  margin: 10px;
-  flex: 0 0 550px;
-  background: #fffce6;
-  border: 2px solid #f9e30c;
-  border-radius: 14px;
-  padding: 1.8rem 1.4rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
- height: 280px;
-}
 
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
 
-/* Texte et nom */
-.testimonial-text {
-  font-style: italic;
-  color: #222;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
-  position: relative;
- 
-}
 
-.testimonial-text::before {
 
-  font-size: 2rem;
-  color: #f9e30c;
-  position: absolute;
-  left: -8px;
-  top: -10px;
-  font-family: serif;
-  opacity: 0.6;
-}
 
-.testimonial-name {
-  font-weight: 600;
-  color: green;
-  font-size: 0.95rem;
-  text-align: right;
-  text-align: center;
- 
-}
-
-/* Pause survol */
-.testimonials-carousel:hover .carousel-track {
-  animation-play-state: paused;
-}
-
-/* Effet fondu discret sur les bords */
-.testimonials-carousel::before,
-.testimonials-carousel::after {
- 
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.testimonials-carousel::before {
-  left: 0;
-  background: linear-gradient(to right, #ffffff 60%, transparent);
-}
-
-.testimonials-carousel::after {
-  right: 0;
-  background: linear-gradient(to left, #ffffff 60%, transparent);
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 260px;
-    padding: 1.3rem;
-  }
-
-  .carousel-track {
-    animation: slideHorizontal 30s linear infinite;
-  }
-
-  .testimonials-carousel::before,
-  .testimonials-carousel::after {
-    width: 40px;
-  }
-}
 /* === Responsive : Tablette moyenne === */
 @media (max-width: 1024px) {
   .testimonial-card {
@@ -328,7 +225,7 @@ span {
 
   .testimonial-name {
     font-size: 0.85rem;
-    color: #006400; /* vert foncé lisible sur petit écran */
+  
   }
 
   .carousel-track {
@@ -355,7 +252,7 @@ span {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px var(--accent-soft);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   animation: blurIn 1s ease forwards;
@@ -363,8 +260,9 @@ span {
 
 .apropos-gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px var(--shadow);
 }
+
 
 /* === MAP === */
 .map-container {
@@ -573,71 +471,13 @@ span {
 
 
 
-.stats-grid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-.stat-item {
-  text-align: center;
-}
-.stat-item span {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #f9e30c;
-  display: block;
-}
-.stat-item p {
-  margin-top: .5rem;
-  font-size: 1.1rem;
-  color: #333;
-}
-  
-/* === SECTION : Nos chiffres clés === */
-.stats-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.stat-item {
-  background: #fffce6;
-  border: 2px solid #f9e30c;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  flex: 1 1 220px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.stat-item span {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: green;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.stat-item p {
-  font-size: 1rem;
-  color: #333;
-}
 /* === SECTION : Prêts à donner vie à vos idées ? === */
 .apropos-cta {
   text-align: center;
-  background: #f9e30c;
+  background: var(--gold);
   padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   margin: 3rem auto;
   max-width: 900px;
 }
@@ -645,30 +485,29 @@ span {
 .apropos-cta h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: green;
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
 .apropos-cta p {
   margin-bottom: 2rem;
   font-size: 1.15rem;
-  color: #222;
+  color: var(--text);
 }
 
 .apropos-cta button {
   padding: 0.9rem 2rem;
   border: none;
-  border-radius: 10px;
-  background: green;
-  color: white;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-contrast);
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: var(--transition);
 }
 
 .apropos-cta button:hover {
-  background: #124660;
+  background: var(--hero-bg);
   transform: scale(1.05);
 }
-

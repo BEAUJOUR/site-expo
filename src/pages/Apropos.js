@@ -3,6 +3,8 @@
 import useScrollAnimation from "../hooks/useScrollAnimation";
 // import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/apropos.css";
+import ImageApropos from "../assets/Atelier/ATELIER10.jpg";
+
 
 function importAll(r) {
   return r.keys().map((key) => ({
@@ -27,7 +29,7 @@ const Apropos = () => {
   return (
     <>
       {/* HERO */}
-      <header className="apropos-hero animate-on-scroll fade-in-up">
+      <header className="apropos-hero animate-on-scroll fade-in-up" style={{ backgroundImage: `url(${ImageApropos})` }}>
         <div className="overlay">
           <h1 className="animate-on-scroll fade-in-down">
             De la conception à la réalisation : l'art de fabriquer l'espace.
@@ -116,65 +118,7 @@ const Apropos = () => {
               ))}
             </div>
           </section>
-          {/* TÉMOIGNAGES */}
-          <section
-            className="apropos-testimonials container section animate-on-scroll fade-in-up"
-            aria-labelledby="temoignages"
-          >
-            <h2  className="animate-on-scroll fadeLeft">
-              Retours de nos clients
-            </h2>
-
-            <div className="testimonials-carousel">
-              <div className="carousel-track">
-                {[
-                  {
-                    name: "Ingrid InTouch",
-                    header: "Chers Tous",
-                    text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
-                  },
-                  {
-                    name: "Kejian",
-                    header: "Bonjour Monsieur GARGANTA,",
-                    text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
-                  },
-
-                  {
-                    name: "Client particulier",
-                    header: "Bonjour Monsieur GARGANTA,",
-                    text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
-                  },
-                ]
-                  // On double les cartes pour créer une boucle fluide
-                  .concat([
-                    {
-                      name: "Ingrid InTouch",
-                      header: "Chers Tous",
-                      text: " un grand merci pour votre professionnalisme et votre réactivité. c'est toujours un plaisir d'être entoutée des meilleurs. Excellent week-end Ingrid.",
-                    },
-                    {
-                      name: "Kejian",
-                      header: "Bonjour Monsieur GARGANTA,",
-                      text: "En tant que professionnel du BTP, j’apprécie particulièrement la qualité de la pose et la propreté du chantier. Votre équipe a travaillé avec soin et précision, et le rendu final est vraiment impeccable. Merci à tous.",
-                    },
-
-                    {
-                      name: "Client particulier",
-                      header: "Bonjour Monsieur GARGANTA,",
-                      text: "Ils sont top, les tiroirs sont très agréables les façades sont belles les mécanises sont tops! C'est vraiment beau merci beaucoup!!!",
-                    },
-                  ])
-                  .map((t, i) => (
-                    <div key={i} className="testimonial-card">
-                      {/* <img src={t.img} alt={t.name} loading="lazy" /> */}
-                      <p className="testimonial-text">“{t.header}”</p>
-                      <p className="testimonial-text">“{t.text}”</p>
-                      <p className="testimonial-name">{t.name}</p>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </section>
+       
 
           {/* CTA */}
           <section className="apropos-cta container section animate-on-scroll fade-in-up">

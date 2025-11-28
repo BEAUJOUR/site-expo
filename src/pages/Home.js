@@ -1,5 +1,5 @@
 import "../style/home.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import useCountOnVisible from "../hooks/useCountOnVisible";
 import expo from "../assets/Atelier/ATELIER8.jpg";
@@ -26,7 +26,7 @@ function StatItem({ value, label, suffix, speed }) {
 }
 
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useScrollAnimation(".fade-in-up", "fade-in-up-animate");
   useScrollAnimation(".fade-in-down", "fade-in-down-animate");
@@ -39,7 +39,8 @@ const Home = () => {
       <Hero />
       <section className="intro fade-in-down">
         <div className="container">
-          <h2 className="fade-in-up">Votre espace, notre passion</h2>
+          <h2 className="fade-in-up">??????????</h2>
+          {/* <h2 className="fade-in-up">Votre espace, notre passion</h2> */}
           <p className="fade-in-left">
             Spécialisée dans la{" "}
             <strong>fabrication et de la pose de stanrds publicitaires</strong>{" "}
@@ -98,12 +99,13 @@ const Home = () => {
 
       <section className="suggestions fade-in-left">
         <div className="container">
-          <h2 className="fade-in-up">Galerie inspiration</h2>
+          <h2 className="fade-in-up">??????????</h2>
+          {/* <h2 className="fade-in-up">Galerie inspiration</h2> */}
 
           <div className="gallery">
             {imageUrls.map((src, index) => (
               <div key={index} className="gallery-item fade-in-zoom">
-                <p className="gallery-caption">Inspiration {index + 1}</p>
+                <p className="gallery-caption">Inspiration  {index + 1}</p>
 
                 <img
                   src={src}
@@ -134,7 +136,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="devis-section fade-in-up">
+      {/* <section className="devis-section fade-in-up">
         <div className="container">
           <h2 className="fade-in-down">Demande de devis gratuit</h2>
           <p className="fade-in-left">
@@ -148,7 +150,7 @@ const Home = () => {
             </strong>
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
