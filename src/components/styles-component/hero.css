@@ -143,11 +143,7 @@
   animation: heroFadeUp 2.1s ease forwards;
 }
 
-/* ------ HOVER ANIMATION -------- */
-.hero-simple-text:hover {
-  cursor: default;
-  animation: glowPulse 1s ease forwards;
-}
+
 
 /* =========================================
       RESPONSIVE
