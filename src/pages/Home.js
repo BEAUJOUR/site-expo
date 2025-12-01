@@ -135,12 +135,12 @@ const Home = () => {
   </div>
 </div>
 
-        <Link to="/quisommesnous" className="extra-block fade-in-up extra-link">
+        <Link to="/quisommesnous" className="extra-block fade-in-up extra-link ">
           <div className="extra-text">
-            <h3>Qui sommes-nous ?</h3>
+            <h3 className="gallery-item">Qui sommes-nous ?</h3>
           </div>
 
-          <img src={expo} alt="Présentation" className="extra-image" />
+          <img src={expo} alt="Présentation" className="extra-image gallery-item" />
         </Link>
       </section>
     </div>
