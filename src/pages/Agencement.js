@@ -2,7 +2,7 @@
 
 import useScrollAnimation from "../hooks/useScrollAnimation";
 // import useCountOnVisible from "../hooks/useCountOnVisible";
-import "../style/apropos.css";
+import "../style/agencement.css";
 import ImageApropos from "../assets/projets/cuisines/fixed/Cuisine_moderne_avec_île_en_marbre.webp";
 
 

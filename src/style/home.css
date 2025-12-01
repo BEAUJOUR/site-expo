@@ -13,13 +13,17 @@
 /* GALERIE */
 .home .suggestions {
   background-color: var(--section-bg); /* ✅ avant: #dbdbdb10 */
-  width: 95%;
+  width: 83%;
   margin: auto;
   border-radius: 10px;
   padding: 2rem 1rem;
   border: 2px solid var(--accent);
-}
 
+
+}
+.home .suggestions{
+  margin-top: 50px;
+}
 .home .suggestions h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -45,6 +49,9 @@
 .extra-block {
   text-decoration: none;
 }
+.extra-image{
+    border-radius: 30px !important;
+}
 .extra-block:hover {
 color: var(--gold);
 }
@@ -52,7 +59,6 @@ color: var(--gold);
 .gallery-item {
  
   border-radius: 14px;
-
   padding: 1rem;
   transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;

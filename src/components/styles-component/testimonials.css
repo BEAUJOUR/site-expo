@@ -48,6 +48,7 @@
   box-shadow: var(--shadow);
   transition: .3s ease;
   text-align: left;
+  margin-top: 1rem;
 }
 
 .card:hover {

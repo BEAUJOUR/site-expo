@@ -101,47 +101,53 @@ const Home = () => {
 
       <section className="suggestions fade-in-left">
         <div className="container">
-  <h2 className="fade-in-up">??????????</h2>
+          <h2 className="fade-in-up">??????????</h2>
 
-  {/* GALERIE CLIQUABLE – CÔTE À CÔTE */}
-  <div className="gallery-grid">
+          {/* GALERIE CLIQUABLE – CÔTE À CÔTE */}
+          <div className="gallery-grid">
+            <Link
+              to="/evenement"
+              className="gallery-item fade-in-zoom gallery-link"
+            >
+              <h3 className="gallery-caption">Événementiel</h3>
 
-    <Link
-      to="/evenement"
-      className="gallery-item fade-in-zoom gallery-link"
-    >
-      <h3 className="gallery-caption">Événementiel</h3>
+              <img
+                src={imageUrls[0]}
+                alt="Réalisation événementielle"
+                className="gallery-image"
+              />
+            </Link>
 
-      <img
-        src={imageUrls[0]}
-        alt="Réalisation événementielle"
-        className="gallery-image"
-      />
-    </Link>
+            <Link
+              to="/agencement"
+              className="gallery-item fade-in-zoom gallery-link"
+            >
+              <h3 className="gallery-caption">Agencement</h3>
 
-    <Link
-      to="/agencement"
-      className="gallery-item fade-in-zoom gallery-link"
-    >
-      <h3 className="gallery-caption">Agencement</h3>
-
-      <img
-        src={imageUrls[1]}
-        alt="Réalisation Agencement"
-        className="gallery-image"
-      />
-    </Link>
-
-  </div>
-</div>
-
-        <Link to="/quisommesnous" className="extra-block fade-in-up extra-link ">
-          <div className="extra-text">
-            <h3 className="gallery-item">Qui sommes-nous ?</h3>
+              <img
+                src={imageUrls[1]}
+                alt="Réalisation Agencement"
+                className="gallery-image"
+              />
+            </Link>
           </div>
+        </div>
 
-          <img src={expo} alt="Présentation" className="extra-image gallery-item" />
-        </Link>
+        <div className="">
+          {" "}
+          <Link
+            to="/quisommesnous"
+            className="extra-block fade-in-up extra-link extra-text "
+          >
+            <h3 className="gallery-item">Qui sommes-nous ?</h3>
+
+            <img
+              src={expo}
+              alt="Présentation"
+              className="extra-image gallery-item"
+            />
+          </Link>
+        </div>
       </section>
     </div>
   );
