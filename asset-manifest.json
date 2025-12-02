@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.a35db648.css",
-    "main.js": "/site-expo/static/js/main.c5db7457.js",
+    "main.css": "/site-expo/static/css/main.bc71ea4a.css",
+    "main.js": "/site-expo/static/js/main.90d8a616.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
+    "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1093.JPG": "/site-expo/static/media/IMG_1093.fb0e56807fd72bd94f37.JPG",
     "static/media/IMG_1098.JPG": "/site-expo/static/media/IMG_1098.86c4ca0b630fef17a6e3.JPG",
     "static/media/image003 .jpg": "/site-expo/static/media/image003 .7ec333e8560f57322a6e.jpg",
     "static/media/image003.jpg": "/site-expo/static/media/image003.71213dd1f69f8b887bee.jpg",
-    "static/media/ATELIER8.jpg": "/site-expo/static/media/ATELIER8.975c1d5d85bf1cd518cf.jpg",
+    "static/media/ATELIER8.jpg": "/site-expo/static/media/ATELIER8.3184af4b7b8699be68f6.jpg",
     "static/media/IMG_7254.JPG": "/site-expo/static/media/IMG_7254.d2cb67906495712788df.JPG",
     "static/media/1.jpg": "/site-expo/static/media/1.eb99d90757b2fb9e1f51.jpg",
     "static/media/image002.jpg": "/site-expo/static/media/image002.193bb2c9fe0af8b420ce.jpg",
@@ -44,11 +45,11 @@
     "static/media/Armoire en chêne et porte ouverte_thumb.webp": "/site-expo/static/media/Armoire en chêne et porte ouverte_thumb.15fc0f8b8b069a9c0f8f.webp",
     "static/media/Armoire blanche intégrée et détails élégants_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb.d05ed0c47e55d935c31b.webp",
     "index.html": "/site-expo/index.html",
-    "main.a35db648.css.map": "/site-expo/static/css/main.a35db648.css.map",
-    "main.c5db7457.js.map": "/site-expo/static/js/main.c5db7457.js.map"
+    "main.bc71ea4a.css.map": "/site-expo/static/css/main.bc71ea4a.css.map",
+    "main.90d8a616.js.map": "/site-expo/static/js/main.90d8a616.js.map"
   },
   "entrypoints": [
-    "static/css/main.a35db648.css",
-    "static/js/main.c5db7457.js"
+    "static/css/main.bc71ea4a.css",
+    "static/js/main.90d8a616.js"
   ]
 }
