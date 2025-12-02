@@ -2,7 +2,7 @@ import "../style/qui.css";
 import headerImg from "../assets/Atelier/ATELIER8.jpg";
 import atelier1 from "../assets/Atelier/IMG_1092.JPG";
 import atelier2 from "../assets/Atelier/IMG_1098.JPG";
-import atelier3 from "../assets/Atelier/IMG_7254.JPG";
+import atelier3 from "../assets/Atelier/Camion.JPG"
 import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
 import atelier6 from "../assets/Atelier/IMG_1093.JPG";
@@ -129,7 +129,7 @@ export default function QuiSommesNous() {
           className="about-big-image"
         />
       </section>
-      <Geolocalisation />
+     
     </div>
   );
 }
