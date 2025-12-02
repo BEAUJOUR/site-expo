@@ -2,7 +2,7 @@ import "../style/qui.css";
 import headerImg from "../assets/Atelier/ATELIER8.jpg";
 import atelier1 from "../assets/Atelier/IMG_1092.JPG";
 import atelier2 from "../assets/Atelier/IMG_1098.JPG";
-import atelier3 from "../assets/Atelier/Camion.JPG"
+import atelier3 from "../assets/Atelier/Camion.JPG";
 import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
 import atelier6 from "../assets/Atelier/IMG_1093.JPG";
@@ -79,7 +79,8 @@ export default function QuiSommesNous() {
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-              Notre parc de machine professionnel permettant précision et rapidité d’exécution
+              Notre parc de machine professionnel permettant précision et
+              rapidité d’exécution
             </p>
           </div>
           <img src={atelier2} className="atelier-img " alt="Parc machines" />
@@ -95,12 +96,23 @@ export default function QuiSommesNous() {
           </div>
           <img src={atelier6} className="atelier-img" alt="Stockage 1300 m²" />
         </div>
+
+        <div className="atelier-row reverse atelier">
+          <div className="atelier-text">
+            <p>
+              Services de logistique et de transport nous permettant d'offrir à
+              nos clients une gestion optimale et longitudinale de chaque
+              projet.
+            </p>
+          </div>
+          <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />
+        </div>
       </section>
 
-      <section className="atelier-services fade-in">
+      {/* <section className="atelier-services fade-in">
         <div className="item-camion">
           <h2>??????????</h2>
-          {/* <h2>Logistique et transport</h2> */}
+          <h2>Logistique et transport</h2>
           <img
             src={atelier3}
             alt="Logistique & transport"
@@ -111,7 +123,8 @@ export default function QuiSommesNous() {
             nos clients une gestion optimale et longitudinale de chaque projet.
           </p>
         </div>
-      </section>
+       </section> */}
+
       <Testimonials />
 
       {/* =======================
@@ -129,7 +142,17 @@ export default function QuiSommesNous() {
           className="about-big-image"
         />
       </section>
-     
+       {/* CTA */}
+          <section className="apropos-cta container section animate-on-scroll ">
+            <h2>Prêts à donner vie à vos idées ?</h2>
+            <p>
+              Notre équipe vous accompagne de la conception à la réalisation.
+            </p>
+            <button onClick={() => (window.location.href = "/contact")}>
+              Contactez-nous
+            </button>
+          </section>
+      <Geolocalisation />
     </div>
   );
 }

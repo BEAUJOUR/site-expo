@@ -1,11 +1,9 @@
-// Fichier : src/pages/Apropos.jsx
+// Fichier : src/pages/Agencement.js
 
 import useScrollAnimation from "../hooks/useScrollAnimation";
 // import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/agencement.css";
 import ImageApropos from "../assets/projets/cuisines/fixed/Cuisine_moderne_avec_île_en_marbre.webp";
-import Geolocalisation from "../components/Geolocalisation";
-
 
 function importAll(r) {
   return r.keys().map((key) => ({
@@ -21,16 +19,19 @@ function importAll(r) {
 const images = importAll(
   require.context("../assets/Img-apropos", false, /\.(png|jpe?g|webp)$/)
 );
-const img= importAll(
-  require.context("../assets/img", false, /\.(png|jpe?g|webp)$/)
-);
+// const img = importAll(
+//   require.context("../assets/img", false, /\.(png|jpe?g|webp)$/)
+// );
 
 const Agencement = () => {
   useScrollAnimation(".animate-on-scroll", "visible");
   return (
     <>
       {/* HERO */}
-      <header className="apropos-hero animate-on-scroll fade-in-up" style={{ backgroundImage: `url(${ImageApropos})` }}>
+      <header
+        className="apropos-hero animate-on-scroll fade-in-up"
+        style={{ backgroundImage: `url(${ImageApropos})` }}
+      >
         <div className="overlay">
           <h1 className="animate-on-scroll fade-in-down">
             De la conception à la réalisation : l'art de fabriquer l'espace.
@@ -48,9 +49,7 @@ const Agencement = () => {
             className="container section animate-on-scroll fade-in-left"
             aria-labelledby="histoire"
           >
-            <h2 className="animate-on-scroll flipIn">
-              ???????????????
-            </h2>
+            <h2 className="animate-on-scroll flipIn">???????????????</h2>
             <p className="animate-on-scroll fade-in-up">
               Des ???????? 3D, au choix des matériaux.
               <br />
@@ -62,14 +61,11 @@ const Agencement = () => {
             </p>
           </section>
 
-       
-   <section
+          {/* <section
             className="apropos-gallery container section animate-on-scroll fade-in-up"
             aria-labelledby="galerie"
           >
-            <h2  className="animate-on-scroll flipIn">
-             Nos projets :
-            </h2>
+            <h2 className="animate-on-scroll flipIn">Nos projets :</h2>
             <br />
             <div className="gallery">
               {img.map((img, index) => (
@@ -83,15 +79,13 @@ const Agencement = () => {
                 />
               ))}
             </div>
-          </section>
+          </section> */}
           {/* GALERIE */}
           <section
             className="apropos-gallery container section animate-on-scroll fade-in-up"
             aria-labelledby="galerie"
           >
-            <h2  className="animate-on-scroll flipIn">
-              ?????????????????
-            </h2>
+            <h2 className="animate-on-scroll flipIn">Nos projets :</h2>
             <br />
             <div className="gallery">
               {images.map((img, index) => (
@@ -106,7 +100,6 @@ const Agencement = () => {
               ))}
             </div>
           </section>
-       
 
           {/* CTA */}
           <section className="apropos-cta container section animate-on-scroll fade-in-up">
@@ -118,10 +111,8 @@ const Agencement = () => {
               Contactez-nous
             </button>
           </section>
-
-          {/* LOCALISATION */}
-    
-        </div>      <Geolocalisation/>
+        </div>
+      
       </main>
     </>
   );
