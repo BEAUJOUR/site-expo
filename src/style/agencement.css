@@ -133,14 +133,6 @@
   transform: scale(1.05);
 }
 
-/* ============================
-   LOCALISATION
-============================ */
-.map-container {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
 
 /* ============================
    ANIMATIONS

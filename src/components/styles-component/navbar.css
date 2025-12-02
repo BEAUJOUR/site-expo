@@ -21,7 +21,9 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: var(--navbar-height, 58px);
 }
-
+nav.navbar{
+  height: 68px;
+}
 .navbar-container,
 .nav-links {
   display: flex;
@@ -30,7 +32,7 @@
 
 .navbar-container {
   width: 90%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 1rem;
   justify-content: space-between;

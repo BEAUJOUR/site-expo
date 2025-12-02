@@ -35,6 +35,7 @@
   max-width: 90%;
   line-height: 1.5;
   text-align: center;
+  justify-content: center;
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
@@ -50,7 +51,7 @@
     max-width: 90%;
   }
   .event-header {
-    height: 45vh;
+    height: 55vh;
   }
 }
 

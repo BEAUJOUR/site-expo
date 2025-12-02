@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="hero-overlay hero-simple-overlay">
         <div className="hero-content hero-simple-content">
           <h1 className="hero-simple-text">
-            Des stands aux intérieus sur mesure : Un savoir faire, deux univers
+            Des stands aux intérieurs sur mesure : Un savoir faire, deux univers
           </h1>
         </div>
       </div>

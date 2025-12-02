@@ -1,13 +1,13 @@
-import React from "react";
 import "../style/qui.css";
-
 import headerImg from "../assets/Atelier/ATELIER8.jpg";
-import atelier1 from "../assets/Atelier/IMG_1093.JPG";
+import atelier1 from "../assets/Atelier/IMG_1092.JPG";
 import atelier2 from "../assets/Atelier/IMG_1098.JPG";
 import atelier3 from "../assets/Atelier/IMG_7254.JPG";
 import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
+import atelier6 from "../assets/Atelier/IMG_1093.JPG";
 import Testimonials from "../components/Testimonials";
+import Geolocalisation from "../components/Geolocalisation";
 
 export default function QuiSommesNous() {
   return (
@@ -41,14 +41,14 @@ export default function QuiSommesNous() {
         {/* <h2>Notre atelier & nos moyens</h2> */}
 
         <p>
-          Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machines
+          Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machine
           complet, nous permet de fabriquer avec précision tous types d’éléments
-          sur-mesure.
+          sur mesure.
         </p>
 
         <p>
           Un espace de stockage de <strong>1 300 m²</strong> et notre service
-          interne de <strong>logistique & transport</strong> garantissent une
+          interne de <strong>logistique et transport</strong> garantissent une
           gestion optimale et continue de chaque projet, du lancement jusqu’à la
           livraison finale.
         </p>
@@ -65,11 +65,11 @@ export default function QuiSommesNous() {
         {/* <h2>Notre atelier et capacités</h2> */}
 
         {/* Ligne 1 : Texte gauche / Image droite */}
-        <div className="atelier-row atelier" >
+        <div className="atelier-row atelier">
           <div className="atelier-text">
             <p>
               Notre atelier de <strong>800 m²</strong> équipé pour la
-              fabrication sur-mesure de toutes vos structures.
+              fabrication sur mesure de toutes vos structures.
             </p>
           </div>
           <img src={atelier1} className="atelier-img" alt="Atelier 800 m²" />
@@ -79,22 +79,21 @@ export default function QuiSommesNous() {
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-              Un parc de machines professionnel permettant précision et
-              rapidité.
+              Notre parc de machine professionnel permettant précision et rapidité d’exécution
             </p>
           </div>
           <img src={atelier2} className="atelier-img " alt="Parc machines" />
         </div>
 
         {/* Ligne 3 : Texte gauche / Image droite */}
-        <div className="atelier-row atelier" >
+        <div className="atelier-row atelier">
           <div className="atelier-text">
             <p>
               Un espace de stockage de <strong>1300 m²</strong> garantissant une
               gestion fluide.
             </p>
           </div>
-          <img src={atelier1} className="atelier-img" alt="Stockage 1200 m²" />
+          <img src={atelier6} className="atelier-img" alt="Stockage 1300 m²" />
         </div>
       </section>
 
@@ -130,6 +129,7 @@ export default function QuiSommesNous() {
           className="about-big-image"
         />
       </section>
+      <Geolocalisation />
     </div>
   );
 }

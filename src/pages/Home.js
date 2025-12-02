@@ -45,15 +45,15 @@ const Home = () => {
           {/* <h2 className="fade-in-up">Votre espace, notre passion</h2> */}
           <p className="fade-in-left">
             Spécialisée dans la{" "}
-            <strong>fabrication et de la pose de stands publicitaires</strong>{" "}
+            <strong>fabrication et la pose de stands publicitaires</strong>{" "}
             réalisés pour des <strong>bureaux d’études</strong> et destinés aux
             <strong> salons professionnels</strong>, en <strong>France</strong>{" "}
-            et <strong>à l'internationnal</strong>.
+            et <strong>à l'international</strong>.
             <br />
             Nous intervenons également dans l’
-            <strong>agencement d’espaces Événementiel</strong>, de{" "}
+            <strong>agencement d’espaces événementiels</strong>, de{" "}
             <strong> showrooms</strong> et de <strong>bureaux</strong>, en
-            garantissant qualifiés, rigueur et respect des délais.
+            garantissant qualité, rigueur et respect des délais.
           </p>
           <p className="fade-in-right">
             En parallèle, notre activité d'
@@ -130,10 +130,20 @@ const Home = () => {
                 className="gallery-image"
               />
             </Link>
-          </div>
-        </div>
+            <Link
+              to="/quisommesnous"
+              className="gallery-item fade-in-zoom gallery-link"
+            >
+              <h3 className="gallery-caption">Qui sommes-nous ?</h3>
 
-        <div className="">
+              <img
+                src={expo}
+                alt="Réalisation Agencement"
+                className="gallery-image"
+              />
+            </Link>
+          </div>
+          {/* <div className="">
           {" "}
           <Link
             to="/quisommesnous"
@@ -147,7 +157,10 @@ const Home = () => {
               className="extra-image gallery-item"
             />
           </Link>
+        </div> */}
         </div>
+
+        
       </section>
     </div>
   );

@@ -21,9 +21,9 @@ const Footer = () => {
           <h3>{("Accès rapides") || "Liens utiles"}</h3>
           <ul>
             <li><Link to="/">{("Accueil")}</Link></li>
-            <li><Link to="/apropos">{("Apropos")}</Link></li>
-            <li><Link to="/services">{("Services")}</Link></li>
-            <li><Link to="/projet">{("Projet")}</Link></li>
+            <li><Link to="/evenement">{("Événementiel")}</Link></li>
+            <li><Link to="/agencement">{("Agencement")}</Link></li>
+            <li><Link to="/quisommesnous">{("Qui sommes-nous")}</Link></li>
             <li><Link to="/contact">{("Contact")}</Link></li>
           </ul>
         </div>
