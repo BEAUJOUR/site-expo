@@ -130,8 +130,8 @@ export default function Contact() {
         <h2>Nos Informations</h2>
         <div className="location-info">
           <p>
-            <strong>Adresse :</strong> ZAC de Montvrain II, 4-10 Rue de
-            Vilmorin, 97540 Mennecy
+            <strong>Adresse :</strong> ZAC de Montvrain II, 4-10 Rue Louise de
+            Vilmorin, 91540 Mennecy
           </p>
           <p>
             <strong>Téléphone :</strong> 01 60 87 20 02

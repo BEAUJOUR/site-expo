@@ -39,7 +39,7 @@
 
 .hero-fixed {
   position: relative;
-  min-height: 100vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   background: var(--hero-bg);
@@ -67,7 +67,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
+  height: 60vh;
   padding: 3rem 5vw;
 
   display: flex;
@@ -103,7 +103,7 @@
 /* Bloc texte */
 .hero-content {
   position: relative;
-  max-width: 600px;
+  /* max-width: 600px; */
   z-index: 2;
 
   animation: heroFadeUp 1.5s ease forwards;

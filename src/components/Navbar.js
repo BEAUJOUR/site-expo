@@ -1,30 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { FaMoon, FaSun, FaBars } from "react-icons/fa";
+import {FaBars } from "react-icons/fa";
 import "../components/styles-component/navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    try {
-      const stored = localStorage.getItem("dark-mode");
-      if (stored !== null) return stored === "1";
-      return document.body.classList.contains("dark");
-    } catch (e) {
-      return document.body.classList.contains("dark");
-    }
-  });
-
-  useEffect(() => {
-    // Applique la classe sur le body et sauvegarde la préférence
-    try {
-      document.body.classList.toggle("dark", darkMode);
-      localStorage.setItem("dark-mode", darkMode ? "1" : "0");
-    } catch (e) {
-      // ignore
-    }
-  }, [darkMode]);
+ 
 
   useEffect(() => {
     // fermer le menu quand on change de route ou de langue
@@ -34,7 +16,7 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setMenuOpen((v) => !v);
-  const toggleDarkMode = () => setDarkMode((v) => !v);
+  // const toggleDarkMode = () => setDarkMode((v) => !v);
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-container">
@@ -49,17 +31,7 @@ const Navbar = () => {
         </div>
 
         <div className="nav-controls">
-          {/* Dark Mode */}
-          <button
-            onClick={toggleDarkMode}
-            className="nav-btn"
-            aria-label="Toggle mode sombre"
-            title={darkMode ? "Mode clair" : "Mode sombre"}
-          >
-            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-          </button>
-
-          {/* Burger */}
+        
           <button
             className={`menu-toggle nav-btn ${menuOpen ? "open" : ""}`}
             onClick={toggleMenu}
@@ -73,9 +45,8 @@ const Navbar = () => {
 
         {/* Ajout de la classe 'dark' sur le <ul> quand darkMode est true */}
         <ul
-          className={`nav-links cascade-nav ${menuOpen ? "active" : ""} ${
-            darkMode ? "dark" : ""
-          }`}
+          className={`nav-links cascade-nav
+          `}
           role="menubar"
         >
           <li className="dark" role="none">

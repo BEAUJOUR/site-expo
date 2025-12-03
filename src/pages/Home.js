@@ -41,7 +41,7 @@ const Home = () => {
       <Hero />
       <section className="intro fade-in-down">
         <div className="container">
-          <h2 className="fade-in-up">??????????</h2>
+          {/* <h2 className="fade-in-up">??????????</h2> */}
           {/* <h2 className="fade-in-up">Votre espace, notre passion</h2> */}
           <p className="fade-in-left">
             Spécialisée dans la{" "}
@@ -101,7 +101,7 @@ const Home = () => {
 
       <section className="suggestions fade-in-left">
         <div className="container">
-          <h2 className="fade-in-up">??????????</h2>
+          <h2 className="fade-in-up">Visitez nos pages :</h2>
 
           {/* GALERIE CLIQUABLE – CÔTE À CÔTE */}
           <div className="gallery-grid">

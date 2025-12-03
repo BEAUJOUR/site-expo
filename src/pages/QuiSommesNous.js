@@ -1,11 +1,12 @@
 import "../style/qui.css";
 import headerImg from "../assets/Atelier/ATELIER8.jpg";
 import atelier1 from "../assets/Atelier/IMG_1092.JPG";
-import atelier2 from "../assets/Atelier/IMG_1098.JPG";
+import atelier2 from "../assets/Atelier/IMG-20251203-WA0003.jpg";
 import atelier3 from "../assets/Atelier/Camion.JPG";
 import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
-import atelier6 from "../assets/Atelier/IMG_1093.JPG";
+import atelier6 from "../assets/Atelier/IMG-20251203-WA0004.jpg";
+import atelier7 from "../assets/Atelier/IMG_1264.JPG";
 import Testimonials from "../components/Testimonials";
 import Geolocalisation from "../components/Geolocalisation";
 
@@ -20,7 +21,7 @@ export default function QuiSommesNous() {
         style={{ backgroundImage: `url(${headerImg})` }}
       >
         <div className="overlay">
-          <h1 className="about-title"> ??????????????</h1>
+          {/* <h1 className="about-title"> Qui sommes-nous ?</h1> */}
           {/* <h1 className="about-title">Qui sommes-nous ?</h1> */}
 
           <p className="texte-header">
@@ -37,18 +38,18 @@ export default function QuiSommesNous() {
           SECTION — NOTRE STRUCTURE
       ======================== */}
       <section className="about-section fade-in">
-        <h2>???????????????</h2>
+        {/* <h2>???????????????</h2> */}
         {/* <h2>Notre atelier & nos moyens</h2> */}
 
         <p>
-          Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machine
+          Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machines
           complet, nous permet de fabriquer avec précision tous types d’éléments
           sur mesure.
         </p>
 
         <p>
           Un espace de stockage de <strong>1 300 m²</strong> et notre service
-          interne de <strong>logistique et transport</strong> garantissent une
+          interne de <strong>transport et logistique </strong> garantissent une
           gestion optimale et continue de chaque projet, du lancement jusqu’à la
           livraison finale.
         </p>
@@ -61,7 +62,7 @@ export default function QuiSommesNous() {
       </section>
 
       <section className="atelier-wrapper">
-        <h2>?????????????</h2>
+        {/* <h2>?????????????</h2> */}
         {/* <h2>Notre atelier et capacités</h2> */}
 
         {/* Ligne 1 : Texte gauche / Image droite */}
@@ -79,7 +80,7 @@ export default function QuiSommesNous() {
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-              Notre parc de machine professionnel permettant précision et
+              Notre parc de machines professionnel permettant précision et
               rapidité d’exécution
             </p>
           </div>
@@ -90,6 +91,17 @@ export default function QuiSommesNous() {
         <div className="atelier-row atelier">
           <div className="atelier-text">
             <p>
+              Montage intégral de la cuisine de stand en atelier permettant la
+              validation des assemblages, des alignements et des systèmes
+              d’ouverture avant transport et pose sur site.
+            </p>
+          </div>
+          <img src={atelier7} className="atelier-img" alt="Stockage 1300 m²" />
+        </div>
+        {/* Ligne 3 : Texte gauche / Image droite */}
+        <div className="atelier-row reverse atelier">
+          <div className="atelier-text">
+            <p>
               Un espace de stockage de <strong>1300 m²</strong> garantissant une
               gestion fluide.
             </p>
@@ -97,10 +109,10 @@ export default function QuiSommesNous() {
           <img src={atelier6} className="atelier-img" alt="Stockage 1300 m²" />
         </div>
 
-        <div className="atelier-row reverse atelier">
+        <div className="atelier-row  atelier">
           <div className="atelier-text">
             <p>
-              Services de logistique et de transport nous permettant d'offrir à
+              Service de transport et de logistique nous permettant d'offrir à
               nos clients une gestion optimale et longitudinale de chaque
               projet.
             </p>
@@ -108,22 +120,6 @@ export default function QuiSommesNous() {
           <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />
         </div>
       </section>
-
-      {/* <section className="atelier-services fade-in">
-        <div className="item-camion">
-          <h2>??????????</h2>
-          <h2>Logistique et transport</h2>
-          <img
-            src={atelier3}
-            alt="Logistique & transport"
-            className="camion-atelier"
-          />
-          <p>
-            Services de logistique et de transport nous permettant d'offrir à
-            nos clients une gestion optimale et longitudinale de chaque projet.
-          </p>
-        </div>
-       </section> */}
 
       <Testimonials />
 
@@ -142,16 +138,14 @@ export default function QuiSommesNous() {
           className="about-big-image"
         />
       </section>
-       {/* CTA */}
-          <section className="apropos-cta container section animate-on-scroll ">
-            <h2>Prêts à donner vie à vos idées ?</h2>
-            <p>
-              Notre équipe vous accompagne de la conception à la réalisation.
-            </p>
-            <button onClick={() => (window.location.href = "/contact")}>
-              Contactez-nous
-            </button>
-          </section>
+      {/* CTA */}
+      <section className="apropos-cta container section animate-on-scroll ">
+        <h2>Prêts à donner vie à vos idées ?</h2>
+        <p>Notre équipe vous accompagne de la conception à la réalisation.</p>
+        <button onClick={() => (window.location.href = "/contact")}>
+          Contactez-nous
+        </button>
+      </section>
       <Geolocalisation />
     </div>
   );

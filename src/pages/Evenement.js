@@ -31,10 +31,10 @@ export default function Evenement() {
       {/* ===== SECTION TEXTE ===== */}
       <section className="event-section">
         <div className="event-text-block">
-          <h2>??????????????????????????????</h2>
+          {/* <h2>??????????????????????????????</h2> */}
           <p>
             Nous vous proposons des projets clés en main réalisés par une équipe
-            investie et dynamique, qui met son professionnalisme à votre
+            investie et dynamique, qui mettra son professionnalisme à votre
             service, dans le respect des exigences de qualité, de délais et de
             finition.{" "}
           </p>
@@ -52,7 +52,7 @@ export default function Evenement() {
 
       {/* ===== GALERIE ===== */}
       <section className="event-gallery-section">
-        <h2 className="gallery-title">Nos projets :</h2>
+        <h2 className="gallery-title">Galerie photos :</h2>
 
         <div className="masonry">
           {gallery.map((src, idx) => (

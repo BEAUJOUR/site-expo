@@ -97,7 +97,11 @@
     height: 160px;
   }
 }
+.apropos-gallery h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 
+}
 /* ============================
    CTA
 ============================ */

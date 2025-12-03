@@ -49,15 +49,15 @@ const Agencement = () => {
             className="container section animate-on-scroll fade-in-left"
             aria-labelledby="histoire"
           >
-            <h2 className="animate-on-scroll flipIn">???????????????</h2>
+            {/* <h2 className="animate-on-scroll flipIn">???????????????</h2> */}
             <p className="animate-on-scroll fade-in-up">
-              Des ???????? 3D, au choix des matériaux.
-              <br />
-              Nous concevons et installons vos espaces de vie avec
-              <br />
-              Une attention particulière portée à l'esthétique
-              <br /> à la fonctionnalité et à la qualité afin de sublimer
-              <br /> vos intérieurs
+              Des vusiels 3D, au choix des matériaux,
+             
+              nous concevons et installons vos espaces de vie avec
+              
+              une attention particulière portée à l'esthétique,
+              à la fonctionnalité et à la qualité afin de sublimer
+               vos intérieurs
             </p>
           </section>
 
@@ -85,7 +85,7 @@ const Agencement = () => {
             className="apropos-gallery container section animate-on-scroll fade-in-up"
             aria-labelledby="galerie"
           >
-            <h2 className="animate-on-scroll flipIn">Nos projets :</h2>
+            <h2 className="animate-on-scroll flipIn">Galerie photos :</h2>
             <br />
             <div className="gallery">
               {images.map((img, index) => (
