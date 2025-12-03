@@ -136,12 +136,12 @@
   margin:0 0 1rem;
   font-weight:700;
   color:var(--accent);
+  font-family: "Libertinus Math", serif;
 }
 .contact-left h2{
   font-size:2rem;
   margin: 15px;
-  /* font-weight:700;
-  color:var(--accent); */
+  font-family: "Libertinus Math", serif;
 }
 
 .contact-right h3{
@@ -149,6 +149,8 @@
   font-weight:600;
   font-size:1.5rem;
   color:var(--text);
+  font-family: "Libertinus Math", serif;
+  
 }
 
 .location-info p{

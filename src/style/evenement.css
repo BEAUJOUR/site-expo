@@ -34,7 +34,7 @@
   color: var(--accent-contrast);
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
   font-size: 3rem;
-  font-family: "Libertinus Math", serif;
+ font-family: "Libertinus Math", serif;
   animation: slideDown 1s ease forwards;
   text-align: center;
   width: 100%;
