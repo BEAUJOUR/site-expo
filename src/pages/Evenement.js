@@ -1,5 +1,5 @@
 // src/pages/Evenement.js
-import React from "react";
+
 import "../style/evenement.css";
 import headerImg from "../assets/projets/salons/expo.png";
 

@@ -1,3 +1,30 @@
+/* ===================================
+   FIX GLOBAL — Empêche la page de 
+   dépasser la largeur → navbar mobile OK
+=================================== */
+
+.about-page {
+  max-width: 100%;
+  overflow-x: hidden; /* 🔥 Fix principal */
+}
+
+.about-header {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.about-image-section {
+  max-width: 100%;
+  overflow-x: hidden;
+  flex-wrap: wrap; /* 🔥 évite l'élargissement en mobile */
+}
+
+.about-big-image {
+  max-width: 100%; /* 🔥 empêche débordement largeur */
+}
+
+
+
 /* ============================
    HEADER GLOBAL
 ============================ */
@@ -62,6 +89,8 @@
   .texte-header { font-size: 1rem; max-width: 95%; }
 }
 
+
+
 /* ============================
    SECTION TEXTE
 ============================ */
@@ -84,6 +113,8 @@
   color: var(--text);
 }
 
+
+
 /* ============================
    WRAPPER ATELIER (GRIS)
 ============================ */
@@ -103,6 +134,8 @@
   font-weight: 700;
 }
 
+
+
 /* ============================
    LIGNES ALTERNÉES
 ============================ */
@@ -116,13 +149,11 @@
 
 .atelier-row.reverse {
   flex-direction: row-reverse;
-
 }
-.atelier{
-    border: 1px solid var(--text);
 
-      border-radius: 14px;
-      
+.atelier {
+  border: 1px solid var(--text);
+  border-radius: 14px;
 }
 
 /* TEXTE */
@@ -146,6 +177,7 @@
 }
 
 
+
 /* Responsive Atelier Rows */
 @media (max-width: 900px) {
   .atelier-row,
@@ -164,13 +196,14 @@
   }
 }
 
+
+
 /* ============================
    SECTION CAMION (GRANDE IMAGE)
 ============================ */
 .atelier-services {
   max-width: 1100px;
   margin: 3rem auto;
-  
 }
 
 .item-camion {
@@ -178,7 +211,7 @@
   width: 100%;
 }
 
-.item-camion h2 {
+item-camion h2 {
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1.2rem;
@@ -207,9 +240,21 @@
   border-radius: 10px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
-/* ==============================
+
+@media (max-width: 768px) {
+  .item-camion p {
+    font-size: 1rem;
+    max-width: 85%;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+
+
+/* ============================
    SECTION TÉMOIGNAGES
-================================ */
+============================ */
 .apropos-testimonials {
   text-align: center;
   margin-top: 4rem;
@@ -224,9 +269,11 @@
   text-shadow: 1px 1px rgba(0,0,0,0.12);
 }
 
-/* ==============================
+
+
+/* ============================
    CARROUSEL HORIZONTAL
-================================ */
+============================ */
 .testimonials-carousel {
   position: relative;
   overflow: hidden;
@@ -248,9 +295,11 @@
   to   { transform: translateX(-50%); }
 }
 
-/* ==============================
+
+
+/* ============================
    CARTE TÉMOIGNAGE
-================================ */
+============================ */
 .testimonial-card {
   flex: 0 0 480px;
   background: var(--card-bg);
@@ -267,9 +316,11 @@
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
-/* ==============================
+
+
+/* ============================
    TEXTE TÉMOIGNAGE
-================================ */
+============================ */
 .testimonial-text {
   font-style: italic;
   color: var(--text);
@@ -289,9 +340,11 @@
   opacity: 0.55;
 }
 
-/* ==============================
+
+
+/* ============================
    NOM
-================================ */
+============================ */
 .testimonial-name {
   font-weight: 700;
   color: var(--accent);
@@ -300,9 +353,11 @@
   margin-top: 1rem;
 }
 
-/* ==============================
+
+
+/* ============================
    FONDU SUR LES CÔTÉS
-================================ */
+============================ */
 .testimonials-carousel::before,
 .testimonials-carousel::after {
   content: "";
@@ -324,12 +379,17 @@
   background: linear-gradient(to left, var(--bg) 60%, transparent);
 }
 
-/* ==============================
+
+
+/* ============================
    PAUSE AU SURVOL
-================================ */
+============================ */
 .testimonials-carousel:hover .carousel-track {
   animation-play-state: paused;
 }
+
+
+
 /* ============================
    CTA
 ============================ */
@@ -347,6 +407,7 @@
   color: var(--accent-contrast);
   font-size: 2rem;
 }
+
 .apropos-cta p {
   color: var(--accent-contrast);
   font-size: 1.1rem;
@@ -369,9 +430,10 @@
 }
 
 
-/* ==============================
+
+/* ============================
    RESPONSIVE
-================================ */
+============================ */
 @media (max-width: 768px) {
   .testimonial-card {
     flex: 0 0 280px;
@@ -389,14 +451,6 @@
 }
 
 
-@media (max-width: 768px) {
-  .item-camion p {
-    font-size: 1rem;
-    max-width: 85%;
-    bottom: 15px;
-    left: 15px;
-  }
-}
 
 /* ============================
    SECTION IMAGES FINALES
@@ -404,20 +458,20 @@
 .about-image-section {
   padding: 2rem 1.5rem;
   display: flex;
-  /* flex-direction: column; */
   gap: 2rem;
   align-items: center;
   justify-content: center;
 }
 
 .about-big-image {
-  max-width: 1100px;
   width: 35%;
   border-radius: 14px;
   box-shadow: var(--shadow);
   object-fit: cover;
   animation: fade 0.8s ease-out forwards;
 }
+
+
 
 /* ============================
    ANIMATIONS

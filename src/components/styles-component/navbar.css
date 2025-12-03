@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1300;
+  z-index: 9999 !important;
 
   background-color: var(--accent);
   color: var(--accent-contrast);
@@ -21,9 +21,13 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: var(--navbar-height, 58px);
 }
-nav.navbar{
+
+/* Hauteur forcée desktop = 68px */
+nav.navbar {
   height: 68px;
 }
+
+/* Containers */
 .navbar-container,
 .nav-links {
   display: flex;
@@ -32,7 +36,6 @@ nav.navbar{
 
 .navbar-container {
   width: 90%;
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 1rem;
   justify-content: space-between;
@@ -77,7 +80,7 @@ nav.navbar{
 }
 
 /* ================================
-   ANIMATION LINK (cascade du bas)
+   ANIMATION LINK
 ================================ */
 .nav-links li {
   opacity: 0;
@@ -85,21 +88,20 @@ nav.navbar{
   animation: riseUp 0.6s ease forwards;
 }
 
-.nav-links li:nth-child(1) { animation-delay: .1s; }
-.nav-links li:nth-child(2) { animation-delay: .2s; }
-.nav-links li:nth-child(3) { animation-delay: .3s; }
-.nav-links li:nth-child(4) { animation-delay: .4s; }
-.nav-links li:nth-child(5) { animation-delay: .5s; }
+.nav-links li:nth-child(1) { animation-delay: 0.1s; }
+.nav-links li:nth-child(2) { animation-delay: 0.2s; }
+.nav-links li:nth-child(3) { animation-delay: 0.3s; }
+.nav-links li:nth-child(4) { animation-delay: 0.4s; }
+.nav-links li:nth-child(5) { animation-delay: 0.5s; }
 
 @keyframes riseUp {
   0% { opacity: 0; transform: translateY(60px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Animation logo */
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-25px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================================
@@ -122,10 +124,7 @@ nav.navbar{
   position: relative;
 }
 
-/* HOVER : changement couleur + effet soulignement */
-.nav-links li a:hover {
-  color: var(--gold);
-}
+.nav-links li a:hover { color: var(--gold); }
 
 .nav-links li a::after {
   content: "";
@@ -138,9 +137,7 @@ nav.navbar{
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
-}
+.nav-links li a:hover::after { width: 100%; }
 
 /* ================================
    MOBILE MENU
@@ -153,23 +150,37 @@ nav.navbar{
   padding: 8px;
 }
 
+/* ================================
+       🌟 MODE MOBILE
+================================ */
 @media (max-width: 768px) {
-  .menu-toggle { display: block; }
+  /* ➤ Forcer une vraie hauteur mobile */
+  nav.navbar {
+    height: 56px !important; /* 🔥 La navbar rétrécit enfin */
+    padding: 0.2rem 0 !important;
+  }
+
+  .logo img {
+    height: 38px !important; /* 🔥 Logo réduit en mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 
   .nav-links {
     position: absolute;
-    top: calc(var(--navbar-height) + 8px);
+    top: 56px;
     right: 0;
     background-color: var(--accent);
     width: 100%;
     max-width: 320px;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.12);
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 999;
+    margin-top: 0;
   }
 
   .nav-links.active {
@@ -184,24 +195,18 @@ nav.navbar{
 }
 
 /* ================================
-   ACCESSIBILITÉ FOCUS
+   ACCESSIBILITÉ
 ================================ */
 .nav-links li a:focus {
-  outline: 3px solid rgba(255,255,255,0.22);
+  outline: 3px solid rgba(255, 255, 255, 0.22);
   outline-offset: 3px;
 }
 
 /* ================================
    DARK MODE
 ================================ */
-body.dark .navbar {
-  background-color: var(--accent);
-}
-
-body.dark .nav-links li a {
-  color: var(--accent-contrast);
-}
-
+body.dark .navbar { background-color: var(--accent); }
+body.dark .nav-links li a { color: var(--accent-contrast); }
 body.dark .nav-btn,
 body.dark .nav-select {
   border-color: var(--accent-contrast);

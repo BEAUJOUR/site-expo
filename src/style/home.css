@@ -52,9 +52,9 @@
 .extra-image{
     border-radius: 30px !important;
 }
-.extra-block:hover {
+/* .extra-block:hover {
 color: var(--gold);
-}
+} */
 
 .gallery-item {
  
@@ -122,7 +122,7 @@ color: var(--gold);
 
 .stat-item {
   background: var(--card-bg);
-  border: 2px solid var(--gold);
+  border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 1.5rem 2rem;
   text-align: center;
