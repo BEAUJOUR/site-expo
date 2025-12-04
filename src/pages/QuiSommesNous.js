@@ -3,7 +3,7 @@ import headerImg from "../assets/Atelier/ATELIER8.jpg";
 import atelier1 from "../assets/Atelier/IMG_1092.JPG";
 import atelier2 from "../assets/Atelier/IMG-20251203-WA0003.jpg";
 import atelier3 from "../assets/Atelier/Camion.JPG";
-import atelier4 from "../assets//Atelier/1.jpg";
+// import atelier4 from "../assets//Atelier/1.jpg";
 import atelier5 from "../assets/Atelier/image002.jpg";
 import atelier6 from "../assets/Atelier/IMG-20251203-WA0004.jpg";
 import atelier7 from "../assets/Atelier/IMG_1264.JPG";
@@ -38,8 +38,7 @@ export default function QuiSommesNous() {
           SECTION — NOTRE STRUCTURE
       ======================== */}
       <section className="about-section fade-in">
-        {/* <h2>???????????????</h2> */}
-        {/* <h2>Notre atelier & nos moyens</h2> */}
+        {/* <h2>Notre structure</h2> */}
 
         <p>
           Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machines
@@ -81,7 +80,7 @@ export default function QuiSommesNous() {
           <div className="atelier-text">
             <p>
               Notre parc de machines professionnel permettant précision et
-              rapidité d’exécution
+              rapidité d’exécution.
             </p>
           </div>
           <img src={atelier2} className="atelier-img " alt="Parc machines" />
@@ -91,7 +90,7 @@ export default function QuiSommesNous() {
         <div className="atelier-row atelier">
           <div className="atelier-text">
             <p>
-              Cuisine de stand montée en atelier pour garantir des assemblages
+              Montage à blanc en atelier pour garantir des assemblages
               précis et des alignements parfaits avant la pose sur site.
             </p>
           </div>
@@ -118,6 +117,14 @@ export default function QuiSommesNous() {
           </div>
           <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />
         </div>
+        <div className="atelier-row reverse atelier">
+          <div className="atelier-text">
+            <p>
+             Là où la machine s’arrête, nos menuisiers apportent précision et savoir-faire.
+            </p>
+          </div>
+          <img src={atelier5} className="atelier-img" alt="Atelier 800 m²" />
+        </div>
       </section>
 
       <Testimonials />
@@ -125,7 +132,7 @@ export default function QuiSommesNous() {
       {/* =======================
           IMAGES ATELIER
       ======================== */}
-      <section className="about-image-section fade-in">
+      {/* <section className="about-image-section fade-in">
         <img
           src={atelier5}
           alt="Atelier Europe Rapide Expo"
@@ -136,7 +143,7 @@ export default function QuiSommesNous() {
           alt="Atelier Europe Rapide Expo"
           className="about-big-image"
         />
-      </section>
+      </section> */}
       {/* CTA */}
       <section className="apropos-cta container section animate-on-scroll ">
         <h2>Prêts à donner vie à vos idées ?</h2>

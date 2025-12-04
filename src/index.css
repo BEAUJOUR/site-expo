@@ -17,6 +17,10 @@
   /* Option gold très discret (pour titres / borders) */
   --gold: #c3a96b; /* or doux mat, pas flashy */
 }
+p{
+  font-size: 18px !important;
+
+}
 
 /* body.dark {
   --bg: #0b0d0e;
@@ -65,10 +69,7 @@ body {
   animation: fadeInSite 0.5s ease-out;
 }
 
-/* body.dark .site-main {
-  background-color: rgba(255, 255, 255, 0.03);
-  transition: background-color 0.4s ease;
-} */
+
 
 /* Animation d'apparition du contenu */
 @keyframes fadeInSite {

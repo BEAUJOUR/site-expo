@@ -51,9 +51,15 @@
 ============================ */
 
 .event-section {
-  width: 85%;
+  /* width: 85%; */
   max-width: 1100px;
   margin: 3rem auto;
+   /* padding: 3rem 1.5rem; */
+
+  margin: auto;
+}
+.event-gallery-section {
+  margin-bottom: 40px;
 }
 
 .event-text-block p {
@@ -62,6 +68,9 @@
   color: var(--text);
   opacity: 0;
   animation: fadeIn 0.9s ease forwards;
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* ============================
@@ -74,6 +83,7 @@
   font-size: 2.2rem;
   color: var(--accent);
   font-family: "Libertinus Math", serif;
+  
 }
 
 /* Conteneur FLEX propre */
@@ -82,8 +92,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.7rem; /* 🔥 ESPACE RÉDUIT ENTRE LES COLONNES */
-  width: 85%; /* 🔥 même largeur que la page apropos */
+  width: 80%;
   margin: auto;
+   
 }
 
 /* 3 colonnes uniformes */

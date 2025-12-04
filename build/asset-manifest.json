@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.eb180760.css",
-    "main.js": "/site-expo/static/js/main.1e252a32.js",
+    "main.css": "/site-expo/static/css/main.3e010cbc.css",
+    "main.js": "/site-expo/static/js/main.d58a66e9.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1264.JPG": "/site-expo/static/media/IMG_1264.fbb42b814beca3312aa4.JPG",
     "static/media/ATELIER8.jpg": "/site-expo/static/media/ATELIER8.3184af4b7b8699be68f6.jpg",
-    "static/media/1.jpg": "/site-expo/static/media/1.eb99d90757b2fb9e1f51.jpg",
     "static/media/image002.jpg": "/site-expo/static/media/image002.193bb2c9fe0af8b420ce.jpg",
-    "static/media/Cuisine_moderne_avec_île_en_marbre.webp": "/site-expo/static/media/Cuisine_moderne_avec_île_en_marbre.1f566db8338d92a61a09.webp",
     "static/media/Camion.JPG": "/site-expo/static/media/Camion.683cf5e48e2c229cdb4c.JPG",
+    "static/media/Cuisine_moderne_avec_île_en_marbre.png": "/site-expo/static/media/Cuisine_moderne_avec_île_en_marbre.581304ee924c149f12d2.png",
     "static/media/IMG-20251203-WA0004.jpg": "/site-expo/static/media/IMG-20251203-WA0004.a23dae3710be8b102ecb.jpg",
     "static/media/IMG-20251203-WA0003.jpg": "/site-expo/static/media/IMG-20251203-WA0003.e38eec2f6d1af2f2fe69.jpg",
     "static/media/20230414_152831_thumb.webp": "/site-expo/static/media/20230414_152831_thumb.701083259380c04fca42.webp",
     "static/media/Estrade_thumb.webp": "/site-expo/static/media/Estrade_thumb.5340715c2fec5bf8dacb.webp",
-    "static/media/IMG_0221_thumb.jpg": "/site-expo/static/media/IMG_0221_thumb.94d28bfe5694399f83fb.jpg",
     "static/media/IMG_0222_thumb.webp": "/site-expo/static/media/IMG_0222_thumb.f2bf6585cb4aef73d880.webp",
     "static/media/20231219_091234_thumb_thumb.webp": "/site-expo/static/media/20231219_091234_thumb_thumb.09508774213827152e7e.webp",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.440a6a785d38b7ff7956.webp",
     "static/media/s4-alon_expo_thumb.webp": "/site-expo/static/media/s4-alon_expo_thumb.07cdf1f57e1f9b500771.webp",
+    "static/media/1_thumb.webp": "/site-expo/static/media/1_thumb.21c098c07693f4e51815.webp",
     "static/media/IMG_20200224_161158_thumb.webp": "/site-expo/static/media/IMG_20200224_161158_thumb.dee39c8ac38e325e12b4.webp",
     "static/media/IMG_20200627_160556_thumb.webp": "/site-expo/static/media/IMG_20200627_160556_thumb.5ca4ab9dad3eab48ff6e.webp",
     "static/media/image003 _thumb.webp": "/site-expo/static/media/image003 _thumb.3856fb368e0a32e18acf.webp",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb.13612d004afffd9316b1.webp",
+    "static/media/IMG_0221_thumb_thumb.webp": "/site-expo/static/media/IMG_0221_thumb_thumb.a89bf1b9e1760bb5ebb3.webp",
     "static/media/cuisine_led_bleu_thumb.webp": "/site-expo/static/media/cuisine_led_bleu_thumb.2930f13b34d0310470c2.webp",
     "static/media/IMG_20190517_200419_thumb.webp": "/site-expo/static/media/IMG_20190517_200419_thumb.491465cc628922b3cd65.webp",
     "static/media/125_thumb.webp": "/site-expo/static/media/125_thumb.6c59008a66947936dedb.webp",
@@ -63,11 +63,11 @@
     "static/media/Armoire en chêne et porte ouverte_thumb_thumb.webp": "/site-expo/static/media/Armoire en chêne et porte ouverte_thumb_thumb.8f5f973720db42cde963.webp",
     "static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.efab9d38abfb932b1a54.webp",
     "index.html": "/site-expo/index.html",
-    "main.eb180760.css.map": "/site-expo/static/css/main.eb180760.css.map",
-    "main.1e252a32.js.map": "/site-expo/static/js/main.1e252a32.js.map"
+    "main.3e010cbc.css.map": "/site-expo/static/css/main.3e010cbc.css.map",
+    "main.d58a66e9.js.map": "/site-expo/static/js/main.d58a66e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb180760.css",
-    "static/js/main.1e252a32.js"
+    "static/css/main.3e010cbc.css",
+    "static/js/main.d58a66e9.js"
   ]
 }

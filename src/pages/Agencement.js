@@ -3,7 +3,7 @@
 import useScrollAnimation from "../hooks/useScrollAnimation";
 // import useCountOnVisible from "../hooks/useCountOnVisible";
 import "../style/agencement.css";
-import ImageApropos from "../assets/projets/cuisines/fixed/Cuisine_moderne_avec_île_en_marbre.webp";
+import ImageApropos from "../assets/Atelier/Cuisine_moderne_avec_île_en_marbre.png";
 
 function importAll(r) {
   return r.keys().map((key) => ({
@@ -51,35 +51,13 @@ const Agencement = () => {
           >
             {/* <h2 className="animate-on-scroll flipIn">???????????????</h2> */}
             <p className="animate-on-scroll fade-in-up">
-              Des vusiels 3D, au choix des matériaux,
-             
-              nous concevons et installons vos espaces de vie avec
-              
-              une attention particulière portée à l'esthétique,
-              à la fonctionnalité et à la qualité afin de sublimer
-               vos intérieurs
+              Des vusiels 3D, au choix des matériaux, nous concevons et
+              installons vos espaces de vie avec une attention particulière
+              portée à l'esthétique, à la fonctionnalité et à la qualité afin de
+              sublimer vos intérieurs
             </p>
           </section>
 
-          {/* <section
-            className="apropos-gallery container section animate-on-scroll fade-in-up"
-            aria-labelledby="galerie"
-          >
-            <h2 className="animate-on-scroll flipIn">Nos projets :</h2>
-            <br />
-            <div className="gallery">
-              {img.map((img, index) => (
-                <img
-                  key={index}
-                  src={img.src}
-                  alt={img.alt || `Photo de réalisation ${index + 1}`}
-                  loading="lazy"
-                  className="animate-on-scroll blurIn"
-                  tabIndex="0"
-                />
-              ))}
-            </div>
-          </section> */}
           {/* GALERIE */}
           <section
             className="apropos-gallery container section animate-on-scroll fade-in-up"
@@ -112,7 +90,6 @@ const Agencement = () => {
             </button>
           </section>
         </div>
-      
       </main>
     </>
   );

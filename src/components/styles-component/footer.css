@@ -55,6 +55,17 @@
   justify-items: center;
   justify-content: center;
 }
+.footer-section p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-icon {
+  font-size: 1.1rem;
+  color: var(--accent-contrast); /* ou var(--gold) si tu veux premium */
+}
+
 
 .footer-logo {
   font-size: 30px;

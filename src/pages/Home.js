@@ -100,7 +100,7 @@ const Home = () => {
       </section>
 
       <section className="suggestions fade-in-left">
-        <div className="container">
+        <div >
           <h2 className="fade-in-up">Visitez nos pages :</h2>
 
           {/* GALERIE CLIQUABLE – CÔTE À CÔTE */}
