@@ -91,9 +91,8 @@ export default function QuiSommesNous() {
         <div className="atelier-row atelier">
           <div className="atelier-text">
             <p>
-              Montage intégral de la cuisine de stand en atelier permettant la
-              validation des assemblages, des alignements et des systèmes
-              d’ouverture avant transport et pose sur site.
+              Cuisine de stand montée en atelier pour garantir des assemblages
+              précis et des alignements parfaits avant la pose sur site.
             </p>
           </div>
           <img src={atelier7} className="atelier-img" alt="Stockage 1300 m²" />

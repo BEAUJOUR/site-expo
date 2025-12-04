@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   padding: 2.5rem;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: flex-end;
   animation: fadeIn 1s ease-in-out;
@@ -32,16 +32,18 @@
 
 .event-title {
   color: var(--accent-contrast);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   font-size: 3rem;
- font-family: "Libertinus Math", serif;
+  font-family: "Libertinus Math", serif;
   animation: slideDown 1s ease forwards;
   text-align: center;
   width: 100%;
 }
 
 @media (max-width: 768px) {
-  .event-title { font-size: 2rem; }
+  .event-title {
+    font-size: 2rem;
+  }
 }
 
 /* ============================
@@ -79,8 +81,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.7rem;                  /* 🔥 ESPACE RÉDUIT ENTRE LES COLONNES */
-  width: 85%;                  /* 🔥 même largeur que la page apropos */
+  gap: 0.7rem; /* 🔥 ESPACE RÉDUIT ENTRE LES COLONNES */
+  width: 85%; /* 🔥 même largeur que la page apropos */
   margin: auto;
 }
 
@@ -92,8 +94,8 @@
 
 /* Images premium et alignées */
 .masonry-item img {
-  width: 300px;                /* 🔥 même style apropos (280px → 260px pour ajuster) */
-  height: 200px;               /* 🔥 cohérent partout */
+  width: 300px; /* 🔥 même style apropos (280px → 260px pour ajuster) */
+  height: 200px; /* 🔥 cohérent partout */
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 15px var(--accent-soft);
@@ -105,7 +107,7 @@
 /* Hover premium */
 .masonry-item img:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
 /* ============================
@@ -139,13 +141,25 @@
 ============================ */
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes blurIn {

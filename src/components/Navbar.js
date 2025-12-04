@@ -44,11 +44,11 @@ const Navbar = () => {
         </div>
 
         {/* Ajout de la classe 'dark' sur le <ul> quand darkMode est true */}
-        <ul
-          className={`nav-links cascade-nav
-          `}
-          role="menubar"
-        >
+       <ul
+  className={`nav-links cascade-nav ${menuOpen ? "active" : ""}`}
+  role="menubar"
+>
+
           <li className="dark" role="none">
             <Link role="menuitem" to="/" onClick={() => setMenuOpen(false)}>
               {"Accueil"}
