@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-expo/static/css/main.eb180760.css",
-    "main.js": "/site-expo/static/js/main.1e252a32.js",
+    "main.js": "/site-expo/static/js/main.621bd2e5.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1264.JPG": "/site-expo/static/media/IMG_1264.fbb42b814beca3312aa4.JPG",
@@ -14,7 +14,6 @@
     "static/media/IMG-20251203-WA0003.jpg": "/site-expo/static/media/IMG-20251203-WA0003.e38eec2f6d1af2f2fe69.jpg",
     "static/media/20230414_152831_thumb.webp": "/site-expo/static/media/20230414_152831_thumb.701083259380c04fca42.webp",
     "static/media/Estrade_thumb.webp": "/site-expo/static/media/Estrade_thumb.5340715c2fec5bf8dacb.webp",
-    "static/media/IMG_0221_thumb.jpg": "/site-expo/static/media/IMG_0221_thumb.94d28bfe5694399f83fb.jpg",
     "static/media/IMG_0222_thumb.webp": "/site-expo/static/media/IMG_0222_thumb.f2bf6585cb4aef73d880.webp",
     "static/media/20231219_091234_thumb_thumb.webp": "/site-expo/static/media/20231219_091234_thumb_thumb.09508774213827152e7e.webp",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.440a6a785d38b7ff7956.webp",
@@ -23,6 +22,7 @@
     "static/media/IMG_20200627_160556_thumb.webp": "/site-expo/static/media/IMG_20200627_160556_thumb.5ca4ab9dad3eab48ff6e.webp",
     "static/media/image003 _thumb.webp": "/site-expo/static/media/image003 _thumb.3856fb368e0a32e18acf.webp",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb.13612d004afffd9316b1.webp",
+    "static/media/IMG_0221_thumb_thumb.webp": "/site-expo/static/media/IMG_0221_thumb_thumb.a89bf1b9e1760bb5ebb3.webp",
     "static/media/cuisine_led_bleu_thumb.webp": "/site-expo/static/media/cuisine_led_bleu_thumb.2930f13b34d0310470c2.webp",
     "static/media/IMG_20190517_200419_thumb.webp": "/site-expo/static/media/IMG_20190517_200419_thumb.491465cc628922b3cd65.webp",
     "static/media/125_thumb.webp": "/site-expo/static/media/125_thumb.6c59008a66947936dedb.webp",
@@ -44,7 +44,6 @@
     "static/media/3-exposition_salon_thumb.webp": "/site-expo/static/media/3-exposition_salon_thumb.1b7d8f702c57c6501cec.webp",
     "static/media/IMG_20211128_122748_thumb.webp": "/site-expo/static/media/IMG_20211128_122748_thumb.be480345626a0424fffc.webp",
     "static/media/Placard moderne avec vue sur nature_thumb_thumb.webp": "/site-expo/static/media/Placard moderne avec vue sur nature_thumb_thumb.99764dc1ef1520e33490.webp",
-    "static/media/126_thumb.webp": "/site-expo/static/media/126_thumb.466883f363ac1041ec5f.webp",
     "static/media/stang-expo_thumb.webp": "/site-expo/static/media/stang-expo_thumb.7ba4c8cd28111c2402b8.webp",
     "static/media/Closet moderne et organisé_thumb_thumb.webp": "/site-expo/static/media/Closet moderne et organisé_thumb_thumb.07ac200b96dec7ba3fe1.webp",
     "static/media/image003_thumb.webp": "/site-expo/static/media/image003_thumb.cc913f0dc7330ea13228.webp",
@@ -64,10 +63,10 @@
     "static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.efab9d38abfb932b1a54.webp",
     "index.html": "/site-expo/index.html",
     "main.eb180760.css.map": "/site-expo/static/css/main.eb180760.css.map",
-    "main.1e252a32.js.map": "/site-expo/static/js/main.1e252a32.js.map"
+    "main.621bd2e5.js.map": "/site-expo/static/js/main.621bd2e5.js.map"
   },
   "entrypoints": [
     "static/css/main.eb180760.css",
-    "static/js/main.1e252a32.js"
+    "static/js/main.621bd2e5.js"
   ]
 }
