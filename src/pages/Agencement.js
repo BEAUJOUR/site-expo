@@ -17,7 +17,7 @@ function importAll(r) {
 }
 
 const images = importAll(
-  require.context("../assets/Img-apropos", false, /\.(png|jpe?g|webp)$/)
+  require.context("../assets/Img-apropos/thumbs", false, /\.(png|jpe?g|webp)$/)
 );
 // const img = importAll(
 //   require.context("../assets/img", false, /\.(png|jpe?g|webp)$/)

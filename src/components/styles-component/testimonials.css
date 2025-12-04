@@ -42,7 +42,7 @@
 .card {
   flex: 0 0 450px;
   background: var(--card-bg);
-  border: 2px solid var(--gold);
+  border: 2px solid var(--accent);
   border-radius: 14px;
   padding: 1.8rem 1.4rem;
   box-shadow: var(--shadow);

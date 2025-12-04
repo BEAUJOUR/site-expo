@@ -1,10 +1,10 @@
 :root {
-  --bg: #f4f2ef; /* beige pierre clair */
-  --text: #191919; /* noir graphite */
+  --bg: #f4f2ef; 
+  --text: #191919; 
 
-  --accent: #61676dcc; /* gris bleu anthracite ultra pro */
-  --accent-contrast: #ffffff; /* blanc pur pour texte sur accent */
-  --accent-soft: rgba(47, 61, 74, 0.08); /* fond léger */
+  --accent: #61676dcc; 
+  --accent-contrast: #ffffff; 
+  --accent-soft: rgba(47, 61, 74, 0.08); 
   --radius: 12px;
   --card-bg: #ffffff;
   --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
@@ -18,11 +18,11 @@
   --gold: #c3a96b; /* or doux mat, pas flashy */
 }
 
-body.dark {
+/* body.dark {
   --bg: #0b0d0e;
   --text: #e8e8e8;
 
-  --accent: #445566; /* anthracite bleu adouci */
+  --accent: #445566; 
   --accent-contrast: #0b0d0e;
   --accent-soft: rgba(68, 85, 102, 0.12);
 
@@ -31,7 +31,7 @@ body.dark {
   --section-bg: rgba(255, 255, 255, 0.04);
 
   --gold: #bda36b;
-}
+} */
 
 /* === HTML & BODY === */
 

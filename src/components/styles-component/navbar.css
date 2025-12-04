@@ -161,7 +161,7 @@ nav.navbar {
   }
 
   .logo img {
-    height: 38px !important; /* 🔥 Logo réduit en mobile */
+    height: 38px !important; /* 🔥 Logo plus petit en mobile */
   }
 
   .menu-toggle {
@@ -198,17 +198,6 @@ nav.navbar {
    ACCESSIBILITÉ
 ================================ */
 .nav-links li a:focus {
-  outline: 3px solid rgba(255, 255, 255, 0.22);
-  outline-offset: 3px;
+ color: var(--gold);
 }
 
-/* ================================
-   DARK MODE
-================================ */
-body.dark .navbar { background-color: var(--accent); }
-body.dark .nav-links li a { color: var(--accent-contrast); }
-body.dark .nav-btn,
-body.dark .nav-select {
-  border-color: var(--accent-contrast);
-  color: var(--accent-contrast);
-}

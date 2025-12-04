@@ -10,7 +10,7 @@ function importAll(r) {
 
 // 🟦 Charge toutes les images du dossier /assets/evenements
 const gallery = importAll(
-  require.context("../assets/evenement", false, /\.(png|jpe?g|webp)$/)
+  require.context("../assets/evenement/thumbs", false, /\.(png|jpe?g|webp)$/)
 );
 
 export default function Evenement() {

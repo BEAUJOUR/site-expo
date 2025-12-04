@@ -2,17 +2,10 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const categories = [
-  "cuisines",
-  "salons",
-  "meubles",
-  "dressings",
-  "salle_de_bain",
-  "savoir_faire",
-];
+const categories = ["Img-apropos", "evenement"];
 
 for (const folder of categories) {
-  const inputDir = path.resolve(`./src/assets/projets/${folder}`);
+  const inputDir = path.resolve(`./src/assets/${folder}`);
   const outputDir = path.join(inputDir, "thumbs");
   fs.mkdirSync(outputDir, { recursive: true });
 
