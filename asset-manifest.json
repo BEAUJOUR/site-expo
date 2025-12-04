@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.096d277c.css",
-    "main.js": "/site-expo/static/js/main.4c4321a3.js",
+    "main.css": "/site-expo/static/css/main.2ce3d30b.css",
+    "main.js": "/site-expo/static/js/main.671532bf.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1264.JPG": "/site-expo/static/media/IMG_1264.fbb42b814beca3312aa4.JPG",
     "static/media/ATELIER8.jpg": "/site-expo/static/media/ATELIER8.3184af4b7b8699be68f6.jpg",
     "static/media/1.jpg": "/site-expo/static/media/1.eb99d90757b2fb9e1f51.jpg",
     "static/media/image002.jpg": "/site-expo/static/media/image002.193bb2c9fe0af8b420ce.jpg",
-    "static/media/Cuisine_moderne_avec_île_en_marbre.webp": "/site-expo/static/media/Cuisine_moderne_avec_île_en_marbre.1f566db8338d92a61a09.webp",
     "static/media/Camion.JPG": "/site-expo/static/media/Camion.683cf5e48e2c229cdb4c.JPG",
+    "static/media/Cuisine_moderne_avec_île_en_marbre.png": "/site-expo/static/media/Cuisine_moderne_avec_île_en_marbre.581304ee924c149f12d2.png",
     "static/media/IMG-20251203-WA0004.jpg": "/site-expo/static/media/IMG-20251203-WA0004.a23dae3710be8b102ecb.jpg",
     "static/media/IMG-20251203-WA0003.jpg": "/site-expo/static/media/IMG-20251203-WA0003.e38eec2f6d1af2f2fe69.jpg",
     "static/media/20230414_152831_thumb.webp": "/site-expo/static/media/20230414_152831_thumb.701083259380c04fca42.webp",
@@ -62,11 +62,11 @@
     "static/media/Armoire en chêne et porte ouverte_thumb_thumb.webp": "/site-expo/static/media/Armoire en chêne et porte ouverte_thumb_thumb.8f5f973720db42cde963.webp",
     "static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.efab9d38abfb932b1a54.webp",
     "index.html": "/site-expo/index.html",
-    "main.096d277c.css.map": "/site-expo/static/css/main.096d277c.css.map",
-    "main.4c4321a3.js.map": "/site-expo/static/js/main.4c4321a3.js.map"
+    "main.2ce3d30b.css.map": "/site-expo/static/css/main.2ce3d30b.css.map",
+    "main.671532bf.js.map": "/site-expo/static/js/main.671532bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.096d277c.css",
-    "static/js/main.4c4321a3.js"
+    "static/css/main.2ce3d30b.css",
+    "static/js/main.671532bf.js"
   ]
 }
