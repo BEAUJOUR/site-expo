@@ -21,16 +21,10 @@ export default function QuiSommesNous() {
         style={{ backgroundImage: `url(${headerImg})` }}
       >
         <div className="overlay">
-          {/* <h1 className="about-title"> Qui sommes-nous ?</h1> */}
-          {/* <h1 className="about-title">Qui sommes-nous ?</h1> */}
+        
+          <h1 className="about-title">Votre projet mérite l’excellence : Voici qui nous sommes</h1>
 
-          <p className="texte-header">
-            Forts de plus de <strong>25 ans d’expérience</strong>, nous mettons
-            en œuvre un <strong>savoir-faire reconnu</strong> et une véritable
-            <strong> culture du travail bien fait</strong> pour accompagner nos
-            clients et partenaires dans la réussite de leurs projets, qu’ils
-            soient <strong>professionnels ou privés</strong>.
-          </p>
+         
         </div>
       </header>
 
@@ -39,8 +33,15 @@ export default function QuiSommesNous() {
       ======================== */}
       <section className="about-section fade-in">
         {/* <h2>Notre structure</h2> */}
+         <p>
+            Forts de plus de <strong>25 ans d’expérience</strong>, nous mettons
+            en œuvre un <strong>savoir-faire reconnu</strong> et une véritable
+            <strong> culture du travail bien fait</strong> pour accompagner nos
+            clients et partenaires dans la réussite de leurs projets, qu’ils
+            soient <strong>professionnels ou privés</strong>.
+          </p>
 
-        <p>
+        {/* <p>
           Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machines
           complet, nous permet de fabriquer avec précision tous types d’éléments
           sur mesure.
@@ -57,7 +58,7 @@ export default function QuiSommesNous() {
           Nous mettons un point d’honneur à offrir à nos clients une
           organisation fiable, réactive et adaptée aux contraintes techniques et
           aux délais serrés.
-        </p>
+        </p> */}
       </section>
 
       <section className="atelier-wrapper">

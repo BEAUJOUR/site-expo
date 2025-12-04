@@ -62,6 +62,9 @@
   margin: 0;
   text-align: left;
   animation: fadeUp 0.8s ease-out forwards;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Libertinus Math", serif;
 }
 
 /* TEXTE HEADER */
