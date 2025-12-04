@@ -22,7 +22,7 @@ export default function QuiSommesNous() {
       >
         <div className="overlay">
         
-          <h1 className="about-title">Votre projet mérite l’excellence : Voici qui nous sommes</h1>
+          <h1 className="about-title">Votre projet mérite l’excellence.</h1>
 
          
         </div>
@@ -111,7 +111,7 @@ export default function QuiSommesNous() {
         <div className="atelier-row  atelier">
           <div className="atelier-text">
             <p>
-              Service de transport et de logistique nous permettant d'offrir à
+              Service de <strong>transport et de logistique</strong> nous permettant d'offrir à
               nos clients une gestion optimale et longitudinale de chaque
               projet.
             </p>

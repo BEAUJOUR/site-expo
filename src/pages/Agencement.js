@@ -33,8 +33,8 @@ const Agencement = () => {
         style={{ backgroundImage: `url(${ImageApropos})` }}
       >
         <div className="overlay">
-          <h1 className="animate-on-scroll fade-in-down">
-            De la conception à la réalisation : l'art de fabriquer l'espace.
+          <h1 className="animate-on-scroll fade-in-down agenceme">
+            De la conception à la réalisation :<br /> L'art de fabriquer l'espace.
           </h1>
         </div>
       </header>
@@ -80,7 +80,7 @@ const Agencement = () => {
           </section>
 
           {/* CTA */}
-          <section className="apropos-cta container section animate-on-scroll fade-in-up">
+          {/* <section className="apropos-cta container section animate-on-scroll fade-in-up">
             <h2>Prêts à donner vie à vos idées ?</h2>
             <p>
               Notre équipe vous accompagne de la conception à la réalisation.
@@ -88,7 +88,7 @@ const Agencement = () => {
             <button onClick={() => (window.location.href = "/contact")}>
               Contactez-nous
             </button>
-          </section>
+          </section> */}
         </div>
       </main>
     </>

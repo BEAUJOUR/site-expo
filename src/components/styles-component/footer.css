@@ -59,24 +59,26 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  padding-left: 0;
+  margin: auto;
 }
 
 .footer-icon {
   font-size: 1.1rem;
-  color: var(--accent-contrast); /* ou var(--gold) si tu veux premium */
+  color: var(--accent-contrast);
 }
-
 
 .footer-logo {
   font-size: 30px;
   font-weight: 700;
-  color: var(--gold);
+  color: green;
   letter-spacing: 2.2px;
   text-transform: uppercase;
-  text-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent),
+    0 0 40px var(--accent);
   cursor: default;
   transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  font-family: 'Playfair Display','Libertinus Math',serif;
+  font-family: "Playfair Display", "Libertinus Math", serif;
 }
 
 .footer-logo:hover {
@@ -153,7 +155,6 @@
   font-weight: 400;
 }
 
-
 /* Icônes sociales */
 .footer-socials a.social-icon {
   background-color: rgba(255, 255, 255, 0.05);
@@ -174,27 +175,27 @@
 
 /* Couleurs marques */
 .footer-socials a.facebook:hover {
-  color: #1877F2;
+  color: #1877f2;
   background-color: rgba(24, 119, 242, 0.1);
-  filter: drop-shadow(0 0 8px #1877F2);
+  filter: drop-shadow(0 0 8px #1877f2);
 }
 
 .footer-socials a.twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
   background-color: rgba(29, 161, 242, 0.1);
-  filter: drop-shadow(0 0 8px #1DA1F2);
+  filter: drop-shadow(0 0 8px #1da1f2);
 }
 
 .footer-socials a.instagram:hover {
-  color: #E1306C;
+  color: #e1306c;
   background-color: rgba(225, 48, 108, 0.1);
-  filter: drop-shadow(0 0 8px #E1306C);
+  filter: drop-shadow(0 0 8px #e1306c);
 }
 
 .footer-socials a.linkedin:hover {
-  color: #0A66C2;
+  color: #0a66c2;
   background-color: rgba(10, 102, 194, 0.1);
-  filter: drop-shadow(0 0 8px #0A66C2);
+  filter: drop-shadow(0 0 8px #0a66c2);
 }
 
 @media (max-width: 900px) {

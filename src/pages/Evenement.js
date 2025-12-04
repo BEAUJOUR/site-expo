@@ -23,7 +23,7 @@ export default function Evenement() {
       >
         <div className="overlay">
           <h1 className="event-title">
-            Rigueur, qualité, expérience : Notre engagement depuis 25 ans.{" "}
+            Rigueur, qualité, expérience :<br /> Notre engagement depuis 25 ans.{" "}
           </h1>
         </div>
       </header>

@@ -5,19 +5,35 @@
 ========================================= */
 
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes heroZoomIn {
-  from { transform: scale(1.06); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes glowPulse {
-  0%   { filter: brightness(1) drop-shadow(0 0 0px rgba(255,255,255,0)); }
-  50%  { filter: brightness(1.15) drop-shadow(0 0 12px rgba(255,255,255,0.18)); }
-  100% { filter: brightness(1) drop-shadow(0 0 0px rgba(255,255,255,0)); }
+  0% {
+    filter: brightness(1) drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+  50% {
+    filter: brightness(1.15) drop-shadow(0 0 12px rgba(255, 255, 255, 0.18));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
 }
 
 /* =========================================
@@ -56,18 +72,18 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-
+/* padding-bottom: 3rem; */
   display: flex;
-  align-items: flex-end;       /* ⬅️ TEXTE EN BAS */
-  justify-content: center;     /* ⬅️ TEXTE CENTRÉ */
+  align-items: flex-end; /* ⬅️ TEXTE EN BAS */
+  justify-content: center; /* ⬅️ TEXTE CENTRÉ */
 
-  padding: 0 5vw 1.4rem 5vw;
+  /* padding: 0 5vw 1.4rem 5vw; */
 
   background: linear-gradient(
     to top,
     rgba(7, 10, 15, 0.94) 0%,
     rgba(7, 10, 15, 0.7) 45%,
-    rgba(7, 10, 15, 0.18) 100%
+    rgba(7, 10, 15, 0.486) 100%
   );
 }
 
@@ -78,9 +94,12 @@
   inset: 10% 30% 14% 30%;
   pointer-events: none;
 
-  background-image:
-    linear-gradient(to right, rgba(148,163,184,0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148,163,184,0.18) 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      rgba(148, 163, 184, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
 
   background-size: 38px 38px;
   opacity: 0.35;
@@ -93,10 +112,18 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* ⬅️ TEXTE EN BAS */
+  align-items: center;         /* ⬅️ CENTRÉ */
 
   text-align: center;
   animation: heroFadeUp 1.5s ease forwards;
 }
+
 
 /* Bloc stylisé (sans bordure) */
 .hero-simple-content {
@@ -104,7 +131,7 @@
   border-left: none;
   margin: 0 auto;
   width: fit-content;
-
+  justify-items: flex-end;
   animation: heroFadeUp 1.7s ease forwards;
 }
 
@@ -114,33 +141,30 @@
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.35;
+  justify-items: flex-end;
   color: var(--accent-contrast);
-
-  /* Corrections demandées */
-  text-transform: none;       /* ⬅️ plus de MAJUSCULES */
-  text-align: center;         /* ⬅️ centré */
-  letter-spacing: 0.02em;     /* plus élégant */
-  
+  text-transform: none; 
+  letter-spacing: 0.02em; /* plus élégant */
   opacity: 0;
   animation: heroFadeUp 1.9s ease forwards;
 }
 
 /* Barre design centrée */
-.hero-simple-text::after {
+/* .hero-simple-text::after {
   content: "";
   display: block;
   width: 62px;
   height: 2px;
-  margin: 1.2rem auto 0 auto;
+  margin: auto;
 
   background: linear-gradient(
     to right,
     var(--accent),
-    rgba(229,231,235,0.08)
+    rgba(229, 231, 235, 0.08)
   );
 
   animation: heroFadeUp 2.2s ease forwards;
-}
+} */
 
 /* =========================================
       RESPONSIVE

@@ -20,8 +20,8 @@ const Footer = () => {
 
         {/* Bloc 2 : Liens utiles */}
         <div className="footer-section">
-          <h3>{"Accès rapides" || "Liens utiles"}</h3>
-          <ul>
+         
+          <ul> <h3>{"Accès rapides" || "Liens utiles"}</h3>
             <li>
               <Link to="/">{"Accueil"}</Link>
             </li>
@@ -41,8 +41,8 @@ const Footer = () => {
         </div>
 {/* Bloc 3 : Contact */}
 <div className="footer-section">
-  <h3>Contact</h3>
-
+ 
+<ul> <h3>Nous contacter</h3>
   <p>
     <FaMapMarkerAlt className="footer-icon" />
     91540 MENNECY
@@ -50,19 +50,20 @@ const Footer = () => {
 
   <p>
     <FaPhoneAlt className="footer-icon" />
-    <a href="tel:0160872002">01.60.87.20.02</a>
+    <p >01.60.87.20.02</p>
   </p>
 
   <p>
     <FaEnvelope className="footer-icon" />
-    <a href="mailto:contact@ere91.com">contact@ere91.com</a>
+    <p>contact@ere91.com</p>
   </p>
+  </ul>
 </div>
 
 
         {/* Bloc 4 : Réseaux sociaux */}
         <div className="footer-section">
-          <h3>{"Social" || "Suivez-nous"}</h3>
+          <h3>{"Suivez-nous" || "Suivez-nous"}</h3>
           <ul className="footer-socials">
             <li>
               <a
