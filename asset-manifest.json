@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-expo/static/css/main.12ead973.css",
-    "main.js": "/site-expo/static/js/main.c0f3ef7f.js",
+    "main.js": "/site-expo/static/js/main.8ad502a7.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1264.JPG": "/site-expo/static/media/IMG_1264.fbb42b814beca3312aa4.JPG",
@@ -14,6 +14,7 @@
     "static/media/Estrade_thumb.webp": "/site-expo/static/media/Estrade_thumb.5340715c2fec5bf8dacb.webp",
     "static/media/IMG_0222_thumb.webp": "/site-expo/static/media/IMG_0222_thumb.f2bf6585cb4aef73d880.webp",
     "static/media/20231219_091234_thumb_thumb.webp": "/site-expo/static/media/20231219_091234_thumb_thumb.09508774213827152e7e.webp",
+    "static/media/2025-12-05 131447_thumb.webp": "/site-expo/static/media/2025-12-05 131447_thumb.28a986f94bf0103dfb96.webp",
     "static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.webp": "/site-expo/static/media/Intérieur moderne d'un restaurant élégant_thumb_thumb.440a6a785d38b7ff7956.webp",
     "static/media/s4-alon_expo_thumb.webp": "/site-expo/static/media/s4-alon_expo_thumb.07cdf1f57e1f9b500771.webp",
     "static/media/1_thumb.webp": "/site-expo/static/media/1_thumb.21c098c07693f4e51815.webp",
@@ -22,14 +23,15 @@
     "static/media/image003 _thumb.webp": "/site-expo/static/media/image003 _thumb.3856fb368e0a32e18acf.webp",
     "static/media/IMG_0221_thumb_thumb.webp": "/site-expo/static/media/IMG_0221_thumb_thumb.a89bf1b9e1760bb5ebb3.webp",
     "static/media/cuisine_led_bleu_thumb.webp": "/site-expo/static/media/cuisine_led_bleu_thumb.2930f13b34d0310470c2.webp",
+    "static/media/2025-12-05 131300_thumb.webp": "/site-expo/static/media/2025-12-05 131300_thumb.985553e48e173fe6fbe9.webp",
     "static/media/125_thumb.webp": "/site-expo/static/media/125_thumb.6c59008a66947936dedb.webp",
     "static/media/Cuisine_moderne_elements_bois_pierre_thumb_thumb.webp": "/site-expo/static/media/Cuisine_moderne_elements_bois_pierre_thumb_thumb.e83da55d0a5725ff228a.webp",
     "static/media/Cuisine moderne avec île en marbre_thumb.webp": "/site-expo/static/media/Cuisine moderne avec île en marbre_thumb.42e60a6028d4a5e1dffc.webp",
     "static/media/IMG_0219_thumb.webp": "/site-expo/static/media/IMG_0219_thumb.085d3f819d1eab8415d1.webp",
     "static/media/1-expo_thumb.webp": "/site-expo/static/media/1-expo_thumb.b3761966b589a33e6385.webp",
     "static/media/IMG_20211128_122838_thumb.webp": "/site-expo/static/media/IMG_20211128_122838_thumb.75a4fc17e172cb3592f3.webp",
-    "static/media/Table ping pong_thumb.webp": "/site-expo/static/media/Table ping pong_thumb.d1acc843afbccbff9b16.webp",
     "static/media/Cuisine_moderne_élégante_thumb_thumb.webp": "/site-expo/static/media/Cuisine_moderne_élégante_thumb_thumb.8fa07ecb9d8f09c36f65.webp",
+    "static/media/Table ping pong_thumb.webp": "/site-expo/static/media/Table ping pong_thumb.7053189994ac01d33a4c.webp",
     "static/media/20220219_111659_thumb_thumb.webp": "/site-expo/static/media/20220219_111659_thumb_thumb.5f630f13d6daf472441c.webp",
     "static/media/IMG_0229_thumb.webp": "/site-expo/static/media/IMG_0229_thumb.4ccd396e189ce7f25a4f.webp",
     "static/media/IMG_1071_thumb.webp": "/site-expo/static/media/IMG_1071_thumb.184af815a3ef21b985a2.webp",
@@ -53,10 +55,10 @@
     "static/media/Salle de bain moderne et lumineuse_thumb_thumb.webp": "/site-expo/static/media/Salle de bain moderne et lumineuse_thumb_thumb.6f417262bdc060f9cc50.webp",
     "index.html": "/site-expo/index.html",
     "main.12ead973.css.map": "/site-expo/static/css/main.12ead973.css.map",
-    "main.c0f3ef7f.js.map": "/site-expo/static/js/main.c0f3ef7f.js.map"
+    "main.8ad502a7.js.map": "/site-expo/static/js/main.8ad502a7.js.map"
   },
   "entrypoints": [
     "static/css/main.12ead973.css",
-    "static/js/main.c0f3ef7f.js"
+    "static/js/main.8ad502a7.js"
   ]
 }
