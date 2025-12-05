@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.12ead973.css",
+    "main.css": "/site-expo/static/css/main.d63acbfb.css",
     "main.js": "/site-expo/static/js/main.bfd0a9d5.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
@@ -54,11 +54,11 @@
     "static/media/Cuisine_moderne_lumineuse_thumb_thumb.webp": "/site-expo/static/media/Cuisine_moderne_lumineuse_thumb_thumb.3b6b1ab4dfa147a959bc.webp",
     "static/media/Salle de bain moderne et lumineuse_thumb_thumb.webp": "/site-expo/static/media/Salle de bain moderne et lumineuse_thumb_thumb.6f417262bdc060f9cc50.webp",
     "index.html": "/site-expo/index.html",
-    "main.12ead973.css.map": "/site-expo/static/css/main.12ead973.css.map",
+    "main.d63acbfb.css.map": "/site-expo/static/css/main.d63acbfb.css.map",
     "main.bfd0a9d5.js.map": "/site-expo/static/js/main.bfd0a9d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.12ead973.css",
+    "static/css/main.d63acbfb.css",
     "static/js/main.bfd0a9d5.js"
   ]
 }
