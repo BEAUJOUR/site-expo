@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/site-expo/static/css/main.0cf95cda.css",
+    "main.css": "/site-expo/static/css/main.94e936fc.css",
     "main.js": "/site-expo/static/js/main.f9ec12f5.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
@@ -63,11 +63,11 @@
     "static/media/Armoire en chêne et porte ouverte_thumb_thumb.webp": "/site-expo/static/media/Armoire en chêne et porte ouverte_thumb_thumb.8f5f973720db42cde963.webp",
     "static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.webp": "/site-expo/static/media/Armoire blanche intégrée et détails élégants_thumb_thumb.efab9d38abfb932b1a54.webp",
     "index.html": "/site-expo/index.html",
-    "main.0cf95cda.css.map": "/site-expo/static/css/main.0cf95cda.css.map",
+    "main.94e936fc.css.map": "/site-expo/static/css/main.94e936fc.css.map",
     "main.f9ec12f5.js.map": "/site-expo/static/js/main.f9ec12f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cf95cda.css",
+    "static/css/main.94e936fc.css",
     "static/js/main.f9ec12f5.js"
   ]
 }
