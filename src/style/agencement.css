@@ -57,7 +57,7 @@
 .container {
   max-width: 1100px;
   width: 85%;
-  margin: 1rem auto;
+  margin: 2.5rem auto;
   /* background: red; */
   margin-bottom: 40px;
 }
@@ -118,7 +118,7 @@
   color: var(--accent);
   /* background: red; */
   font-family: "Libertinus Math", serif;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
 }
 

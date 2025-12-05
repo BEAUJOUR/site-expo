@@ -107,7 +107,6 @@
    SECTION TEXTE
 ============================ */
 .about-section {
-  /* padding: 3rem 1.5rem; */
   max-width: 1100px;
 
   margin: auto;
@@ -121,7 +120,9 @@
 } */
 
 .about-section p {
-  /* font-size: 1.15rem; */
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
   line-height: 1.9;
   color: var(--text);
 }
@@ -135,7 +136,7 @@
   margin: auto;
   max-width: 1100px;
 
-  margin-bottom: -5rem;
+  margin-bottom: -4rem;
 }
 
 /* .atelier-wrapper h2 {
@@ -217,12 +218,13 @@
   width: 100%;
 }
 
-item-camion h2 {
+/* item-camion h2 {
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1.2rem;
   text-align: center;
-}
+ 
+} */
 
 .camion-atelier {
   width: 100%;
@@ -255,8 +257,6 @@ item-camion h2 {
     left: 15px;
   }
 }
-
-
 
 @keyframes slideHorizontal {
   from {
@@ -366,14 +366,18 @@ item-camion h2 {
 .apropos-cta h2 {
   color: var(--accent-contrast);
   font-size: 2rem;
+   margin-top: -1rem;
 }
 
 .apropos-cta p {
   color: var(--accent-contrast);
   font-size: 1.1rem;
+   margin-top: -1.5rem;
 }
 
 .apropos-cta button {
+  margin-top: 1.5rem;
+ 
   background: var(--accent);
   color: var(--accent-contrast);
   padding: 0.9rem 2rem;
@@ -382,6 +386,7 @@ item-camion h2 {
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
+  width: 55%;
 }
 
 .apropos-cta button:hover {

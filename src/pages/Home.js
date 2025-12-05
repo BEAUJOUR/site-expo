@@ -85,7 +85,7 @@ const Home = () => {
             speed={2500}
           />
           <StatItem
-            value={500}
+            value={2000}
             label="Projets réalisés"
             suffix="+"
             speed={2500}

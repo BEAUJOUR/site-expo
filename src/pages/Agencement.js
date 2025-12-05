@@ -52,7 +52,7 @@ const Agencement = () => {
           >
             {/* <h2 className="animate-on-scroll flipIn">???????????????</h2> */}
             <p className="animate-on-scroll fade-in-up">
-              Des vusiels 3D, au choix des matériaux, nous concevons et
+              Des visuels 3D, au choix des matériaux, nous concevons et
               installons vos espaces de vie avec une attention particulière
               portée à l'esthétique, à la fonctionnalité et à la qualité afin de
               sublimer vos intérieurs

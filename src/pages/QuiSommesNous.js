@@ -77,8 +77,8 @@ export default function QuiSommesNous() {
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-              Notre parc de machines professionnel permettant précision et
-              rapidité d’exécution.
+              Un espace de produiction ebtièrement aménage de machines
+              spécialisées.
             </p>
           </div>
           <img src={atelier2} className="atelier-img " alt="Parc machines" />
@@ -106,7 +106,7 @@ export default function QuiSommesNous() {
         <div className="atelier-row  atelier">
           <div className="atelier-text">
             <p>
-              Un espace de stockage de <strong>1300 m²</strong> garantissant une
+              Un espace de stockage de <strong>1300 m²</strong> assurant une
               gestion fluide.
             </p>
           </div>
@@ -116,9 +116,9 @@ export default function QuiSommesNous() {
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-              Service de <strong>transport et de logistique</strong> nous
-              permettant d'offrir à nos clients une gestion optimale et
-              longitudinale de chaque projet.
+              Service de <strong>transport et de logistique</strong> pour offrir
+              à nos clients une gestion optimale et longitudinale de chaque
+              projet.
             </p>
           </div>
           <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />

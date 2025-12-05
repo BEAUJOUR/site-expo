@@ -1,5 +1,5 @@
 .intro {
-  margin: 1rem;
+  margin-top: 2.5rem;
 }
 .intro p{
   color: var(--text);
@@ -10,6 +10,8 @@ text-align: center;
   font-size: 2.2rem;
   color: var(--accent);
   font-family: "Libertinus Math", serif;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 /* Container */
 .home .container {

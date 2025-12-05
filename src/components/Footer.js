@@ -67,7 +67,7 @@ const Footer = () => {
 
         {/* Bloc 4 : Réseaux sociaux */}
         <div className="footer-section">
-          <h3>{"Suivez-nous" || "Suivez-nous"}</h3>
+          <h3>{"Nous suivres" || "Nous suivres"}</h3>
           <ul className="footer-socials">
             <li>
               <a
