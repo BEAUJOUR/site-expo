@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-expo/static/css/main.12ead973.css",
-    "main.js": "/site-expo/static/js/main.8ad502a7.js",
+    "main.js": "/site-expo/static/js/main.1987b67c.js",
     "static/media/expo.png": "/site-expo/static/media/expo.52d4345dbd9de57f364f.png",
     "static/media/IMG_1092.JPG": "/site-expo/static/media/IMG_1092.da01d3573cfc78425619.JPG",
     "static/media/IMG_1264.JPG": "/site-expo/static/media/IMG_1264.fbb42b814beca3312aa4.JPG",
@@ -55,10 +55,10 @@
     "static/media/Salle de bain moderne et lumineuse_thumb_thumb.webp": "/site-expo/static/media/Salle de bain moderne et lumineuse_thumb_thumb.6f417262bdc060f9cc50.webp",
     "index.html": "/site-expo/index.html",
     "main.12ead973.css.map": "/site-expo/static/css/main.12ead973.css.map",
-    "main.8ad502a7.js.map": "/site-expo/static/js/main.8ad502a7.js.map"
+    "main.1987b67c.js.map": "/site-expo/static/js/main.1987b67c.js.map"
   },
   "entrypoints": [
     "static/css/main.12ead973.css",
-    "static/js/main.8ad502a7.js"
+    "static/js/main.1987b67c.js"
   ]
 }
