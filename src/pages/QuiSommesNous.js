@@ -21,10 +21,7 @@ export default function QuiSommesNous() {
         style={{ backgroundImage: `url(${headerImg})` }}
       >
         <div className="overlay">
-        
           <h1 className="about-title">Votre projet mérite l’excellence.</h1>
-
-         
         </div>
       </header>
 
@@ -33,13 +30,13 @@ export default function QuiSommesNous() {
       ======================== */}
       <section className="about-section fade-in">
         {/* <h2>Notre structure</h2> */}
-         <p>
-            Forts de plus de <strong>25 ans d’expérience</strong>, nous mettons
-            en œuvre un <strong>savoir-faire reconnu</strong> et une véritable
-            <strong> culture du travail bien fait</strong> pour accompagner nos
-            clients et partenaires dans la réussite de leurs projets, qu’ils
-            soient <strong>professionnels ou privés</strong>.
-          </p>
+        <p>
+          Forts de plus de <strong>25 ans d’expérience</strong>, nous mettons en
+          œuvre un <strong>savoir-faire reconnu</strong> et une véritable
+          <strong> culture du travail bien fait</strong> pour accompagner nos
+          clients et partenaires dans la réussite de leurs projets, qu’ils
+          soient <strong>professionnels ou privés</strong>.
+        </p>
 
         {/* <p>
           Notre atelier de <strong>800 m²</strong>, équipé d’un parc de machines
@@ -86,19 +83,27 @@ export default function QuiSommesNous() {
           </div>
           <img src={atelier2} className="atelier-img " alt="Parc machines" />
         </div>
-
-        {/* Ligne 3 : Texte gauche / Image droite */}
-        <div className="atelier-row atelier">
+        <div className="atelier-row  atelier">
           <div className="atelier-text">
             <p>
-              Montage à blanc en atelier pour garantir des assemblages
-              précis et des alignements parfaits avant la pose sur site.
+              Là où la machine s’arrête, nos menuisiers apportent précision et
+              savoir-faire.
+            </p>
+          </div>
+          <img src={atelier5} className="atelier-img" alt="Atelier 800 m²" />
+        </div>
+        {/* Ligne 3 : Texte gauche / Image droite */}
+        <div className="atelier-row reverse atelier">
+          <div className="atelier-text">
+            <p>
+              Montage à blanc en atelier pour garantir des assemblages précis et
+              des alignements parfaits avant la pose sur site.
             </p>
           </div>
           <img src={atelier7} className="atelier-img" alt="Stockage 1300 m²" />
         </div>
         {/* Ligne 3 : Texte gauche / Image droite */}
-        <div className="atelier-row reverse atelier">
+        <div className="atelier-row  atelier">
           <div className="atelier-text">
             <p>
               Un espace de stockage de <strong>1300 m²</strong> garantissant une
@@ -108,23 +113,15 @@ export default function QuiSommesNous() {
           <img src={atelier6} className="atelier-img" alt="Stockage 1300 m²" />
         </div>
 
-        <div className="atelier-row  atelier">
-          <div className="atelier-text">
-            <p>
-              Service de <strong>transport et de logistique</strong> nous permettant d'offrir à
-              nos clients une gestion optimale et longitudinale de chaque
-              projet.
-            </p>
-          </div>
-          <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />
-        </div>
         <div className="atelier-row reverse atelier">
           <div className="atelier-text">
             <p>
-             Là où la machine s’arrête, nos menuisiers apportent précision et savoir-faire.
+              Service de <strong>transport et de logistique</strong> nous
+              permettant d'offrir à nos clients une gestion optimale et
+              longitudinale de chaque projet.
             </p>
           </div>
-          <img src={atelier5} className="atelier-img" alt="Atelier 800 m²" />
+          <img src={atelier3} className="atelier-img" alt="Atelier 800 m²" />
         </div>
       </section>
 

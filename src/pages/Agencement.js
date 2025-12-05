@@ -34,7 +34,8 @@ const Agencement = () => {
       >
         <div className="overlay">
           <h1 className="animate-on-scroll fade-in-down agenceme">
-            De la conception à la réalisation :<br /> L'art de fabriquer l'espace.
+            De la conception à la réalisation :<br /> L'art de fabriquer
+            l'espace.
           </h1>
         </div>
       </header>
@@ -60,7 +61,7 @@ const Agencement = () => {
 
           {/* GALERIE */}
           <section
-            className="apropos-gallery container section animate-on-scroll fade-in-up"
+            className="apropos-gallery container section  "
             aria-labelledby="galerie"
           >
             <h2 className="animate-on-scroll flipIn">Galerie photos :</h2>

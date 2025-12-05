@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 
-
-
-import { FaFacebookF, FaInstagram, FaLinkedinIn,FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 import "../components/styles-component/footer.css";
 
 const Footer = () => {
@@ -20,8 +25,9 @@ const Footer = () => {
 
         {/* Bloc 2 : Liens utiles */}
         <div className="footer-section">
-         
-          <ul> <h3>{"Accès rapides" || "Liens utiles"}</h3>
+          <ul>
+            {" "}
+            <h3>{"Accès rapides" || "Liens utiles"}</h3>
             <li>
               <Link to="/">{"Accueil"}</Link>
             </li>
@@ -39,27 +45,25 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-{/* Bloc 3 : Contact */}
-<div className="footer-section">
- 
-<ul> <h3>Nous contacter</h3>
-  <p>
-    <FaMapMarkerAlt className="footer-icon" />
-    91540 MENNECY
-  </p>
-
-  <p>
-    <FaPhoneAlt className="footer-icon" />
-    <p >01.60.87.20.02</p>
-  </p>
-
-  <p>
-    <FaEnvelope className="footer-icon" />
-    <p>contact@ere91.com</p>
-  </p>
-  </ul>
-</div>
-
+        {/* Bloc 3 : Contact */}
+        <div className="footer-section">
+          <ul>
+            {" "}
+            <h3>Nous contacter</h3>
+            <p>
+              <FaMapMarkerAlt className="footer-icon" />
+              91540 MENNECY
+            </p>
+            <p>
+              <FaPhoneAlt className="footer-icon" />
+              01.60.87.20.02
+            </p>
+            <p>
+              <FaEnvelope className="footer-icon" />
+              <p>contact@ere91.com</p>
+            </p>
+          </ul>
+        </div>
 
         {/* Bloc 4 : Réseaux sociaux */}
         <div className="footer-section">

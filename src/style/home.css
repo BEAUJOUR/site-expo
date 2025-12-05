@@ -1,22 +1,26 @@
-.home {
-  line-height: 1.8;
-  margin-bottom: 2rem;
+.intro {
+  margin: 1rem;
+}
+.intro p{
+  color: var(--text);
+  width: 100%;
 }
 h2{
-  font-family: "Libertinus Math", serif;
+text-align: center;
+  font-size: 2.2rem;
   color: var(--accent);
+  font-family: "Libertinus Math", serif;
 }
 /* Container */
 .home .container {
   display: block;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin:  auto;
 }
 /* GALERIE */
 .home .suggestions {
-  background-color: var(--section-bg); /* ✅ avant: #dbdbdb10 */
-  width: 83%;
+  background-color: var(--section-bg);
+  width: 85%;
   margin: auto;
   border-radius: 10px;
 
@@ -24,21 +28,26 @@ h2{
 
 }
 .home .suggestions{
-  margin-top: 50px;
+  margin-top: 4rem;
+  margin-bottom:40px;
 }
 .home .suggestions h2 {
   text-align: center;
-  /* margin-bottom: 2rem; */
-  font-size: 2rem;
+  font-size: 2.2rem;
+  color: var(--accent);
+  font-family: "Libertinus Math", serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
+
 
 /* ===== GRID principal ===== */
 .gallery-grid {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  /* gap: 2rem; */
   flex-wrap: wrap;
+  margin-top:-1rem;
 }
 h2{
   text-align: center;
@@ -60,7 +69,7 @@ h2{
 .gallery-item {
  
   border-radius: 14px;
-  padding: 1rem;
+  padding: 1.5rem;
   transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;
 }
@@ -75,7 +84,7 @@ h2{
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 0.8rem;
+  margin-bottom: 3.8rem;
   text-align: center;
   /* text-transform: uppercase; */
 }
@@ -95,23 +104,12 @@ h2{
     flex-direction: column;
     gap: 1.5rem;
   }
-
   .gallery-image {
     height: 220px;
   }
 }
 
-/* === BLOC TEXTE + IMAGE === */
-.extra-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
- 
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
- 
-}
+
 /* === SECTION : Nos chiffres clés === */
 .stats-grid {
   display: flex;
@@ -145,31 +143,10 @@ h2{
   margin-bottom: 0.5rem;
 }
 
-.stat-item p {
+/* .stat-item p {
   font-size: 1rem;
   color: var(--text);
-}
-
-
-/* Texte en haut à gauche */
-.extra-text {
-  width: 100%;
-}
-
-.extra-text h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0;
-  color: var(--accent);
-}
-
-.extra-text p {
-  font-size: 1rem;
-  margin-top: .5rem;
-  color: var(--text);
-  max-width: 50%;
-}
-
+} */
 
 
 /* === Responsive === */
@@ -210,7 +187,8 @@ h2{
 .home .gallery-caption {
   font-size: 0.95rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0rem;
   color: var(--text);
 }
 

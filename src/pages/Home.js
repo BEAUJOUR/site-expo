@@ -71,7 +71,7 @@ const Home = () => {
       </section>
       {/* CHIFFRES CLÉS */}
       <section
-        className="apropos-stats container section animate-on-scroll fade-in-up"
+        className="apropos-stats container section animate-on-scroll "
         aria-labelledby="chiffres"
       >
         <h2 id="chiffres" className="animate-on-scroll flipIn">
